@@ -1,0 +1,30 @@
+@import "./_variables.scss";
+
+$primary:         $gray-100 !default;
+$secondary:       $gray-200 !default;
+$success:         $white !default;
+$info:            $gray-400 !default;
+$warning:         $matsukaze-red !default;
+$danger:          $matsukaze-red !default;
+$light:           $gray-200 !default;
+$dark:            $gray-700 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+$body-bg:         $gray-900 !default;
+$body-color:      $gray-100 !default;
+
+$card-bg:         $gray-800 !default;
