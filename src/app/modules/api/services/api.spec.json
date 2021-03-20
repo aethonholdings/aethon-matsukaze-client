@@ -1,0 +1,86 @@
+{
+  "root": {
+      "dev": "http://localhost:3000/api/0.1/",
+      "test": "test",
+      "prod": "test"
+  },
+  "methods": {
+    "get": "GET",
+    "post": "POST"
+  },
+  "actions": {
+    "auth": {
+      "login": {"endpoint": "auth/login", "method": "POST"},
+      "logout": {"endpoint": "auth/logout", "method": "POST"},
+      "register": {"endpoint": "auth/register", "method": "POST"},
+      "test": {"endpoint": "auth/test", "method": "GET"}
+    },
+    "project": {
+      "get": {"endpoint": "project", "method": "GET"}
+    },
+    "story": {
+      "create": {"endpoint": "storyStructureElement/create", "method": "POST"},
+      "get": {"endpoint": "storyStructureElement/get", "method": "GET"},
+      "gets": {"endpoint": "storyStructureElement/gets", "method": "GET"},
+      "update": {"endpoint": "storyStructureElement/update", "method": "POST"},
+      "delete": {"endpoint": "storyStructureElement/delete", "method": "POST"},
+      "pull": {"endpoint": "story/pull", "method": "GET"}
+    },
+    "act": {
+      "create": {"endpoint": "storyStructureElement/create", "method": "POST"},
+      "get": {"endpoint": "storyStructureElement/get", "method": "GET"},
+      "gets": {"endpoint": "storyStructureElement/gets", "method": "GET"},
+      "update": {"endpoint": "storyStructureElement/update", "method": "POST"},
+      "move": {"endpoint": "storyStructureElement/move", "method": "POST"},
+      "delete": {"endpoint": "storyStructureElement/delete", "method": "POST"}
+    },
+    "sceneSequence": {
+      "create": {"endpoint": "storyStructureElement/create", "method": "POST"},
+      "get": {"endpoint": "storyStructureElement/get", "method": "GET"},
+      "gets": {"endpoint": "storyStructureElement/gets", "method": "GET"},
+      "update": {"endpoint": "storyStructureElement/update", "method": "POST"},
+      "move": {"endpoint": "storyStructureElement/move", "method": "POST"},
+      "delete": {"endpoint": "storyStructureElement/delete", "method": "POST"}
+    },
+    "scene": {
+      "create": {"endpoint": "storyStructureElement/create", "method": "POST"},
+      "get": {"endpoint": "storyStructureElement/get", "method": "GET"},
+      "gets": {"endpoint": "storyStructureElement/gets", "method": "GET"},
+      "update": {"endpoint": "storyStructureElement/update", "method": "POST"},
+      "move": {"endpoint": "storyStructureElement/move", "method": "POST"},
+      "delete": {"endpoint": "storyStructureElement/delete", "method": "POST"}
+    },
+    "beat": {
+      "create": {"endpoint": "storyStructureElement/create", "method": "POST"},
+      "get": {"endpoint": "storyStructureElement/get", "method": "GET"},
+      "gets": {"endpoint": "storyStructureElement/gets", "method": "GET"},
+      "update": {"endpoint": "storyStructureElement/update", "method": "POST"},
+      "move": {"endpoint": "storyStructureElement/move", "method": "POST"},
+      "delete": {"endpoint": "storyStructureElement/delete", "method": "POST"}
+    },
+    "momentSequence": {
+      "create": {"endpoint": "storyStructureElement/create", "method": "POST"},
+      "get": {"endpoint": "storyStructureElement/get", "method": "GET"},
+      "gets": {"endpoint": "storyStructureElement/gets", "method": "GET"},
+      "update": {"endpoint": "storyStructureElement/update", "method": "POST"},
+      "move": {"endpoint": "storyStructureElement/move", "method": "POST"},
+      "delete": {"endpoint": "storyStructureElement/delete", "method": "POST"}
+    },
+    "moment": {
+      "create": {"endpoint": "storyStructureElement/create", "method": "POST"},
+      "get": {"endpoint": "storyStructureElement/get", "method": "GET"},
+      "gets": {"endpoint": "storyStructureElement/gets", "method": "GET"},
+      "update": {"endpoint": "storyStructureElement/update", "method": "POST"},
+      "move": {"endpoint": "storyStructureElement/move", "method": "POST"},
+      "delete": {"endpoint": "storyStructureElement/delete", "method": "POST"}
+    },
+    "dialogueline": {
+      "create": {"endpoint": "storyStructureElement/create", "method": "POST"},
+      "get": {"endpoint": "storyStructureElement/get", "method": "GET"},
+      "gets": {"endpoint": "storyStructureElement/gets", "method": "GET"},
+      "update": {"endpoint": "storyStructureElement/update", "method": "POST"},
+      "move": {"endpoint": "storyStructureElement/move", "method": "POST"},
+      "delete": {"endpoint": "storyStructureElement/delete", "method": "POST"}
+    }
+  }
+}
