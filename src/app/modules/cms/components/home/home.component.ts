@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'matsukaze-home',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  team: string[] = ['konstantinos', 'kallia', 'avgi', 'dennis'];
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }

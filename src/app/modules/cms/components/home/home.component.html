@@ -1,46 +1,46 @@
 <!-- navbar -->
 
 <!-- splash -->
-<!-- <div class="block" style="background: #000 url('/home/img/artwork/{{params.content.images.splash}}') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div> -->
+<div class="block" style="background: #000 url('assets/img/artwork/splash-EN.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
 
 <!-- quote -->
-<!-- <div style="height: 100%; width: 100%; position: relative;">
+<div class="digenes-font" style="height: 100%; width: 100%; position: relative;">
   <div class="container-fluid" style="height: 100%">
     <div class="row no-gutters" style="height: 100%">
       <div class="col-lg-6">
-        <div style="height: 100%; width: 100%; background: #000 url('/home/img/artwork/digenes.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
+        <div style="height: 100%; width: 100%; background: #000 url('/assets/img/artwork/digenes.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
       </div>
       <div class="col-lg-6">
-        <div style="height: 100%; width: 100%; background: #000 url('/home/img/artwork/bardas.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
+        <div style="height: 100%; width: 100%; background: #000 url('/assets/img/artwork/bardas.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
       </div>
     </div>
   </div>
   <div class="quote">
-    <h1 class="quote">{{{params.content.text.quote}}}</h1>
+    <h1 class="quote"><span [innerHTML]="'content.home.text.quote' | translate"></span></h1>
   </div>
-</div> -->
+</div>
 
 <!-- synopsis -->
-<!-- <div id="synopsis" class="block">
+<div id="synopsis" class="block digenes-font">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
         <div class="title">
-          <h1 class="title">{{{params.content.text.synopsis.title}}}</h1>
+          <h1 class="title">{{'content.home.text.synopsis.title' | translate}}</h1>
         </div>
       </div>
     </div>
-    <div class="block" style="background: #000 url('/home/img/artwork/memories.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;">
+    <div class="block" style="background: #000 url('/assets/img/artwork/memories.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;">
     <div class="row">
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
           <div class="card" style="margin: 20% 0 20% 0; background-color: rgba(0,0,0,0.8)">
             <div class="title">
-              <h3>{{{params.content.text.synopsis.premise}}}</h3>
+              <h3><span [innerHTML]="'content.home.text.synopsis.premise' | translate"></span></h3>
             </div>
             <div class="card-text">
-              <h5>{{{params.content.text.synopsis.punchline}}}</h5>
-              {{{params.content.text.synopsis.detail}}}
+              <h5><span [innerHTML]="'content.home.text.synopsis.punchline' | translate"></span></h5>
+              <span [innerHTML]="'content.home.text.synopsis.detail' | translate"></span>
             </div>
           </div>
         </div>
@@ -48,37 +48,45 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <!-- team -->
-<!-- <div id="team" class="block team">
+<div id="team" class="block team digenes-font">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
         <div class="title">
-          <h1 class="title">{{{params.content.text.team.title}}}</h1>
+          <h1 class="title">{{'content.home.text.team.title' | translate}}</h1>
         </div>
       </div>
     </div>
     <div class="row">
-      {{#each params.content.text.team.members}}
-      <div class="col-lg-3">
+      <div *ngFor="let member of team" class="col-lg-3">
         <div class="card">
-          <a data-toggle="collapse" href="#{{@key}}" role="button" aria-expanded="false" aria-controls="{{@key}}"><img class="card-img-top" src="/home/img/photos/{{this.img}}" alt="Card image cap"></a>
+          <a data-toggle="collapse" href="#{{member}}" role="button" aria-expanded="false" [attr.aria-controls]="member">
+            <img class="card-img-top" src="/assets/img/photos/{{member}}.jpg" alt="Card image cap">
+          </a>
           <div class="card-body">
-            <h4 class="card-title"><a data-toggle="collapse" href="#{{@key}}" role="button" aria-expanded="false" aria-controls="{{@key}}">{{this.name}}</a></h4>
-            <div class="collapse multi-collapse" id="{{@key}}">
-              <p class="card-text">{{this.bio}}</p>
-              <a data-toggle="collapse" href="#{{@key}}" role="button" aria-expanded="false" aria-controls="{{@key}}"><i class="fas fa-chevron-up"></i></a>
+            <h4 class="card-title">
+              <a data-toggle="collapse"
+                  href="#{{member}}"
+                  role="button"
+                  aria-expanded="false"
+                  [attr.aria-controls]="member">
+                  {{'content.home.text.team.members.' + member + '.name' | translate}}
+              </a>
+            </h4>
+            <div class="collapse multi-collapse" id="{{member}}">
+              <p class="card-text">{{'content.home.text.team.members.' + member + '.bio' | translate}}</p>
+              <a data-toggle="collapse" href="#{{member}}" role="button" aria-expanded="false" [attr.aria-controls]="member"><i class="fas fa-chevron-up"></i></a>
             </div>
           </div>
         </div>
       </div>
-      {{/each}}
     </div>
   </div>
-</div> -->
+</div>
 
-<div class="copyright">
+<div class="copyright digenes-font">
   <p>© 2018 Aethon Holdings Private Limited. <br />All rights reserved.</p>
 </div>

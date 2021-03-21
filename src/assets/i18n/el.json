@@ -1,0 +1,51 @@
+{
+  "navbar": {
+    "language": "Γλωσσα",
+    "sample": "Δειγμα",
+    "order": "Παραγγελια",
+    "social": "Social media",
+    "login": "Login"
+  },
+  "content": {
+    "home": {
+      "title": "Διγενής",
+      "images": {
+        "splash": "splash-EL.jpg"
+      },
+      "text": {
+        "quote": "ΣΤΗΝ ΚΟΨΗ ΤΟΥ ΣΠΑΘΙΟΥ<br />ΚΡΙΝΟΜΑΣΤΕ ΟΛΟΙ",
+        "synopsis": {
+          "title": "Συνοψη",
+          "premise": "Δυο<br/>εις σαρκαν<br/>μιαν",
+          "punchline": "ΕΝΑΣ ΝΕΑΡΟΣ, ΑΠΟΒΛΗΤΟΣ ΑΡΙΣΤΟΚΡΑΤΗΣ, ΜΕ ΑΡΑΒΙΚΗ ΚΑΙ ΒΥΖΑΝΤΙΝΗ ΚΑΤΑΓΩΓΗ, ΠΡΕΠΕΙ ΝΑ ΑΝΤΙΠΑΛΕΨΕΙ ΤΟΥΣ ΧΘΟΝΙΟΥΣ ΔΑΙΜΟΝΕΣ ΤΟΥ ΓΙΑ ΝΑ ΣΩΣΕΙ ΤΗ ΒΥΖΑΝΤΙΝΗ ΑΥΤΟΚΡΑΤΟΡΙΑ ΑΠΟ ΤΗΝ ΚΑΤΑΣΤΡΟΦΗ.",
+          "detail": "<p>10 αιώνας μ.Χ. Στα ανατολικά της σύνορα του Βυζαντίου με την Σαρακινή Συρία μεγαλώνει ο Βασίλειος Μουσούρ, γιος μιας βυζαντινής αριστοκράτισσας και ενός Σύρου εμίρη. Σε μια βίαιη εποχή, όπου η επιβίωση εξαρτάται από τις πολεμικές αρετές, ο Βασίλειος δεν έχει να επιδείξει ούτε ρώμη ούτε δεξιοτεχνία. Είναι άνθρωπος των βιβλίων.</p><p>Μέσα, όμως, από ένα μακρινό ταξίδι στα βάθη της Ανατολής και μια εσωτερική διαμάχη μεταξύ καλού και κακού, ο Βασίλειος μεταμορφώνεται σε ικανό πολεμιστή και υπερασπιστή των συνόρων της βυζαντινής αυτοκρατορίας· γίνεται ο «Διγενής Ακρίτας».</p><p>Πρόκειται για μια παραλλαγή του μεσαιωνικού έπους του Διγενή Ακρίτα· μια ιστορία που αμφιταλαντεύεται ανάμεσα στην αγάπη και το μίσος, στην εξουσία και την υποταγή, στην πίστη και την αθεΐα και διαδραματίζεται στον Δρόμο του Μεταξιού, κατά την περίοδο των πιο σκοτεινών χρόνων του μεσαίωνα.</p>"
+        },
+        "team": {
+          "title": "Ομαδα",
+          "members": {
+            "konstantinos": {
+              "img": "konstantinos.jpg",
+              "name": "Κωνσταντίνος Δημητρίου",
+              "bio": "Konstantinos was born in Athens, Greece.  He has lived, worked and travelled extensively across most of Asia, including China, India, Japan, Korea and South East Asia.  He has authored multiple articles for business journals and newspapers, including the Greek daily Kathimerini.  Digenes is his first graphic novel. He holds degrees in Electrical Engineering from Cambridge University and an MBA with High Distinction from Harvard Business School. Konstantinos lives in Singapore."
+            },
+            "kallia": {
+              "img": "kallia.jpg",
+              "name": "Κάλλια Παπαδάκη",
+              "bio": "Kallia was born in Didimoticho, Greece. She is a novelist, poet and screenwriter. Her novel Dendrites (Polis Publishers, 2015), received the European Union Prize for Literature in 2017. Her short story collection The Back-Lot Sound (Polis Publishers, 2009), won the New Writers Award from the Greek literary journal Diavazo. September, her first feature script won, in 2010, the International Balkan Fund script development award, received the Nipkow Scholarship in Berlin, and premiered at the 48th Karlovy Vary IFF. Kallia lives in Greece."
+            },
+            "avgi": {
+              "img": "avgi.jpg",
+              "name": "Αυγή Κανάκη",
+              "bio": "Avgo is a greek, self-taught comic artist and illustrator that started their academic life by studying Philosophy of Science, but were always drawn to comics. A few semesters and a degree later they decided it’d be better to just follow their dream and do what they always wanted to do instead and just draw. That’s how they landed their first participation in IDW’s team project Womanthology: Heroic. It was enough to make them fall in love with the art of making comics and they never looked back. Since then they’ve worked with people all over the world as a freelance illustrator and comic artist and their first personal graphic novel as an artist (with writer Paul Mallory), “Greta’s Grimoire, Book1: Initiations” was published in Greece by Jemma Press, followed by “Bestiary”. They’re currently working as a writer and artist on a love project “Equidistance”, a queer, multidimensional mystery/action story alongside co-writer and co-artist Dennis Yatras."
+            },
+            "dennis": {
+              "img": "dennis.jpg",
+              "name": "Ντένης Γιάτρας",
+              "bio": "Dennis Yatras was born on the island of Zakynthos, and he’s been living in Athens for the past years. Growing up he was acquainted with Western and Japanese animation and games and became infatuated with their style ever since. As a hobby, he began doodling at a very young age and never seemed to break the habit. After graduating from high school, he enrolled in the Athens School of Graphic Arts in PA.D.A., honing his illustration and design skills. At the same time he decided to dive deeper in the anime and cosplay scene, the latter of which ended up leading him to a second BA degree in Middlesex University’s Fashion Design course some years later. Obsessed with the aesthetic of the 80’s and early 90’s pop culture, he loves designing characters that inhabit his strange yet familiar and nostalgic worlds. Lately he decided to follow his desire to complete Dark Practice, a spooky comic about a team of teenage witches' adventures in a small town of northern England. The first issue of his passion project made its debut at Comicdom CON Athens 2018. From then on he attended many other conventions in Greece and Europe. In 2019 he started to write and illustrate the graphic novel “Equidistance” along with his long-time friend Avgo. The four-parts of this new work are going to be published by Nerdula Creative Lab starting from the first third of 2021."
+            }
+          }
+        }
+      }
+    }
+  }
+}
