@@ -1,4 +1,5 @@
 <!-- navbar -->
+<matsukaze-navbar></matsukaze-navbar>
 
 <!-- splash -->
 <div class="block" style="background: #000 url('assets/img/artwork/splash-EN.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
@@ -21,12 +22,12 @@
 </div>
 
 <!-- synopsis -->
-<div id="synopsis" class="block digenes-font">
+<div id="synopsis" class="block">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
         <div class="title">
-          <h1 class="title">{{'content.home.text.synopsis.title' | translate}}</h1>
+          <h1 class="title digenes-font">{{'content.home.text.synopsis.title' | translate}}</h1>
         </div>
       </div>
     </div>
@@ -35,10 +36,10 @@
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
           <div class="card" style="margin: 20% 0 20% 0; background-color: rgba(0,0,0,0.8)">
-            <div class="title">
+            <div class="title digenes-font">
               <h3><span [innerHTML]="'content.home.text.synopsis.premise' | translate"></span></h3>
             </div>
-            <div class="card-text">
+            <div class="card-text digenes-font">
               <h5><span [innerHTML]="'content.home.text.synopsis.punchline' | translate"></span></h5>
               <span [innerHTML]="'content.home.text.synopsis.detail' | translate"></span>
             </div>
@@ -51,12 +52,12 @@
 </div>
 
 <!-- team -->
-<div id="team" class="block team digenes-font">
+<div id="team" class="block team">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
         <div class="title">
-          <h1 class="title">{{'content.home.text.team.title' | translate}}</h1>
+          <h1 class="title digenes-font">{{'content.home.text.team.title' | translate}}</h1>
         </div>
       </div>
     </div>
@@ -67,7 +68,7 @@
             <img class="card-img-top" src="/assets/img/photos/{{member}}.jpg" alt="Card image cap">
           </a>
           <div class="card-body">
-            <h4 class="card-title">
+            <h4 class="card-title digenes-font">
               <a data-toggle="collapse"
                   href="#{{member}}"
                   role="button"
@@ -77,7 +78,7 @@
               </a>
             </h4>
             <div class="collapse multi-collapse" id="{{member}}">
-              <p class="card-text">{{'content.home.text.team.members.' + member + '.bio' | translate}}</p>
+              <p class="card-text digenes-font">{{'content.home.text.team.members.' + member + '.bio' | translate}}</p>
               <a data-toggle="collapse" href="#{{member}}" role="button" aria-expanded="false" [attr.aria-controls]="member"><i class="fas fa-chevron-up"></i></a>
             </div>
           </div>

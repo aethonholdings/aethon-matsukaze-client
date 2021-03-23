@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { AppRoutingModule } from '../routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
   imports: [
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    AppRoutingModule
    ],
   providers: [ TranslateService ],
   exports: [ HomeComponent ]
