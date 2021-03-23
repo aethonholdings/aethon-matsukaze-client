@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
-// import { Observable, of } from 'rxjs';
-// import { catchError, map, share, tap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import * as apiJson from './api.spec.json'
+import { catchError, map, share, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-// import * as apiJson from './api.spec.json';
-// import { User, MatsukazeObjectTypes, Story, Scene, Act, Beat, DialogueLine, MatsukazeObject, I18nBundle, I18nBundleElement } from 'src/app/model/model.js';
-// import { SceneSequence } from 'src/app/model/model.js';
-// import { MomentSequence } from 'src/app/model/model.js';
-// import { Moment } from 'src/app/model/model.js';
+import { User } from 'src/app/model/model'
 
 // SERVICE CONNECTS TO API, FETCHES AND CONVERTS JSON TO MATSUKAZE DTOs
 
@@ -19,33 +16,32 @@ export class ApiService {
   private root: string = "";
   private verbose: boolean = true;
   token: string = "";
-  private headers: HttpHeaders = new HttpHeaders();
-  // user$: Observable<User> = null;
-  api: any;
-  //
-  // constructor(private http: HttpClient) {
-  //   this.api = apiJson["default"];
-  //   if(this.test) this.root = this.api.root.dev; else this.root = this.api.root.test;
-  // }
-  //
-  // public login$(email: string, password: string): Observable<User> {
-  //   return this._request$(this.api.actions.auth.login, {email: email, password: password}).pipe(
-  //     map( data => {
-  //       if(data?.user) {
-  //         const user:User = data.user;
-  //         this.user$ = of(user);
-  //         return user;
-  //       }
-  //       else return null;
-  //     })
-  //   );
-  // }
-  //
-  // public getUser$(): Observable<User> { return this.user$; }
-  //
-  // public isAuthenticated(): boolean { if(this.token) return true; else return false }
-  //
-  // // CRUD OPERATIONS -----------------------------------------------------------
+  private headers: HttpHeaders;
+  user$: Observable<User>;
+  api: any = apiJson["default"];
+
+  constructor(private http: HttpClient) {
+    if(this.test) this.root = this.api.root.dev; else this.root = this.api.root.test;
+  }
+
+  public login$(email: string, password: string): Observable<User> {
+    return this._request$(this.api.actions.auth.login, {email: email, password: password}).pipe(
+      map( data => {
+        if(data?.user) {
+          const user:User = data.user;
+          this.user$ = of(user);
+          return user;
+        }
+        else return null;
+      })
+    );
+  }
+
+  public getUser$(): Observable<User> { return this.user$; }
+
+  public isAuthenticated(): boolean { if(this.token) return true; else return false }
+
+  // CRUD OPERATIONS -----------------------------------------------------------
   //
   // create$(dtoType: MatsukazeObjectTypes, params: any): Observable<any> {
   //   params["matsukazeObjectType"] = dtoType;
@@ -163,54 +159,54 @@ export class ApiService {
   //   if(this.isAuthenticated()) return this._request$(endpoint, params, blob); else return of(null)
   // }
   //
-  // private _request$(action: any, data?: any, blob?: boolean): Observable<any> {
-  //   var req: Observable<any>;
-  //   const url = this.root + action.endpoint;
-  //
-  //   if(this.verbose) {
-  //     console.log("*** HTTP request starting" +
-  //                 "\nheaders:" + JSON.stringify(this.headers) +
-  //                 "\ntype:" + action.method +
-  //                 "\nurl:" + url +
-  //                 "\nData:" + JSON.stringify(data)
-  //               )
-  //
-  //   }
-  //   switch(action.method) {
-  //     case this.api.methods.get : {
-  //       if(blob) req = this.http.get(url, {params: data, headers: this.headers, responseType: 'blob'});
-  //       else req = this.http.get(url, {params: data, headers: this.headers});
-  //       break;
-  //     }
-  //     case this.api.methods.post : {
-  //       if(this.headers==null) req = this.http.post(url, data);
-  //       else req = this.http.post(url, data, {headers: this.headers});
-  //       break;
-  //     }
-  //   }
-  //
-  //   return req.pipe(
-  //     catchError(err => {
-  //       if(this.verbose) {
-  //         console.log("*** HTTP error" +
-  //                     "\nStatus:" + err.status +
-  //                     "\nurl:" + url);
-  //         return of(null);
-  //       }
-  //     }),
-  //     map(response => {
-  //       if(this.verbose && response) {
-  //         console.log("*** HTTP response received" +
-  //                   "\nurl:" + url +
-  //                   "\nResponse:" + JSON.stringify(response));
-  //       }
-  //       if(response?.access_token) {
-  //         this.token = response.access_token;
-  //         this.headers = new HttpHeaders().set('Authorization', "Bearer " + this.token);
-  //       }
-  //       return(response);
-  //     }),
-  //     share()
-  //   );
-  // }
+  private _request$(action: any, data?: any, blob?: boolean): Observable<any> {
+    var req: Observable<any>;
+    const url = this.root + action.endpoint;
+
+    if(this.verbose) {
+      console.log("*** HTTP request starting" +
+                  "\nheaders:" + JSON.stringify(this.headers) +
+                  "\ntype:" + action.method +
+                  "\nurl:" + url +
+                  "\nData:" + JSON.stringify(data)
+                )
+
+    }
+    switch(action.method) {
+      case this.api.methods.get : {
+        if(blob) req = this.http.get(url, {params: data, headers: this.headers, responseType: 'blob'});
+        else req = this.http.get(url, {params: data, headers: this.headers});
+        break;
+      }
+      case this.api.methods.post : {
+        if(this.headers==null) req = this.http.post(url, data);
+        else req = this.http.post(url, data, {headers: this.headers});
+        break;
+      }
+    }
+
+    return req.pipe(
+      catchError(err => {
+        if(this.verbose) {
+          console.log("*** HTTP error" +
+                      "\nStatus:" + err.status +
+                      "\nurl:" + url);
+        }
+        return of(null);
+      }),
+      map(response => {
+        if(this.verbose && response) {
+          console.log("*** HTTP response received" +
+                    "\nurl:" + url +
+                    "\nResponse:" + JSON.stringify(response));
+        }
+        if(response?.access_token) {
+          this.token = response.access_token;
+          this.headers = new HttpHeaders().set('Authorization', "Bearer " + this.token);
+        }
+        return(response);
+      }),
+      share()
+    );
+  }
 }

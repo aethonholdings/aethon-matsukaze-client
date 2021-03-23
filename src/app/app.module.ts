@@ -5,10 +5,10 @@ import { AppRoutingModule } from './modules/routing/app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { CmsModule } from './modules/cms/cms.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { ApiModule } from './modules/api/api.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ApiService } from './services/api/api.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -24,7 +24,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     AuthModule,
     CmsModule,
-    ApiModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
@@ -34,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
+  providers: [ ApiService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
