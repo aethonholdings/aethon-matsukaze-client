@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Observer } from 'rxjs';
 import * as apiJson from './api.spec.json'
 import { catchError, map, share, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -12,34 +12,38 @@ import { User } from 'src/app/model/model'
 })
 export class ApiService {
 
-  private test: boolean = true;
-  private root: string = "";
-  private verbose: boolean = true;
-  token: string = "";
-  private headers: HttpHeaders;
-  user$: Observable<User>;
-  api: any = apiJson["default"];
+  private _test: boolean = true;
+  private _root: string = null;
+  private _verbose: boolean = true;
+  private _headers: HttpHeaders;
+  private _api: any = apiJson["default"];
+  private _user: User;
+  private _token: string = null;
+  private _redirectUrl: string;
 
   constructor(private http: HttpClient) {
-    if(this.test) this.root = this.api.root.dev; else this.root = this.api.root.test;
+    if(this._test) this._root = this._api.root.dev; else this._root = this._api.root.test;
   }
 
+  public setRedirectUrl(url: string) { this._redirectUrl = url; }
+
+  public getRedirectUrl() { return this._redirectUrl; }
+
   public login$(email: string, password: string): Observable<User> {
-    return this._request$(this.api.actions.auth.login, {email: email, password: password}).pipe(
+    return this._request$(this._api.actions.auth.login, {email: email, password: password}).pipe(
       map( data => {
         if(data?.user) {
-          const user:User = data.user;
-          this.user$ = of(user);
-          return user;
+          this._user = new User(data.user);
+          return this._user;
         }
         else return null;
       })
     );
   }
 
-  public getUser$(): Observable<User> { return this.user$; }
+  public getUser(): User { return this._user }
 
-  public isAuthenticated(): boolean { if(this.token) return true; else return false }
+  public isAuthenticated(): boolean { if(this._token) return true; else return false }
 
   // CRUD OPERATIONS -----------------------------------------------------------
   //
@@ -161,11 +165,11 @@ export class ApiService {
   //
   private _request$(action: any, data?: any, blob?: boolean): Observable<any> {
     var req: Observable<any>;
-    const url = this.root + action.endpoint;
+    const url = this._root + action.endpoint;
 
-    if(this.verbose) {
+    if(this._verbose) {
       console.log("*** HTTP request starting" +
-                  "\nheaders:" + JSON.stringify(this.headers) +
+                  "\nheaders:" + JSON.stringify(this._headers) +
                   "\ntype:" + action.method +
                   "\nurl:" + url +
                   "\nData:" + JSON.stringify(data)
@@ -173,21 +177,21 @@ export class ApiService {
 
     }
     switch(action.method) {
-      case this.api.methods.get : {
-        if(blob) req = this.http.get(url, {params: data, headers: this.headers, responseType: 'blob'});
-        else req = this.http.get(url, {params: data, headers: this.headers});
+      case this._api.methods.get : {
+        if(blob) req = this.http.get(url, {params: data, headers: this._headers, responseType: 'blob'});
+        else req = this.http.get(url, {params: data, headers: this._headers});
         break;
       }
-      case this.api.methods.post : {
-        if(this.headers==null) req = this.http.post(url, data);
-        else req = this.http.post(url, data, {headers: this.headers});
+      case this._api.methods.post : {
+        if(this._headers==null) req = this.http.post(url, data);
+        else req = this.http.post(url, data, {headers: this._headers});
         break;
       }
     }
 
     return req.pipe(
       catchError(err => {
-        if(this.verbose) {
+        if(this._verbose) {
           console.log("*** HTTP error" +
                       "\nStatus:" + err.status +
                       "\nurl:" + url);
@@ -195,14 +199,14 @@ export class ApiService {
         return of(null);
       }),
       map(response => {
-        if(this.verbose && response) {
+        if(this._verbose && response) {
           console.log("*** HTTP response received" +
                     "\nurl:" + url +
                     "\nResponse:" + JSON.stringify(response));
         }
         if(response?.access_token) {
-          this.token = response.access_token;
-          this.headers = new HttpHeaders().set('Authorization', "Bearer " + this.token);
+          this._token = response.access_token;
+          this._headers = new HttpHeaders().set('Authorization', "Bearer " + this._token);
         }
         return(response);
       }),

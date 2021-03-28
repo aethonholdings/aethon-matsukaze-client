@@ -22,10 +22,11 @@
           <a class="nav-link text-shadow" [routerLink]="['/order']">{{'navbar.order' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['/social']">{{'navbar.social' | translate}}</a>
+          <a class="nav-link text-shadow" [routerLink]="['/contact']">{{'navbar.contact' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['/login']">{{'navbar.login' | translate}}</a>
+          <a *ngIf="user" class="nav-link text-shadow" [routerLink]="['/login']">{{'navbar.account' | translate}}</a>
+          <a *ngIf="!user" class="nav-link text-shadow" [routerLink]="['/login']">{{'navbar.login' | translate}}</a>
         </li>
       </ul>
     </div>

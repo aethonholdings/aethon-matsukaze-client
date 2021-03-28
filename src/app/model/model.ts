@@ -81,18 +81,26 @@ export class Project extends MatsukazeObject {
 export class User extends MatsukazeObject {
   id: number;
   email: string;
-  roles: Role[];
+  roles: Role[] = [];
 
-  constructor(params: any) { super(params); }
+  constructor(params: any) {
+    super(params);
+    this.email = params?.email;
+    for(let role of params?.roles) { this.roles.push(new Role(role)); }
+    this.matsukazeObjectType = MatsukazeObjectTypes.user;
+  }
 
   getType(): MatsukazeObjectTypes { return MatsukazeObjectTypes.user; }
 }
 
 export class Role extends MatsukazeObject {
-  id: number;
   name: string;
 
-  constructor(params: any) { super(params); }
+  constructor(params: any) {
+    super(params);
+    this.name = params?.name;
+    this.matsukazeObjectType = MatsukazeObjectTypes.role;
+  }
 
   getType(): MatsukazeObjectTypes { return MatsukazeObjectTypes.role; }
 }

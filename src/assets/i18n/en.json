@@ -3,8 +3,9 @@
     "language": "Language",
     "sample": "Sample",
     "order": "Order",
-    "social": "Social media",
-    "login": "Login"
+    "contact": "Contact",
+    "login": "Login",
+    "account": "My account"
   },
   "content": {
     "home": {
@@ -47,5 +48,15 @@
         }
       }
     }
+  },
+  "auth": {
+    "login": {
+      "email": "Email",
+      "password": "Password",
+      "login": "Login",
+      "create": "Create account",
+      "forgot": "Forgot password"
+    },
+    "back": "Back"
   }
 }
