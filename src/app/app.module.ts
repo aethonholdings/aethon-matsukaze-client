@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './modules/routing/app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { CmsModule } from './modules/cms/cms.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ViewerModule } from './modules/viewer/viewer.module';
+import { PersistenceService } from './services/persistence/persistence.service';
 import { ApiService } from './services/api/api.service';
+import { FilesystemService } from './services/filesystem/filesystem.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -24,6 +27,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     AuthModule,
     CmsModule,
+    ViewerModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
@@ -33,7 +37,11 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [ ApiService ],
+  providers: [
+    ApiService,
+    PersistenceService,
+    FilesystemService 
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

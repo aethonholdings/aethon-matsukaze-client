@@ -176,8 +176,6 @@ export let MatsukazeStoryStructureElementTypes = {
   [MatsukazeObjectTypes.dialogueLine]: {label: "Dialogue line", hierarchy: 8}
 }
 
-
-
 export class StoryStructureElement extends MatsukazeObject implements Positioned, StoryNode {
 
   matsukazeObjectType: MatsukazeObjectTypes;

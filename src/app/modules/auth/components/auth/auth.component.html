@@ -3,24 +3,7 @@
     <div class="logo">
       <img src="/assets/img/aethon/logo.jpg" />
     </div>
-    <form>
-      <div class="form-group">
-        <input [(ngModel)]="email" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{'auth.login.email' | translate}}">
-        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-      </div>
-      <div class="form-group">
-        <input [(ngModel)]="password" type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="{{'auth.login.password' | translate}}">
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" style="width: 100%" (click)="submit()">{{'auth.login.login' | translate}}</button>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-warning" style="width: 100%" (click)="submit()">{{'auth.login.create' | translate}}</button>
-      </div>
-    </form>
-    <div class="account-management">
-      <a href="#">{{'auth.login.forgot' | translate}}</a>
-    </div>
-    <div *ngIf="retry">Invalid username or password, please try again.</div>
+    <matsukaze-login *ngIf="state=='login'" (state)="onChangeState($event)"></matsukaze-login>
+    <matsukaze-create *ngIf="state=='create'" (state)="onChangeState($event)"></matsukaze-create>
   </div>
 </div>

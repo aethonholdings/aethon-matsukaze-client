@@ -5,10 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AppRoutingModule } from '../routing/app-routing.module';
+import { LoginComponent } from './components/login/login.component';
+import { CreateComponent } from './components/create/create.component';
 
 @NgModule({
   declarations: [
-    AuthComponent
+    AuthComponent,
+    LoginComponent,
+    CreateComponent
   ],
   imports: [
     CommonModule,

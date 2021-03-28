@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from 'src/app/model/model';
-import { ApiService } from 'src/app/services/api/api.service';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'matsukaze-navbar',
@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private translate: TranslateService,
-    private apiService: ApiService
+    private dataService: DataService
   ) { }
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
       const lang = queryParamMap?.get("lang");
       if(lang) this.translate.use(lang);
     });
-    this.user = this.apiService.getUser();
+    this.user = this.dataService.getUser();
   }
 
   onChangeLang(lang: string) { this.translate.use(lang); }

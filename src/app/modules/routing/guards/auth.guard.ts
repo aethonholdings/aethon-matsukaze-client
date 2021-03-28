@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ApiService } from 'src/app/services/api/api.service';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private dataService: DataService, private router: Router) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -15,10 +15,10 @@ export class AuthGuard implements CanActivate {
   ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const url: string = state.url;
 
-    if(this.apiService.getUser()) {
+    if(this.dataService.getUser()) {
       return true;
     } else {
-      this.apiService.setRedirectUrl(url);
+      this.dataService.setRedirectUrl(url);
       return this.router.parseUrl('/login');
     }
   }

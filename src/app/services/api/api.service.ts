@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, Observer } from 'rxjs';
-import * as apiJson from './api.spec.json'
 import { catchError, map, share, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User } from 'src/app/model/model'
+import { PersistenceService } from '../persistence/persistence.service';
 
 // SERVICE CONNECTS TO API, FETCHES AND CONVERTS JSON TO MATSUKAZE DTOs
 
@@ -12,36 +11,17 @@ import { User } from 'src/app/model/model'
 })
 export class ApiService {
 
-  private _test: boolean = true;
-  private _root: string = null;
-  private _verbose: boolean = true;
+  private _root: string;
+  private _verbose: boolean;
   private _headers: HttpHeaders;
-  private _api: any = apiJson["default"];
-  private _user: User;
   private _token: string = null;
-  private _redirectUrl: string;
 
-  constructor(private http: HttpClient) {
-    if(this._test) this._root = this._api.root.dev; else this._root = this._api.root.test;
+  constructor(private http: HttpClient, private persistenceService: PersistenceService) { }
+
+  public initialise(root: string, verbose: boolean) {
+    this._root = root;
+    this._verbose = verbose;
   }
-
-  public setRedirectUrl(url: string) { this._redirectUrl = url; }
-
-  public getRedirectUrl() { return this._redirectUrl; }
-
-  public login$(email: string, password: string): Observable<User> {
-    return this._request$(this._api.actions.auth.login, {email: email, password: password}).pipe(
-      map( data => {
-        if(data?.user) {
-          this._user = new User(data.user);
-          return this._user;
-        }
-        else return null;
-      })
-    );
-  }
-
-  public getUser(): User { return this._user }
 
   public isAuthenticated(): boolean { if(this._token) return true; else return false }
 
@@ -163,7 +143,7 @@ export class ApiService {
   //   if(this.isAuthenticated()) return this._request$(endpoint, params, blob); else return of(null)
   // }
   //
-  private _request$(action: any, data?: any, blob?: boolean): Observable<any> {
+  request$(action: any, data?: any, blob?: boolean): Observable<any> {
     var req: Observable<any>;
     const url = this._root + action.endpoint;
 
@@ -177,12 +157,12 @@ export class ApiService {
 
     }
     switch(action.method) {
-      case this._api.methods.get : {
+      case "GET" : {
         if(blob) req = this.http.get(url, {params: data, headers: this._headers, responseType: 'blob'});
         else req = this.http.get(url, {params: data, headers: this._headers});
         break;
       }
-      case this._api.methods.post : {
+      case "POST" : {
         if(this._headers==null) req = this.http.post(url, data);
         else req = this.http.post(url, data, {headers: this._headers});
         break;

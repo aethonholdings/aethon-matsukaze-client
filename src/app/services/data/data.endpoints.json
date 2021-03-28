@@ -1,12 +1,8 @@
 {
   "root": {
       "dev": "http://localhost:3000/api/0.1/",
-      "test": "test",
-      "prod": "test"
-  },
-  "methods": {
-    "get": "GET",
-    "post": "POST"
+      "test": "https://test.aethon.sg/api/0.1",
+      "prod": "https://www.digenes.com/api/0.1"
   },
   "actions": {
     "auth": {
