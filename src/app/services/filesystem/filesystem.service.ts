@@ -5,15 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class FilesystemService {
 
-  private _dataDirectory: string = "/";
+  private _filesystemPath: string;
+  private _storage = window.localStorage;
 
   constructor() { }
 
-  getDataDirectory(): string { return this._dataDirectory; }
+  getPath(): string { return this._filesystemPath; }
+
+  public async initialise(): Promise<boolean> {
+    return(true);
+  }
 
   writeFile(path: string, filename: string, blob: any, params: any): Promise<boolean> {
-    return new Promise<boolean>((resolve) => {
-      resolve(true);
-    })
+    return new Promise<boolean>((resolve) => { resolve(true); })
   }
 }

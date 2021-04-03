@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from 'src/app/services/data/data.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'matsukaze-login',
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   @Output() state = new EventEmitter<string>()
 
   constructor(
-    private dataService: DataService,
+    private authService: AuthService,
     private router: Router
   ) { }
 
@@ -23,10 +23,10 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    this.dataService.login$(this.email, this.password).subscribe(response => {
+    this.authService.login$(this.email, this.password).subscribe(response => {
       if(response) {
         this.error = false;
-        this.router.navigateByUrl(this.dataService.getRedirectUrl());
+        this.router.navigateByUrl(this.authService.getRedirectUrl());
       }
       else {
         this.error = true;

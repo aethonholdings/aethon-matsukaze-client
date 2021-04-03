@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, Observer } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError, map, share, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { PersistenceService } from '../persistence/persistence.service';
-
-// SERVICE CONNECTS TO API, FETCHES AND CONVERTS JSON TO MATSUKAZE DTOs
 
 @Injectable({
   providedIn: 'root'
@@ -16,14 +13,19 @@ export class ApiService {
   private _headers: HttpHeaders;
   private _token: string = null;
 
-  constructor(private http: HttpClient, private persistenceService: PersistenceService) { }
+  constructor(private http: HttpClient) { }
 
-  public initialise(root: string, verbose: boolean) {
+  public initialise(root: string, verbose: boolean): boolean {
     this._root = root;
     this._verbose = verbose;
+    this._token = null;
+    this._headers = null;
+    return true
   }
 
   public isAuthenticated(): boolean { if(this._token) return true; else return false }
+
+  public logout(): boolean { return this.setToken(null) }
 
   // CRUD OPERATIONS -----------------------------------------------------------
   //
@@ -143,7 +145,7 @@ export class ApiService {
   //   if(this.isAuthenticated()) return this._request$(endpoint, params, blob); else return of(null)
   // }
   //
-  request$(action: any, data?: any, blob?: boolean): Observable<any> {
+  public request$(action: any, data?: any, blob?: boolean): Observable<any> {
     var req: Observable<any>;
     const url = this._root + action.endpoint;
 
@@ -154,7 +156,6 @@ export class ApiService {
                   "\nurl:" + url +
                   "\nData:" + JSON.stringify(data)
                 )
-
     }
     switch(action.method) {
       case "GET" : {
@@ -184,13 +185,15 @@ export class ApiService {
                     "\nurl:" + url +
                     "\nResponse:" + JSON.stringify(response));
         }
-        if(response?.access_token) {
-          this._token = response.access_token;
-          this._headers = new HttpHeaders().set('Authorization', "Bearer " + this._token);
-        }
         return(response);
       }),
       share()
     );
+  }
+
+  public setToken(token: string): boolean {
+    this._token = token;
+    this._headers = new HttpHeaders().set('Authorization', "Bearer " + this._token);
+    return true;
   }
 }

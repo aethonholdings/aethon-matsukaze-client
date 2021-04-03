@@ -81,11 +81,13 @@ export class Project extends MatsukazeObject {
 export class User extends MatsukazeObject {
   id: number;
   email: string;
+  token: string;
   roles: Role[] = [];
 
   constructor(params: any) {
     super(params);
     this.email = params?.email;
+    this.token = params?.token;
     for(let role of params?.roles) { this.roles.push(new Role(role)); }
     this.matsukazeObjectType = MatsukazeObjectTypes.user;
   }

@@ -1,0 +1,15 @@
+{
+  "root": {
+      "dev": "http://localhost:3000/api/0.1/",
+      "test": "https://test.aethon.sg/api/0.1",
+      "prod": "https://www.digenes.com/api/0.1"
+  },
+  "actions": {
+    "auth": {
+      "login": {"endpoint": "auth/login", "method": "POST"},
+      "logout": {"endpoint": "auth/logout", "method": "POST"},
+      "register": {"endpoint": "auth/register", "method": "POST"},
+      "test": {"endpoint": "auth/test", "method": "GET"}
+    }
+  }
+}
