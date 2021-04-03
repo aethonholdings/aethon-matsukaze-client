@@ -9,7 +9,6 @@ import { AppRoutingModule } from '../routing/app-routing.module';
 import { AuthModule } from '../auth/auth.module';
 import { ErrorComponent } from './components/error/error.component';
 
-
 @NgModule({
   declarations: [
     HomeComponent,

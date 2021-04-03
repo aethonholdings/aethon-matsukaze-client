@@ -20,7 +20,9 @@ import { CreateComponent } from './components/create/create.component';
     TranslateModule,
     AppRoutingModule
   ],
-  providers: [ TranslateService ],
+  providers: [
+    TranslateService
+  ],
   exports: [
     AuthComponent
   ]

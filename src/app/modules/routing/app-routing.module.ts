@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ApiService } from 'src/app/services/api/api.service';
 import { ErrorComponent } from '../cms/components/error/error.component';
 import { HomeComponent } from '../cms/components/home/home.component';
 import { LoginComponent } from '../cms/components/login/login.component';
@@ -20,9 +19,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
   ],
-  providers: [
-    ApiService
-  ],
+  providers: [ ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

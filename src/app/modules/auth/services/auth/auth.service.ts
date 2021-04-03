@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { mergeMap, map } from 'rxjs/operators';
 import { User } from 'src/app/model/model';
-import { ApiService } from '../api/api.service';
-import { PersistenceService } from '../persistence/persistence.service';
 import * as apiJson from './auth.endpoints.json'
+import { ApiService } from 'src/app/services/api/api.service';
+import { PersistenceService } from 'src/app/services/persistence/persistence.service';
 
 @Injectable({
   providedIn: 'root'
