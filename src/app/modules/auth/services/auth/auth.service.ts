@@ -40,6 +40,16 @@ export class AuthService {
     );
   }
 
+  public create$(params: any): Observable<User> {
+    if(params?.email && params?.password) {
+      return this.apiService.request$(
+        this._endpoints.actions.auth.create,
+        {email: params.email, password: params.password}
+      )
+    }
+    return null;
+  }
+
   public getUser$(): Observable<User> {
     if(this._user) { return of(this._user) } else { return of(null) };
   }
@@ -47,6 +57,7 @@ export class AuthService {
   public logout$(): Observable<boolean> {
     return this.persistenceService.clear$().pipe(
       map(success => {
+        // should log out at the API?
         if(success) return this.apiService.logout(); else return false;
       })
     );

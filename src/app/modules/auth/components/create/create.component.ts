@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
-import { ApiService } from 'src/app/services/api/api.service';
+import { AuthService } from '../../services/auth/auth.service';
+import { ValidateService } from '../../services/validate/validate.service';
 
 @Component({
   selector: 'matsukaze-create',
@@ -12,19 +12,33 @@ export class CreateComponent implements OnInit {
   email: string;
   password: string;
   verifyPassword: string;
-  error: boolean = false;
+  error: string = null;
   @Output() state = new EventEmitter<string>()
 
-  constructor(
-    private apiService: ApiService,
-    private router: Router
-  ) { }
+  constructor(private validateService: ValidateService, private authService: AuthService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onCreate() {
+    const params: any = {
+      email: this.email,
+      password: this.password,
+      verifyPassword: this.verifyPassword
+    }
+    this.error = this.validateService.validateParams(params)
+    if(!this.error) {
+      this.authService.create$(params).subscribe(response => {
+        console.log(response);
+      })
+    }
   }
-
-  onCreate() {}
 
   onChangeState(state: string) { this.state.emit(state); }
 
+  onPasswordChange() {
+    this.error = this.validateService.comparePasswords({
+      password: this.password,
+      verifyPassword: this.verifyPassword
+    })
+  }
 }

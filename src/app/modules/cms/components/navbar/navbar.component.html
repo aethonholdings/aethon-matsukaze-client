@@ -11,15 +11,15 @@
         <li class="dropdown">
           <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.language' | translate}}</a>
           <div class="dropdown-menu" role="menu">
-            <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('en')" [routerLink]="['/']" [queryParams]="{lang: 'en'}">English</a>
-            <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('el')" [routerLink]="['/']" [queryParams]="{lang: 'el'}">Ελληνικα</a>
+            <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('en')" [routerLink]="['.']" [queryParams]="{lang: 'en'}">English</a>
+            <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('el')" [routerLink]="['.']" [queryParams]="{lang: 'el'}">Ελληνικα</a>
           </div>
         </li>
         <li class="nav-item">
           <a class="nav-link text-shadow" [routerLink]="['/sample']">{{'navbar.sample' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['/order']">{{'navbar.order' | translate}}</a>
+          <a class="nav-link text-shadow" [routerLink]="['/books']">{{'navbar.books' | translate}}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-shadow" [routerLink]="['/contact']">{{'navbar.contact' | translate}}</a>

@@ -7,6 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { AppRoutingModule } from '../routing/app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { CreateComponent } from './components/create/create.component';
+import { ValidateService } from './services/validate/validate.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CreateComponent } from './components/create/create.component';
     AppRoutingModule
   ],
   providers: [
-    TranslateService
+    TranslateService,
+    ValidateService
   ],
   exports: [
     AuthComponent

@@ -2,7 +2,7 @@
   "navbar": {
     "language": "Γλωσσα",
     "sample": "Δειγμα",
-    "order": "Παραγγελια",
+    "books": "Βιβλια",
     "contact": "Επαφη",
     "login": "Login",
     "account": "Λογαριασμος"
@@ -50,13 +50,15 @@
     }
   },
   "auth": {
-    "login": {
-      "email": "Email",
-      "password": "Κωδικός",
-      "login": "Σύνδεση",
-      "create": "Νέος λογαριασμός",
-      "forgot": "Απώλεια κωδικού"
-    },
-    "back": "Επιστροφή"
+    "email": "Email",
+    "password": "Κωδικός",
+    "login": "Σύνδεση",
+    "create": "Δημιουργία λογαριασμού",
+    "forgot": "Νέος κωδικός",
+    "confirmPassword": "Επιβεβαίωση κωδικού",
+    "alreadyHaveAccount": "Έχω ήδη λογαριασμό",
+    "back": "Επιστροφή",
+    "invalidLogin": "Άκυρος συνδιασμός email και κωδικού, δοκιμάστε ξανά.",
+    "privacy": "Δεν θα μοιραστούμε το email σας με κανένα άλλο σύστημα."
   }
 }

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
+import { ValidateService } from '../../services/validate/validate.service';
 
 
 @Component({
@@ -12,27 +13,34 @@ export class LoginComponent implements OnInit {
 
   email: string;
   password: string;
-  error: boolean = false;
+  error: string = null;
   @Output() state = new EventEmitter<string>()
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private validateService: ValidateService
   ) { }
 
   ngOnInit(): void {
   }
 
   onLogin() {
-    this.authService.login$(this.email, this.password).subscribe(response => {
-      if(response) {
-        this.error = false;
-        this.router.navigateByUrl(this.authService.getRedirectUrl());
-      }
-      else {
-        this.error = true;
-      }
-    })
+    this.error = this.validateService.validateParams({
+      email: this.email,
+      password: this.password
+    });
+    if(!this.error) {
+      this.authService.login$(this.email, this.password).subscribe(response => {
+        if(response) {
+          this.error = null;
+          this.router.navigateByUrl(this.authService.getRedirectUrl());
+        }
+        else {
+          this.error = "Error TBD";
+        }
+      })
+    }
   }
 
   onChangeState(state: string) { this.state.emit(state); }

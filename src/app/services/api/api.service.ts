@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map, share } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Act, Beat, DialogueLine, I18nBundle, I18nBundleElement, MatsukazeObjectTypes, Moment, MomentSequence, Scene, SceneSequence, Story, User } from 'src/app/model/model';
 
 @Injectable({
   providedIn: 'root'
@@ -69,6 +70,9 @@ export class ApiService {
         }
         return(response);
       }),
+      map(response => {
+        return this._dtoFactory(response.matsukazeObjectType, response);
+      }),
       share()
     );
   }
@@ -77,5 +81,54 @@ export class ApiService {
     this._token = token;
     this._headers = new HttpHeaders().set('Authorization', "Bearer " + this._token);
     return true;
+  }
+
+  private _dtoFactory(dtoType: MatsukazeObjectTypes, json: any): any {
+    var obj: any;
+    switch(dtoType) {
+      case(MatsukazeObjectTypes.user): {
+        obj = new User(json);
+        break;
+      }
+      case(MatsukazeObjectTypes.story): {
+        obj = new Story(json);
+        break;
+      }
+      case(MatsukazeObjectTypes.act): {
+        obj = new Act(json);
+        break;
+      }
+      case(MatsukazeObjectTypes.sceneSequence): {
+        obj = new SceneSequence(json);
+        break;
+      }
+      case(MatsukazeObjectTypes.scene): {
+        obj = new Scene(json);
+        break;
+      }
+      case(MatsukazeObjectTypes.beat): {
+        obj = new Beat(json);
+        break;
+      }
+      case(MatsukazeObjectTypes.momentSequence): {
+        obj = new MomentSequence(json);
+        break;
+      }
+      case(MatsukazeObjectTypes.moment): {
+        obj = new Moment(json);
+        break;
+      }
+      case(MatsukazeObjectTypes.dialogueLine): {
+        obj = new DialogueLine(json);
+        obj.i18nBundle = new I18nBundle(json.i18nBundle);
+        for(let element in json.i18nBundle.i18nBundleElements) {
+          obj.i18nBundle[element]= new I18nBundleElement(json.i18nBundle.i18nBundleElements[element]);
+        }
+        obj.children$ = null;
+        obj.children = [];
+        break;
+      }
+    }
+    return obj;
   }
 }

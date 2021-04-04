@@ -1,18 +1,35 @@
 <form>
   <div class="form-group">
-    <input [(ngModel)]="email" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{'auth.login.email' | translate}}">
+    <input [(ngModel)]="email"
+        name="email"
+        type="email"
+        class="form-control"
+        id="email"
+        aria-describedby="emailHelp"
+        autocomplete="username"
+        placeholder="{{'auth.email' | translate}}">
   </div>
   <div class="form-group">
-    <input [(ngModel)]="password" type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="{{'auth.login.password' | translate}}">
+    <input [(ngModel)]="password"
+        type="password"
+        name="password"
+        class="form-control"
+        id="password"
+        autocomplete="current-password"
+        placeholder="{{'auth.password' | translate}}">
   </div>
   <div class="form-group">
-    <button class="btn btn-warning" style="width: 100%" (click)="onLogin()">{{'auth.login.login' | translate}}</button>
+    <button class="btn btn-warning"
+        style="width: 100%"
+        (click)="onLogin()">{{'auth.login' | translate}}</button>
   </div>
   <div class="form-group">
-    <button class="btn btn-primary" style="width: 100%" (click)="onChangeState('create')">{{'auth.login.create' | translate}}</button>
+    <button class="btn btn-primary"
+        style="width: 100%"
+        (click)="onChangeState('create')">{{'auth.create' | translate}}</button>
   </div>
+  <div *ngIf="error">{{'auth.invalidLogin' | translate}}</div>
   <div class="account-management">
-    <a href="#">{{'auth.login.forgot' | translate}}</a>
+    <a href="#">{{'auth.forgot' | translate}}</a>
   </div>
-  <div *ngIf="error">Invalid username or password, please try again.</div>
 </form>

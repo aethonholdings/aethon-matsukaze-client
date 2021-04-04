@@ -1,22 +1,43 @@
 <form>
   <div class="form-group">
-    <input [(ngModel)]="email" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{'auth.login.email' | translate}}">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <input [(ngModel)]="email"
+        name="email"
+        type="email"
+        class="form-control"
+        id="email"
+        aria-describedby="emailHelp"
+        autocomplete="username"
+        placeholder="{{'auth.email' | translate}}">
+    <small id="emailHelp" class="form-text text-muted">{{'auth.privacy' | translate}}</small>
   </div>
   <div class="form-group">
-    <input [(ngModel)]="password" type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="{{'auth.login.password' | translate}}">
+    <input [(ngModel)]="password"
+        type="password"
+        name="password"
+        class="form-control"
+        id="password"
+        autocomplete="new-password"
+        (ngModelChange)="onPasswordChange()"
+        placeholder="{{'auth.password' | translate}}">
   </div>
   <div class="form-group">
-    <input [(ngModel)]="verifyPassword" type="password" name="verifyPassword" class="form-control" id="exampleInputPassword1" placeholder="Verify password">
+    <input [(ngModel)]="verifyPassword"
+        type="password"
+        name="verifyPassword"
+        class="form-control"
+        id="verifyPassword"
+        autocomplete="new-password"
+        (ngModelChange)="onPasswordChange()"
+        placeholder="{{'auth.confirmPassword' | translate}}">
   </div>
   <div class="form-group">
-    <button class="btn btn-warning" style="width: 100%" (click)="onCreate()">Create account</button>
+    <button class="btn btn-warning" style="width: 100%" (click)="onCreate()">{{'auth.create' | translate}}</button>
   </div>
   <div class="form-group">
-    <button class="btn btn-primary" style="width: 100%" (click)="onChangeState('login')">I already have an account</button>
+    <button class="btn btn-primary" style="width: 100%" (click)="onChangeState('login')">{{'auth.alreadyHaveAccount' | translate}}</button>
   </div>
   <div class="account-management">
-    <a href="#">{{'auth.login.forgot' | translate}}</a>
+    <a href="#">{{'auth.forgot' | translate}}</a>
   </div>
-  <div *ngIf="error">Invalid username or password, please try again.</div>
+  <div *ngIf="error">{{error | translate}}</div>
 </form>

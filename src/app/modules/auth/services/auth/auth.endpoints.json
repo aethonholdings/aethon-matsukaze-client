@@ -8,7 +8,7 @@
     "auth": {
       "login": {"endpoint": "auth/login", "method": "POST"},
       "logout": {"endpoint": "auth/logout", "method": "POST"},
-      "register": {"endpoint": "auth/register", "method": "POST"},
+      "create": {"endpoint": "user/create", "method": "POST"},
       "test": {"endpoint": "auth/test", "method": "GET"}
     }
   }
