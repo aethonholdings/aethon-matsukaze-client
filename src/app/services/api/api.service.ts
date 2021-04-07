@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map, share } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Act, Beat, DialogueLine, I18nBundle, I18nBundleElement, MatsukazeObjectTypes, Moment, MomentSequence, Scene, SceneSequence, Story, User } from 'src/app/model/model';
+import { Act, Beat, DialogueLine, I18nBundle, I18nBundleElement, MatsukazeError, MatsukazeObjectTypes, Moment, MomentSequence, Scene, SceneSequence, Story, User } from 'src/app/model/model';
 
 @Injectable({
   providedIn: 'root'
@@ -86,6 +86,10 @@ export class ApiService {
   private _dtoFactory(dtoType: MatsukazeObjectTypes, json: any): any {
     var obj: any;
     switch(dtoType) {
+      case(MatsukazeObjectTypes.error): {
+        obj = new MatsukazeError(json);
+        break;
+      }
       case(MatsukazeObjectTypes.user): {
         obj = new User(json);
         break;

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MatsukazeObjectTypes } from 'src/app/model/model';
 import { AuthService } from '../../services/auth/auth.service';
 import { ValidateService } from '../../services/validate/validate.service';
 
@@ -27,8 +28,12 @@ export class CreateComponent implements OnInit {
     }
     this.error = this.validateService.validateParams(params)
     if(!this.error) {
-      this.authService.create$(params).subscribe(response => {
-        console.log(response);
+      this.authService.create$(params).subscribe(obj => {
+        if(obj.matsukazeObjectType==MatsukazeObjectTypes.error) {
+          this.error = obj.type;
+        } else {
+          console.log("SUCCESS")
+        }
       })
     }
   }

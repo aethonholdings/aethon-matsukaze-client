@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { mergeMap, map } from 'rxjs/operators';
-import { User } from 'src/app/model/model';
+import { MatsukazeError, User } from 'src/app/model/model';
 import * as apiJson from './auth.endpoints.json'
 import { ApiService } from 'src/app/services/api/api.service';
 import { PersistenceService } from 'src/app/services/persistence/persistence.service';
@@ -40,7 +40,7 @@ export class AuthService {
     );
   }
 
-  public create$(params: any): Observable<User> {
+  public create$(params: any): Observable<any> {
     if(params?.email && params?.password) {
       return this.apiService.request$(
         this._endpoints.actions.auth.create,

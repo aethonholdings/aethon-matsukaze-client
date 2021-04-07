@@ -160,16 +160,17 @@ export class Publication extends MatsukazeObject {
   constructor(params: any) { super(params); }
 }
 
-export class Error extends MatsukazeObject {
+export class MatsukazeError extends MatsukazeObject {
   id: number;
   type: string;
   data: string;
+  matsukazeObjectType: MatsukazeObjectTypes = MatsukazeObjectTypes.error;
 
   constructor(params: any) {
     super(params);
     this.id = params.id;
     this.type = params.type;
-    this.data = params.data;
+    this.data = params?.data;
   }
 }
 
