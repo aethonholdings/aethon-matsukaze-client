@@ -71,7 +71,7 @@ export class ApiService {
         return(response);
       }),
       map(response => {
-        return this._dtoFactory(response.matsukazeObjectType, response);
+        return this._dtoFactory(response?.matsukazeObjectType, response);
       }),
       share()
     );
@@ -84,7 +84,7 @@ export class ApiService {
   }
 
   private _dtoFactory(dtoType: MatsukazeObjectTypes, json: any): any {
-    var obj: any;
+    var obj: any = null;
     switch(dtoType) {
       case(MatsukazeObjectTypes.error): {
         obj = new MatsukazeError(json);

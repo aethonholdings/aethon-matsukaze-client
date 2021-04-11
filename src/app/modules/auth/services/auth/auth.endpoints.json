@@ -8,8 +8,8 @@
     "auth": {
       "login": {"endpoint": "auth/login", "method": "POST"},
       "logout": {"endpoint": "auth/logout", "method": "POST"},
-      "create": {"endpoint": "user/create", "method": "POST"},
-      "test": {"endpoint": "auth/test", "method": "GET"}
+      "register": {"endpoint": "user/register", "method": "POST"},
+      "confirm": {"endpoint": "user/confirm", "method": "GET"}
     }
   }
 }

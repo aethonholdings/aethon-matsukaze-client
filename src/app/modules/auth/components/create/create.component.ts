@@ -28,7 +28,7 @@ export class CreateComponent implements OnInit {
     }
     this.error = this.validateService.validateParams(params)
     if(!this.error) {
-      this.authService.create$(params).subscribe(obj => {
+      this.authService.register$(params).subscribe(obj => {
         if(obj.matsukazeObjectType==MatsukazeObjectTypes.error) {
           this.error = obj.type;
         } else {

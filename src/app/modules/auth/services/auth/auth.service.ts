@@ -40,14 +40,31 @@ export class AuthService {
     );
   }
 
-  public create$(params: any): Observable<any> {
+  public confirmUser$(user: User): Observable<User> {
+    const endpoint: any = this._endpoints.actions.auth.login;
+    this._setUser(user);
+    return this.persistenceService.store$(endpoint, this._user).pipe(
+      map(()=>{
+        return this._user;
+      })
+    );
+  }
+
+  public register$(params: any): Observable<any> {
     if(params?.email && params?.password) {
       return this.apiService.request$(
-        this._endpoints.actions.auth.create,
+        this._endpoints.actions.auth.register,
         {email: params.email, password: params.password}
       )
     }
-    return null;
+    return of(null);
+  }
+
+  public confirm$(params: any): Observable<any> {
+    if(params?.email && params?.activationCode) {
+      return this.apiService.request$(this._endpoints.actions.auth.confirm, params)
+    }
+    return of(null);
   }
 
   public getUser$(): Observable<User> {
