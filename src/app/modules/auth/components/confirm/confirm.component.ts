@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
-import { map } from 'rxjs/operators';
+import { of } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
+import { MatsukazeObjectTypes } from 'src/app/model/model';
 import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
@@ -12,6 +14,7 @@ export class ConfirmComponent implements OnInit {
 
   activationCode: string;
   email: string;
+  error: string;
 
   constructor(private route: ActivatedRoute, private authService: AuthService) {}
 
@@ -22,8 +25,13 @@ export class ConfirmComponent implements OnInit {
       email: this.email,
       activationCode: this.activationCode
     }).pipe(
-      map(user => {
-        console.log(user);
+      mergeMap(obj => {
+        if(obj.matsukazeObjectType==MatsukazeObjectTypes.user) {
+          return this.authService.loginFromConfirm$(obj);
+        } else {
+          this.error = obj.type;
+          return of(null);
+        }
       })
     ).subscribe();
   }

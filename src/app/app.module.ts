@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 import { AppRoutingModule } from './modules/routing/app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -12,6 +13,7 @@ import { ViewerModule } from './modules/viewer/viewer.module';
 import { PersistenceService } from './services/persistence/persistence.service';
 import { ApiService } from './services/api/api.service';
 import { FilesystemService } from './services/filesystem/filesystem.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -28,6 +30,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AuthModule,
     CmsModule,
     ViewerModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
@@ -40,7 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     ApiService,
     PersistenceService,
-    FilesystemService 
+    FilesystemService
   ],
   bootstrap: [ AppComponent ]
 })

@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgxSpinnerService } from "ngx-spinner";
+import { tap } from 'rxjs/operators';
 import { MatsukazeObjectTypes } from 'src/app/model/model';
 import { AuthService } from '../../services/auth/auth.service';
 import { ValidateService } from '../../services/validate/validate.service';
@@ -10,13 +12,17 @@ import { ValidateService } from '../../services/validate/validate.service';
 })
 export class CreateComponent implements OnInit {
 
+  @Output() state = new EventEmitter<string>()
   email: string;
   password: string;
   verifyPassword: string;
   error: string = null;
-  @Output() state = new EventEmitter<string>()
 
-  constructor(private validateService: ValidateService, private authService: AuthService) {}
+  constructor(
+    private validateService: ValidateService,
+    private authService: AuthService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -28,12 +34,14 @@ export class CreateComponent implements OnInit {
     }
     this.error = this.validateService.validateParams(params)
     if(!this.error) {
+      this.spinner.show();
       this.authService.register$(params).subscribe(obj => {
         if(obj.matsukazeObjectType==MatsukazeObjectTypes.error) {
           this.error = obj.type;
         } else {
-          console.log("SUCCESS")
+          this.state.emit("email");
         }
+        this.spinner.hide();
       })
     }
   }
