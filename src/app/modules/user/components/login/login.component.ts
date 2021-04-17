@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth/auth.service';
+import { UserService } from '../../services/user/user.service';
 import { ValidateService } from '../../services/validate/validate.service';
 
 
@@ -17,19 +17,16 @@ export class LoginComponent implements OnInit {
   @Output() state = new EventEmitter<string>()
 
   constructor(
-    private authService: AuthService,
+    private authService: UserService,
     private router: Router,
     private validateService: ValidateService
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onLogin() {
-    this.error = this.validateService.validateParams({
-      email: this.email,
-      password: this.password
-    });
+    const params = { email: this.email, password: this.password }
+    this.error = this.validateService.validateParams(params);
     if(!this.error) {
       this.authService.login$(this.email, this.password).subscribe(response => {
         if(response) {

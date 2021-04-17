@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/modules/auth/services/auth/auth.service';
+import { UserService } from 'src/app/modules/user/services/user/user.service';
 
 @Component({
   selector: 'matsukaze-viewer',
@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/modules/auth/services/auth/auth.service';
 })
 export class ViewerComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: UserService) { }
 
   ngOnInit(): void {
   }

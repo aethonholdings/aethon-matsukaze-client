@@ -2,25 +2,25 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component';
+import { AuthComponent } from './components/auth/auth.component';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { AppRoutingModule } from '../routing/app-routing.module';
-import { AuthModule } from '../auth/auth.module';
+import { UserModule } from '../user/user.module';
 import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     NavbarComponent,
-    LoginComponent,
+    AuthComponent,
     ErrorComponent
   ],
   imports: [
     CommonModule,
     TranslateModule,
     AppRoutingModule,
-    AuthModule
+    UserModule
    ],
   providers: [ TranslateService ],
   exports: [ HomeComponent ]

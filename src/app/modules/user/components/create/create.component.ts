@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from "ngx-spinner";
-import { tap } from 'rxjs/operators';
 import { MatsukazeObjectTypes } from 'src/app/model/model';
-import { AuthService } from '../../services/auth/auth.service';
+import { UserService } from '../../services/user/user.service';
 import { ValidateService } from '../../services/validate/validate.service';
 
 @Component({
@@ -20,8 +20,9 @@ export class CreateComponent implements OnInit {
 
   constructor(
     private validateService: ValidateService,
-    private authService: AuthService,
-    private spinner: NgxSpinnerService
+    private authService: UserService,
+    private spinner: NgxSpinnerService,
+    private translateService: TranslateService
   ) {}
 
   ngOnInit(): void {}
@@ -30,7 +31,8 @@ export class CreateComponent implements OnInit {
     const params: any = {
       email: this.email,
       password: this.password,
-      verifyPassword: this.verifyPassword
+      verifyPassword: this.verifyPassword,
+      lang: this.translateService.currentLang
     }
     this.error = this.validateService.validateParams(params)
     if(!this.error) {
@@ -48,10 +50,4 @@ export class CreateComponent implements OnInit {
 
   onChangeState(state: string) { this.state.emit(state); }
 
-  onPasswordChange() {
-    this.error = this.validateService.comparePasswords({
-      password: this.password,
-      verifyPassword: this.verifyPassword
-    })
-  }
 }

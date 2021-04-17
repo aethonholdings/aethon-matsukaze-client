@@ -3,7 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 import { of } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 import { MatsukazeObjectTypes } from 'src/app/model/model';
-import { AuthService } from '../../services/auth/auth.service';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'matsukaze-confirm',
@@ -16,7 +16,7 @@ export class ConfirmComponent implements OnInit {
   email: string;
   error: string;
 
-  constructor(private route: ActivatedRoute, private authService: AuthService) {}
+  constructor(private route: ActivatedRoute, private authService: UserService) {}
 
   ngOnInit(): void {
     this.activationCode = this.route.snapshot.queryParamMap.get("code");

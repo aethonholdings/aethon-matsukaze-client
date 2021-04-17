@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { mergeMap, map } from 'rxjs/operators';
-import { MatsukazeError, User } from 'src/app/model/model';
-import * as apiJson from './auth.endpoints.json'
+import { User } from 'src/app/model/model';
+import * as apiJson from './user.endpoints.json'
 import { ApiService } from 'src/app/services/api/api.service';
 import { PersistenceService } from 'src/app/services/persistence/persistence.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class UserService {
 
   private _user: User = null;
   private _verbose: boolean = true;
@@ -59,7 +59,7 @@ export class AuthService {
     if(params?.email && params?.password) {
       return this.apiService.request$(
         this._endpoints.actions.auth.register,
-        {email: params.email, password: params.password}
+        {email: params.email, password: params.password, lang: params.lang}
       )
     }
     return of(null);

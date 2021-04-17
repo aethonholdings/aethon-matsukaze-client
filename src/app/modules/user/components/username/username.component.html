@@ -1,0 +1,11 @@
+<div class="form-group">
+  <input [(ngModel)]="email"
+      (ngModelChange)="onChange($event)"
+      name="email"
+      type="email"
+      class="form-control"
+      id="email"
+      aria-describedby="emailHelp"
+      autocomplete="username"
+      placeholder="{{'auth.email' | translate}}">
+</div>

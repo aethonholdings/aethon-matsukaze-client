@@ -8,7 +8,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { AppRoutingModule } from './modules/routing/app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { CmsModule } from './modules/cms/cms.module';
-import { AuthModule } from './modules/auth/auth.module';
+import { UserModule } from './modules/user/user.module';
 import { ViewerModule } from './modules/viewer/viewer.module';
 import { PersistenceService } from './services/persistence/persistence.service';
 import { ApiService } from './services/api/api.service';
@@ -27,7 +27,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    AuthModule,
+    UserModule,
     CmsModule,
     ViewerModule,
     NgxSpinnerModule,

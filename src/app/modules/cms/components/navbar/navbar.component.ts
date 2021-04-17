@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from 'src/app/model/model';
-import { AuthService } from 'src/app/modules/auth/services/auth/auth.service';
+import { UserService } from 'src/app/modules/user/services/user/user.service';
 
 @Component({
   selector: 'matsukaze-navbar',
@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private translate: TranslateService,
-    private authService: AuthService
+    private authService: UserService
   ) { }
 
   ngOnInit(): void {
