@@ -1,0 +1,19 @@
+<ngx-spinner></ngx-spinner>
+<form>
+  <div class="form-group">
+    <h3>{{'auth.labels.reset' | translate}}</h3>
+  </div>
+
+  <matsukaze-password-checker></matsukaze-password-checker>
+
+  <div class="form-group">
+    <button class="btn btn-warning"
+        type="submit"
+        style="width: 100%">{{'auth.buttons.reset' | translate}}</button>
+  </div>
+
+  <div class="form-group">
+    <div *ngIf="error"><small class="form-text">{{error | translate}}</small></div>
+  </div>
+
+</form>

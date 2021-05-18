@@ -50,16 +50,31 @@
     }
   },
   "auth": {
-    "email": "Email",
-    "password": "Password",
-    "login": "Login",
-    "create": "Create account",
-    "forgot": "Forgot password",
-    "confirmPassword": "Confirm password",
-    "create": "Create account",
-    "alreadyHaveAccount": "I already have an account",
-    "back": "Back",
-    "invalidLogin": "Invalid username or password, please try again.",
-    "privacy": "We'll never share your email with anyone else."
+    "labels": {
+      "login": "Login",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "privacy": "We'll never share your email with anyone else",
+      "passwordSpec": "Your password should be 8-11 characters long",
+      "reset": "Please enter your email to request a password reset",
+      "checkEmail": "Please check your email and click on the confirmation link we have just sent you.",
+      "createComplete": "Thank you for creating an account with us. You may now log in."
+    },
+    "error": {
+      "invalidLogin": "Invalid username or password, please try again",
+      "invalidEmail": "Invalid email address format",
+      "length": "Password too short",
+      "noMatch": "Passwords do not match"
+    },
+    "buttons": {
+      "back": "Back",
+      "alreadyHaveAccount": "I already have an account",
+      "login": "Login",
+      "create": "Create account",
+      "forgot": "Forgot password",
+      "submit": "Submit",
+      "reset": "Reset"
+    }
   }
 }

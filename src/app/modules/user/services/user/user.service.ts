@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { mergeMap, map } from 'rxjs/operators';
-import { User } from 'src/app/model/model';
+import { mergeMap, map, tap } from 'rxjs/operators';
+import { MatsukazeObjectTypes, User } from 'src/app/model/model';
 import * as apiJson from './user.endpoints.json'
 import { ApiService } from 'src/app/services/api/api.service';
 import { PersistenceService } from 'src/app/services/persistence/persistence.service';
@@ -29,20 +29,25 @@ export class UserService {
   public login$(email: string, password: string): Observable<User> {
     const endpoint: any = this._endpoints.actions.auth.login;
     return this.apiService.request$(endpoint, {email: email, password: password}).pipe(
-      mergeMap(data => {
-        if(data) {
-          this._setUser(data);
-          return this.persistenceService.store$(endpoint, this._user);
-        }
-        else return of(null);
+      map(matsukazeObject => {
+        if(matsukazeObject?.matsukazeObjectType===MatsukazeObjectTypes.user) this._setUser(matsukazeObject);
+        return matsukazeObject;
       }),
-      map(() => { return this._user })
+      tap(() => {if(this._user) this.persistenceService.store$(endpoint, this._user).subscribe()})
     );
   }
 
   public confirm$(params: any): Observable<any> {
     if(params?.email && params?.activationCode) {
-      return this.apiService.request$(this._endpoints.actions.auth.confirm, params)
+      return this.apiService.request$(this._endpoints.actions.auth.confirm, params).pipe(
+        mergeMap(obj => {
+          if(obj.matsukazeObjectType===MatsukazeObjectTypes.user) {
+            return this.loginFromConfirm$(obj);
+          } else {
+            return of(obj);
+          }
+        })
+      )
     }
     return of(null);
   }
@@ -59,7 +64,7 @@ export class UserService {
     if(params?.email && params?.password) {
       return this.apiService.request$(
         this._endpoints.actions.auth.register,
-        {email: params.email, password: params.password, lang: params.lang}
+        { email: params.email, password: params.password, lang: params.lang }
       )
     }
     return of(null);
@@ -67,6 +72,14 @@ export class UserService {
 
   public getUser$(): Observable<User> {
     if(this._user) { return of(this._user) } else { return of(null) };
+  }
+
+  public requestPasswordReset$(email: string, lang?: string): Observable<any> {
+    if(email) return this.apiService.request$(
+      this._endpoints.actions.auth.requestReset,
+      { email: email, lang: lang }
+    )
+    return of(null);
   }
 
   public logout$(): Observable<boolean> {

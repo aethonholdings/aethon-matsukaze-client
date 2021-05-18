@@ -14,7 +14,8 @@ const routes: Routes = [
     { path: "forgot", component: AuthComponent },
     { path: "create", component: AuthComponent },
     { path: "confirm", component: AuthComponent },
-    { path: "email", component: AuthComponent },
+    { path: "reset", component: AuthComponent },
+    { path: "checkEmail", component: AuthComponent },
     { path: "**", component: ErrorComponent }
   ]},
   { path: '**', component: ErrorComponent }

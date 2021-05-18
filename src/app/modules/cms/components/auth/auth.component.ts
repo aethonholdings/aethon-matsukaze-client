@@ -10,7 +10,10 @@ export class AuthComponent implements OnInit {
 
   state: string = "login";
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     if(this.route.snapshot.url[0]?.path) {
@@ -19,7 +22,7 @@ export class AuthComponent implements OnInit {
   }
 
   onChangeState($event: any) {
-    this.router.navigate(['auth', $event], { queryParamsHandling: "preserve"});
+    this.router.navigate(['auth', $event], { queryParamsHandling: "preserve" });
   }
 
 }

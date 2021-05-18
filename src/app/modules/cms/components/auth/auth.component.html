@@ -4,12 +4,13 @@
 <!-- auth -->
 <div class="auth">
   <div class="form">
-    <div class="logo">
-      <img src="/assets/img/aethon/logo.jpg" />
-    </div>
     <matsukaze-login *ngIf="state=='login'" (state)="onChangeState($event)"></matsukaze-login>
     <matsukaze-create *ngIf="state=='create'" (state)="onChangeState($event)"></matsukaze-create>
     <matsukaze-forgot *ngIf="state=='forgot'" (state)="onChangeState($event)"></matsukaze-forgot>
     <matsukaze-confirm *ngIf="state=='confirm'" (state)="onChangeState($event)"></matsukaze-confirm>
+    <matsukaze-reset *ngIf="state=='reset'" (state)="onChangeState($event)"></matsukaze-reset>
+    <div *ngIf="state=='checkEmail'">
+      <div class="form-group">{{'auth.labels.checkEmail' | translate}}</div>
+    </div>
   </div>
 </div>

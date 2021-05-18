@@ -13,6 +13,7 @@ import { PasswordCheckerComponent } from './components/password-checker/password
 import { UsernameComponent } from './components/username/username.component';
 import { PasswordComponent } from './components/password/password.component';
 import { ForgotComponent } from './components/forgot/forgot.component';
+import { ResetComponent } from './components/reset/reset.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ForgotComponent } from './components/forgot/forgot.component';
     PasswordCheckerComponent,
     UsernameComponent,
     PasswordComponent,
-    ForgotComponent
+    ForgotComponent,
+    ResetComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { ForgotComponent } from './components/forgot/forgot.component';
     LoginComponent,
     ConfirmComponent,
     CreateComponent,
-    ForgotComponent
+    ForgotComponent,
+    ResetComponent
   ]
 })
 export class UserModule { }

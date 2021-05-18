@@ -41,7 +41,7 @@ export class CreateComponent implements OnInit {
         if(obj.matsukazeObjectType==MatsukazeObjectTypes.error) {
           this.error = obj.type;
         } else {
-          this.state.emit("email");
+          this.state.emit("checkEmail");
         }
         this.spinner.hide();
       })

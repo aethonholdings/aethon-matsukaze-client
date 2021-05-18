@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { UserService } from '../../services/user/user.service';
 import { ValidateService } from '../../services/validate/validate.service';
 
@@ -17,27 +18,29 @@ export class LoginComponent implements OnInit {
   @Output() state = new EventEmitter<string>()
 
   constructor(
-    private authService: UserService,
+    private userService: UserService,
     private router: Router,
-    private validateService: ValidateService
+    private validateService: ValidateService,
+    private spinner: NgxSpinnerService,
   ) { }
 
   ngOnInit(): void {}
 
   onLogin() {
+    this.spinner.show();
     const params = { email: this.email, password: this.password }
     this.error = this.validateService.validateParams(params);
     if(!this.error) {
-      this.authService.login$(this.email, this.password).subscribe(response => {
+      this.userService.login$(this.email, this.password).subscribe(response => {
         if(response) {
-          this.error = null;
-          this.router.navigateByUrl(this.authService.getRedirectUrl());
+          this.router.navigateByUrl(this.userService.getRedirectUrl());
         }
         else {
-          this.error = "Error TBD";
+          this.error = "auth.error.invalidLogin";
         }
       })
     }
+    this.spinner.hide();
   }
 
   onChangeState(state: string) { this.state.emit(state); }

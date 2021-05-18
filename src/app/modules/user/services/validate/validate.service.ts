@@ -20,6 +20,12 @@ export class ValidateService {
       if(params.password != params.verifyPassword) return "auth.error.noMatch";
       if(params.password.length<8) return "auth.error.length";
     }
-    return null
+    return null;
+  }
+
+  public validateEmail(email: string): string {
+    var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    if(re.test(email)) return null;
+    return "auth.error.invalidEmail";
   }
 }

@@ -9,6 +9,7 @@
       "login": {"endpoint": "auth/login", "method": "POST"},
       "logout": {"endpoint": "auth/logout", "method": "POST"},
       "register": {"endpoint": "user/register", "method": "POST"},
+      "requestReset": {"endpoint": "user/requestReset", "method": "POST"},
       "confirm": {"endpoint": "user/confirm", "method": "GET"}
     }
   }
