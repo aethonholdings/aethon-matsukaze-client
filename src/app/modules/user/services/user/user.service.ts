@@ -78,7 +78,17 @@ export class UserService {
     if(email) return this.apiService.request$(
       this._endpoints.actions.auth.requestReset,
       { email: email, lang: lang }
-    )
+    );
+    return of(null);
+  }
+
+  public resetPassword$(email: string, password: string, code: string): Observable<any> {
+    if(email && password && code) {
+      return this.apiService.request$(
+        this._endpoints.actions.auth.reset,
+        {email: email, password: password, code: code}
+      );
+    }
     return of(null);
   }
 

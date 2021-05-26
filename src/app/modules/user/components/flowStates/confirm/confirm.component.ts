@@ -11,7 +11,6 @@ import { UserService } from '../../../services/user/user.service';
 export class ConfirmComponent implements OnInit {
 
   @Output() state = new EventEmitter<string>()
-  @Input() successMessage: string;
   activationCode: string;
   email: string;
   error: string;

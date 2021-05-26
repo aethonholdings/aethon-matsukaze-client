@@ -19,7 +19,8 @@ export class FlowComponent implements OnInit {
     "00000111": {flow: "register", state: "confirm"},
     "00100000": {flow: "reset", state: "forgot"},
     "00110000": {flow: "reset", state: "checkEmail"},
-    "00111000": {flow: "reset", state: "reset"}
+    "00111000": {flow: "reset", state: "reset"},
+    "00111100": {flow: "reset", state: "confirm"}
   }
 
   constructor(

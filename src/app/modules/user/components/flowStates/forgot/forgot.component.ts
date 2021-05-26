@@ -21,11 +21,13 @@ export class ForgotComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.authService.requestPasswordReset$(
-      this.email,
-      this.translateService.currentLang).subscribe(result => {
-        this.state.emit({flow:"reset",state:"checkEmail"});
-      });
+    if(this.email) {
+      this.authService.requestPasswordReset$(
+        this.email,
+        this.translateService.currentLang).subscribe(result => {
+          this.state.emit({flow:"reset",state:"checkEmail"});
+        });
+    }
   }
 
   onChangeState(state: any) { this.state.emit(state); }

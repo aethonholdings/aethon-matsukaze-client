@@ -5,9 +5,17 @@
   <matsukaze-forgot *ngIf="state=='forgot'" (state)="onChangeState($event)"></matsukaze-forgot>
   <div *ngIf="state=='checkEmail'" class="form-group">{{'auth.flows.reset.checkEmail.labels.checkEmail' | translate}}</div>
   <matsukaze-reset *ngIf="state=='reset'" (state)="onChangeState($event)"></matsukaze-reset>
+  <div *ngIf="state=='confirm'">
+    <div class="form-group">
+      {{'auth.flows.reset.confirm.labels.resetComplete' | translate}}
+    </div>
+    <div class="form-group">
+      <button class="btn btn-warning" type="button" style="width: 100%" (click)="onChangeState({flow:'login',state:'form'})">{{'auth.flows.register.confirm.labels.login' | translate}}</button>
+    </div>
+  </div>
 </div>
 <div *ngIf="flow=='register'">
   <matsukaze-create *ngIf="state=='form'" (state)="onChangeState($event)"></matsukaze-create>
   <div *ngIf="state=='checkEmail'" class="form-group">{{'auth.flows.register.checkEmail.labels.checkEmail' | translate}}</div>
-  <matsukaze-confirm *ngIf="state=='confirm'" (state)="onChangeState($event)" [successMessage]='"auth.flows.register.confirm.labels.createComplete"'></matsukaze-confirm>
+  <matsukaze-confirm *ngIf="state=='confirm'" (state)="onChangeState($event)"></matsukaze-confirm>
 </div>

@@ -100,7 +100,9 @@
           "error": {}
         },
         "checkEmail": {
-          "labels": {},
+          "labels": {
+            "checkEmail": "Please check your email and click on the link that we have sent you."
+          },
           "error": {}
         },
         "reset": {
@@ -109,6 +111,11 @@
             "submit": "Submit"
           },
           "error": {}
+        },
+        "confirm": {
+          "labels": {
+            "resetComplete": "You have changed your password.  You can now log in."
+          }
         }
       }
     },
