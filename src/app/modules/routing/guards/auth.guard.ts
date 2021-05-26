@@ -17,7 +17,6 @@ export class AuthGuard implements CanActivate {
     const url: string = state.url;
     return this.authService.getUser$().pipe(
       map(user => {
-        console.log(route.queryParams);
         if(user) {
           return true;
         } else {

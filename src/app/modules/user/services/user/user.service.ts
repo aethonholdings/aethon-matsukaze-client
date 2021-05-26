@@ -5,6 +5,7 @@ import { MatsukazeObjectTypes, User } from 'src/app/model/model';
 import * as apiJson from './user.endpoints.json'
 import { ApiService } from 'src/app/services/api/api.service';
 import { PersistenceService } from 'src/app/services/persistence/persistence.service';
+import { environment } from '../../../../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +13,13 @@ import { PersistenceService } from 'src/app/services/persistence/persistence.ser
 export class UserService {
 
   private _user: User = null;
-  private _verbose: boolean = true;
-  private _env: string = "dev";
+  private _verbose: boolean = environment.verbose;
+  private _root: string = environment.apiRoot;
   private _redirectUrl: string;
   private _endpoints: any = apiJson["default"];
 
   constructor(private apiService: ApiService, private persistenceService: PersistenceService) {
-    let root: string = this._endpoints.root[this._env];
-    this.apiService.initialise(root, this._verbose);
+    this.apiService.initialise(this._root, this._verbose);
     this.persistenceService.initialise(this._verbose);
     this.persistenceService.retrieve$(this._endpoints.actions.auth.login).subscribe(cacheable => {
       if(cacheable) this._setUser(cacheable.object);
