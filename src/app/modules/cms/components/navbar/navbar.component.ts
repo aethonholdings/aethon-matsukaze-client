@@ -23,9 +23,14 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.translate.setDefaultLang('en');
     this.activatedRoute.queryParamMap.subscribe(queryParamMap => {
-      this.lang = queryParamMap?.get("lang");
-      if(this.lang) this.translate.use(this.lang); else this.lang = "en"
+      if(queryParamMap?.get("lang")) {
+        this.lang = queryParamMap?.get("lang");
+      } else {
+        this.lang = this.translate.getBrowserLang()
+      }
+      this.translate.use(this.lang); ;
     });
     this.authService.getUser$().subscribe(user => { this.user = user });
   }

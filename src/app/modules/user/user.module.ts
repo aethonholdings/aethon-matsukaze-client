@@ -14,6 +14,7 @@ import { ConfirmComponent } from './components/flowStates/confirm/confirm.compon
 import { PasswordCheckerComponent } from './components/widgets/password-checker/password-checker.component';
 import { UsernameComponent } from './components/widgets/username/username.component';
 import { PasswordComponent } from './components/widgets/password/password.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -27,7 +28,8 @@ import { PasswordComponent } from './components/widgets/password/password.compon
     PasswordComponent,
     ForgotComponent,
     ResetComponent,
-    FlowComponent
+    FlowComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,8 @@ import { PasswordComponent } from './components/widgets/password/password.compon
   ],
   providers: [],
   exports: [
-    FlowComponent
+    FlowComponent,
+    HomeComponent
   ]
 })
 export class UserModule { }

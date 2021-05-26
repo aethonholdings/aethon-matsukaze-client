@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.spinner.show();
     const params = { email: this.email, password: this.password }
-    console.log(params);
     this.error = this.validateParams();
     if(!this.error) {
       this.userService.login$(this.email, this.password).subscribe(response => {

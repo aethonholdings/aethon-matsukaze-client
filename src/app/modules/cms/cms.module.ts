@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './components/home/home.component';
+import { RootComponent } from './components/root/root.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { TranslateService } from '@ngx-translate/core';
@@ -11,7 +11,7 @@ import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    RootComponent,
     NavbarComponent,
     AuthComponent,
     ErrorComponent
@@ -23,6 +23,6 @@ import { ErrorComponent } from './components/error/error.component';
     UserModule
    ],
   providers: [ TranslateService ],
-  exports: [ HomeComponent ]
+  exports: [ RootComponent ]
 })
 export class CmsModule { }

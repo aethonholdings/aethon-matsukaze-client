@@ -17,11 +17,15 @@ export class AuthGuard implements CanActivate {
     const url: string = state.url;
     return this.authService.getUser$().pipe(
       map(user => {
+        console.log(route.queryParams);
         if(user) {
           return true;
         } else {
           this.authService.setRedirectUrl(url);
-          return this.router.parseUrl('/auth');
+          return this.router.createUrlTree(
+            ['auth'],
+            {queryParams: {lang: route.queryParams?.lang}}
+          )
         }
       })
     )

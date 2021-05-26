@@ -13,8 +13,4 @@ export class ViewerComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onLogout(): void {
-    this.authService.logout$().subscribe();
-  }
-
 }

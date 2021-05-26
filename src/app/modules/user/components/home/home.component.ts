@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'matsukaze-home',
@@ -7,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  team: string[] = ['konstantinos', 'kallia', 'avgi', 'dennis'];
-
-  constructor() {
-
-  }
+  constructor(
+    private authService: UserService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  onLogout(): void {
+    this.authService.logout$().subscribe();
   }
 
 }
