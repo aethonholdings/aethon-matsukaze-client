@@ -11,7 +11,6 @@ import { CreateComponent } from './components/flowStates/create/create.component
 import { ForgotComponent } from './components/flowStates/forgot/forgot.component';
 import { ResetComponent } from './components/flowStates/reset/reset.component';
 import { ConfirmComponent } from './components/flowStates/confirm/confirm.component';
-import { ValidateService } from './services/validate/validate.service';
 import { PasswordCheckerComponent } from './components/widgets/password-checker/password-checker.component';
 import { UsernameComponent } from './components/widgets/username/username.component';
 import { PasswordComponent } from './components/widgets/password/password.component';
@@ -37,9 +36,7 @@ import { PasswordComponent } from './components/widgets/password/password.compon
     AppRoutingModule,
     NgxSpinnerModule
   ],
-  providers: [
-    ValidateService
-  ],
+  providers: [],
   exports: [
     FlowComponent
   ]

@@ -1,9 +1,9 @@
 <div *ngIf="!error">
   <div class="form-group">
-    {{'auth.labels.createComplete' | translate}}
+    {{successMessage | translate}}
   </div>
   <div class="form-group">
-    <button class="btn btn-warning" type="button" style="width: 100%" (click)="onChangeState({flow:'login',state:'form'})">{{'auth.buttons.login' | translate}}</button>
+    <button class="btn btn-warning" type="button" style="width: 100%" (click)="onChangeState({flow:'login',state:'form'})">{{'auth.flows.register.confirm.labels.login' | translate}}</button>
   </div>
 </div>
 <div *ngIf="error">{{error}}</div>

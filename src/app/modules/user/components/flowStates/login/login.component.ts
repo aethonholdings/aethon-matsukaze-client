@@ -2,8 +2,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { UserService } from '../../../services/user/user.service';
-import { ValidateService } from '../../../services/validate/validate.service';
-
 
 @Component({
   selector: 'matsukaze-login',
@@ -20,8 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router,
-    private validateService: ValidateService,
-    private spinner: NgxSpinnerService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {}
@@ -29,6 +26,7 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.spinner.show();
     const params = { email: this.email, password: this.password }
+    console.log(params);
     this.error = this.validateParams();
     if(!this.error) {
       this.userService.login$(this.email, this.password).subscribe(response => {
@@ -37,6 +35,7 @@ export class LoginComponent implements OnInit {
         }
         else {
           this.error = "auth.flows.login.form.errors.invalidLogin";
+          this.password = null;
         }
       })
     }

@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ValidateService } from '../../../services/validate/validate.service';
 
 @Component({
   selector: 'matsukaze-password-checker',
@@ -9,22 +8,40 @@ import { ValidateService } from '../../../services/validate/validate.service';
 export class PasswordCheckerComponent implements OnInit {
 
   @Input() password: string;
-  verifyPassword: string;
-  error: string;
+  passwordTxtBox: string;
+  verifyPasswordTxtBox: string;
+  passwordError: string;
+  verifyPasswordError: string;
 
   @Output() passwordChange = new EventEmitter<string>()
 
-  constructor(private validateService: ValidateService) { }
+  constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  onPasswordFocusOut(): void {
+    if(this.passwordTxtBox && this.passwordTxtBox.length<8) {
+      this.passwordError = "auth.widgets.password-checker.error.length";
+    } else {
+      this.passwordError = null;
+    }
+    this.emit();
   }
 
-  onPasswordChange() {
-    this.error = this.validateService.comparePasswords({
-      password: this.password,
-      verifyPassword: this.verifyPassword
-    })
-    if(!this.error) this.passwordChange.emit(this.password);
+  onVerifyPasswordChange(): void {
+    if(this.passwordTxtBox && this.verifyPasswordTxtBox && this.passwordTxtBox!=this.verifyPasswordTxtBox) {
+      this.verifyPasswordError = "auth.widgets.password-checker.error.noMatch";
+    } else {
+      this.verifyPasswordError = null;
+    }
+    this.emit();
   }
 
+  emit(): void {
+    if(this.passwordTxtBox && this.verifyPasswordTxtBox && !this.passwordError && !this.verifyPasswordError) {
+      this.passwordChange.emit(this.passwordTxtBox);
+    } else {
+      this.passwordChange.emit(null);
+    };
+  }
 }

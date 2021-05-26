@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { MatsukazeObjectTypes } from 'src/app/model/model';
 import { UserService } from '../../../services/user/user.service';
@@ -11,6 +11,7 @@ import { UserService } from '../../../services/user/user.service';
 export class ConfirmComponent implements OnInit {
 
   @Output() state = new EventEmitter<string>()
+  @Input() successMessage: string;
   activationCode: string;
   email: string;
   error: string;
@@ -27,7 +28,7 @@ export class ConfirmComponent implements OnInit {
       email: this.email,
       activationCode: this.activationCode
     }).subscribe(obj => {
-      if(obj.type===MatsukazeObjectTypes.error) this.error = obj.type;
+      if(obj.matsukazeObjectType===MatsukazeObjectTypes.error) this.error = obj.type;
     });
   }
 

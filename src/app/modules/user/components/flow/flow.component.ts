@@ -10,6 +10,7 @@ export class FlowComponent implements OnInit {
 
   flow: string;
   state: string;
+  lang: string;
 
   private _states = {
     "00000000": {flow: "login", state: "form"},
@@ -29,6 +30,7 @@ export class FlowComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       const state = this._states[params?.state];
+      this.lang = params?.lang;
       if(state) {
         this.flow = state.flow;
         this.state = state.state;
@@ -46,8 +48,7 @@ export class FlowComponent implements OnInit {
     for(let stateId in this._states) {
       if(this._states[stateId].flow==params?.flow && this._states[stateId].state==params.state) {
         this.router.navigate(['auth'], {
-          queryParams: {state: stateId},
-          queryParamsHandling: 'merge'
+          queryParams: {state: stateId, lang: this.lang}
         })
         break;
       }

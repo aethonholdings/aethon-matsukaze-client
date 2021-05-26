@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ValidateService } from '../../../services/validate/validate.service';
 
 @Component({
   selector: 'matsukaze-username',
@@ -10,21 +9,26 @@ export class UsernameComponent implements OnInit {
 
   @Input() email: string;
   @Output() emailChange = new EventEmitter<string>();
+  emailTxtBox: string;
   error: string;
 
-  constructor(private validateService: ValidateService) { }
+  constructor() { }
 
   ngOnInit(): void {}
 
-  onChange($event) {
-    this.emailChange.emit(this.email.toLowerCase());
-    if(!this.email) this.error = null;
-  }
-
   public validateEmail() {
-    if(this.email) {
+    if(this.emailTxtBox) {
       var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-      if(re.test(this.email)) this.error = null; else this.error = "auth.widgets.username.error.invalidEmail";
+      if(re.test(this.emailTxtBox)) {
+        this.error = null;
+        this.emailChange.emit(this.emailTxtBox.toLowerCase());
+      } else {
+        this.error = "auth.widgets.username.error.invalidEmail";
+        this.emailChange.emit(null);
+      };
+    } else {
+      this.error = null;
+      this.emailChange.emit(null);
     }
   }
 

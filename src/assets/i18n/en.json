@@ -72,18 +72,19 @@
             "alreadyHaveAccount": "I already have an account"
           },
           "error": {
-
+            "noCredentials": "Please provide your credentials"
           }
         },
         "checkEmail": {
           "labels": {
-            "checkEmail": "Παρακαλούμε ελέγξτε το email σας και κάντε κλικ στον σύνδεσμο επιβεβαίωσης που σας αποστείλαμε"
+            "checkEmail": "Thank you for your interest!  Please check your email and click on the link that we have sent you."
           },
           "error": {}
         },
         "confirm": {
           "labels": {
-            "createComplete": "Ευχαριστούμε που δημιουργήσατε τον λογαριασμό σας.  Μπορείτε να προχωρήσετε σε σύνδεση."
+            "createComplete": "Thank you for creating your account.  You can now log in.",
+            "login": "Login"
           },
           "error": {}
         }
@@ -117,16 +118,14 @@
           "email": "Email"
         },
         "error": {
-          "invalidEmail": "Invalid email addressΆκυρη διεύθυνση email"
+          "invalidEmail": "Invalid email address"
         }
       },
       "password": {
         "labels": {
           "password": "Password"
         },
-        "error": {
-          "length": "Password must be 8-11 characters"
-        }
+        "error": {}
       },
       "password-checker": {
         "labels": {
@@ -134,7 +133,8 @@
           "confirmPassword": "Confirm password"
         },
         "error": {
-          "noMatch": "Passwords do not match"
+          "noMatch": "Passwords do not match",
+          "length": "Password must be 8-11 characters"
         }
       }
     }
