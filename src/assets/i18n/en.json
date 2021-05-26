@@ -50,31 +50,93 @@
     }
   },
   "auth": {
-    "labels": {
-      "login": "Login",
-      "email": "Email",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "privacy": "We'll never share your email with anyone else",
-      "passwordSpec": "Your password should be 8-11 characters long",
-      "reset": "Please enter your email to request a password reset",
-      "checkEmail": "Please check your email and click on the confirmation link we have just sent you.",
-      "createComplete": "Thank you for creating an account with us. You may now log in."
+    "flows": {
+      "login": {
+        "form": {
+          "labels": {
+            "login": "Login",
+            "create": "Create account",
+            "forgot": "Forgot password"
+          },
+          "errors": {
+            "invalidLogin": "Invalid credentials, please try again",
+            "noCredentials": "Please provide your email and password"
+          }
+        }
+      },
+      "register": {
+        "form": {
+          "labels": {
+            "create": "Create account",
+            "submit": "Submit",
+            "alreadyHaveAccount": "I already have an account"
+          },
+          "error": {
+
+          }
+        },
+        "checkEmail": {
+          "labels": {
+            "checkEmail": "Παρακαλούμε ελέγξτε το email σας και κάντε κλικ στον σύνδεσμο επιβεβαίωσης που σας αποστείλαμε"
+          },
+          "error": {}
+        },
+        "confirm": {
+          "labels": {
+            "createComplete": "Ευχαριστούμε που δημιουργήσατε τον λογαριασμό σας.  Μπορείτε να προχωρήσετε σε σύνδεση."
+          },
+          "error": {}
+        }
+      },
+      "reset": {
+        "forgot": {
+          "labels": {
+            "reset": "Password reset",
+            "instructions": "Please enter your email to request a password reset",
+            "submit": "Submit",
+            "login": "Login"
+          },
+          "error": {}
+        },
+        "checkEmail": {
+          "labels": {},
+          "error": {}
+        },
+        "reset": {
+          "labels": {
+            "reset": "Password reset",
+            "submit": "Submit"
+          },
+          "error": {}
+        }
+      }
     },
-    "error": {
-      "invalidLogin": "Invalid username or password, please try again",
-      "invalidEmail": "Invalid email address format",
-      "length": "Password too short",
-      "noMatch": "Passwords do not match"
-    },
-    "buttons": {
-      "back": "Back",
-      "alreadyHaveAccount": "I already have an account",
-      "login": "Login",
-      "create": "Create account",
-      "forgot": "Forgot password",
-      "submit": "Submit",
-      "reset": "Reset"
+    "widgets": {
+      "username": {
+        "labels": {
+          "email": "Email"
+        },
+        "error": {
+          "invalidEmail": "Invalid email addressΆκυρη διεύθυνση email"
+        }
+      },
+      "password": {
+        "labels": {
+          "password": "Password"
+        },
+        "error": {
+          "length": "Password must be 8-11 characters"
+        }
+      },
+      "password-checker": {
+        "labels": {
+          "password": "Password",
+          "confirmPassword": "Confirm password"
+        },
+        "error": {
+          "noMatch": "Passwords do not match"
+        }
+      }
     }
   }
 }

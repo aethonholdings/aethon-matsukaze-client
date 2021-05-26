@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ValidateService } from '../../services/validate/validate.service';
+import { ValidateService } from '../../../services/validate/validate.service';
 
 @Component({
   selector: 'matsukaze-username',
@@ -21,6 +21,11 @@ export class UsernameComponent implements OnInit {
     if(!this.email) this.error = null;
   }
 
-  onFocusOut($event) { if(this.email) this.error = this.validateService.validateEmail(this.email.toLowerCase()); }
+  public validateEmail() {
+    if(this.email) {
+      var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+      if(re.test(this.email)) this.error = null; else this.error = "auth.widgets.username.error.invalidEmail";
+    }
+  }
 
 }

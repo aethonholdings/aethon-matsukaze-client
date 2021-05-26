@@ -3,7 +3,7 @@
     <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navcol-1">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a [routerLink]="['/']" queryParamsHandling="preserve" class="navbar-brand">
+    <a [routerLink]="['/']" [queryParams]="{lang: lang}" class="navbar-brand">
       <img src="assets/img/artwork/eagle.png"/>
     </a>
     <div class="collapse navbar-collapse" id="navcol-1">
@@ -11,22 +11,22 @@
         <li class="dropdown">
           <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.language' | translate}}</a>
           <div class="dropdown-menu" role="menu">
-            <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('en')" [routerLink]="['.']" [queryParams]="{lang: 'en'}">English</a>
-            <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('el')" [routerLink]="['.']" [queryParams]="{lang: 'el'}">Ελληνικα</a>
+            <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('en')" [routerLink]="['.']" [queryParams]="{lang: 'en'}" [queryParams]="{lang: lang}">English</a>
+            <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('el')" [routerLink]="['.']" [queryParams]="{lang: 'el'}" [queryParams]="{lang: lang}">Ελληνικα</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['/sample']">{{'navbar.sample' | translate}}</a>
+          <a class="nav-link text-shadow" [routerLink]="['/sample']" [queryParams]="{lang: lang}">{{'navbar.sample' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['/books']">{{'navbar.books' | translate}}</a>
+          <a class="nav-link text-shadow" [routerLink]="['/books']" [queryParams]="{lang: lang}">{{'navbar.books' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['/contact']">{{'navbar.contact' | translate}}</a>
+          <a class="nav-link text-shadow" [routerLink]="['/contact']" [queryParams]="{lang: lang}">{{'navbar.contact' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a *ngIf="user" [routerLink]="['/auth']" queryParamsHandling="merge" class="nav-link text-shadow">{{'navbar.account' | translate}}</a>
-          <a *ngIf="!user" [routerLink]="['/auth/login']" queryParamsHandling="merge" class="nav-link text-shadow">{{'navbar.login' | translate}}</a>
+          <a *ngIf="user" [routerLink]="['/auth']" [queryParams]="{lang: lang}" class="nav-link text-shadow">{{'navbar.account' | translate}}</a>
+          <a *ngIf="!user" [routerLink]="['/auth']" [queryParams]="{lang: lang}" class="nav-link text-shadow">{{'navbar.login' | translate}}</a>
         </li>
       </ul>
     </div>

@@ -1,7 +1,7 @@
 <ngx-spinner></ngx-spinner>
 <form>
   <div class="form-group">
-    <h3>{{'auth.labels.login' | translate}}</h3>
+    <h3>{{'auth.flows.login.form.labels.login' | translate}}</h3>
   </div>
 
   <matsukaze-username [(email)]="email"></matsukaze-username>
@@ -15,19 +15,19 @@
     <button class="btn btn-warning"
         type="submit"
         style="width: 100%"
-        (click)="onLogin()">{{'auth.buttons.login' | translate}}</button>
+        (click)="onLogin()">{{'auth.flows.login.form.labels.login' | translate}}</button>
   </div>
 
   <div class="form-group">
     <button class="btn btn-primary"
         type="button"
         style="width: 100%"
-        (click)="onChangeState('create')">{{'auth.buttons.create' | translate}}</button>
+        (click)="onChangeState({'flow':'register', 'state':'form'})">{{'auth.flows.login.form.labels.create' | translate}}</button>
   </div>
 
   <div class="form-group">
     <div style="text-align:center;">
-      <a [routerLink]="" queryParamsHandling="preserve" (click)="onChangeState('forgot')">{{'auth.buttons.forgot' | translate}}</a>
+      <a [routerLink]="" queryParamsHandling="preserve" (click)="onChangeState({'flow':'reset', 'state':'forgot'})">{{'auth.flows.login.form.labels.forgot' | translate}}</a>
     </div>
   </div>
 </form>

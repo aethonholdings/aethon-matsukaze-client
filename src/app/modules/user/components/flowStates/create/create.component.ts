@@ -2,8 +2,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from "ngx-spinner";
 import { MatsukazeObjectTypes } from 'src/app/model/model';
-import { UserService } from '../../services/user/user.service';
-import { ValidateService } from '../../services/validate/validate.service';
+import { UserService } from '../../../services/user/user.service';
+import { ValidateService } from '../../../services/validate/validate.service';
 
 @Component({
   selector: 'matsukaze-create',
@@ -12,7 +12,7 @@ import { ValidateService } from '../../services/validate/validate.service';
 })
 export class CreateComponent implements OnInit {
 
-  @Output() state = new EventEmitter<string>()
+  @Output() state = new EventEmitter<any>()
   email: string;
   password: string;
   verifyPassword: string;
@@ -35,19 +35,21 @@ export class CreateComponent implements OnInit {
       lang: this.translateService.currentLang
     }
     this.error = this.validateService.validateParams(params)
-    if(!this.error) {
-      this.spinner.show();
-      this.authService.register$(params).subscribe(obj => {
-        if(obj.matsukazeObjectType==MatsukazeObjectTypes.error) {
-          this.error = obj.type;
-        } else {
-          this.state.emit("checkEmail");
-        }
-        this.spinner.hide();
-      })
-    }
+    console.log(params);
+    console.log(this.error);
+    // if(!this.error) {
+    //   this.spinner.show();
+    //   this.authService.register$(params).subscribe(obj => {
+    //     if(obj.matsukazeObjectType==MatsukazeObjectTypes.error) {
+    //       this.error = obj.type;
+    //     } else {
+    //       this.state.emit({flow:'register',state:'checkEmail'});
+    //     }
+    //     this.spinner.hide();
+    //   })
+    // }
   }
 
-  onChangeState(state: string) { this.state.emit(state); }
+  onChangeState(state: any) { this.state.emit(state); }
 
 }

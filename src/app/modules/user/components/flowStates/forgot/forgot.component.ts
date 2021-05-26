@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../../services/user/user.service';
 
 @Component({
   selector: 'matsukaze-forgot',
@@ -9,7 +9,7 @@ import { UserService } from '../../services/user/user.service';
 })
 export class ForgotComponent implements OnInit {
 
-  @Output() state = new EventEmitter<string>()
+  @Output() state = new EventEmitter<any>()
   email: string;
 
   constructor(
@@ -24,10 +24,10 @@ export class ForgotComponent implements OnInit {
     this.authService.requestPasswordReset$(
       this.email,
       this.translateService.currentLang).subscribe(result => {
-        this.state.emit("checkEmail");
+        this.state.emit({flow:"reset",state:"checkEmail"});
       });
   }
 
-  onChangeState(state: string) { this.state.emit(state); }
+  onChangeState(state: any) { this.state.emit(state); }
 
 }

@@ -15,6 +15,4 @@ export class ResetComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onChangeState(state: string) { this.state.emit(state); }
-
 }

@@ -1,14 +1,14 @@
 <div class="form-group">
   <input [(ngModel)]="email"
       (ngModelChange)="onChange($event)"
-      (focusout)="onFocusOut($event)"
+      (focusout)="validateEmail()"
       name="email"
       type="email"
       class="form-control"
       id="email"
       aria-describedby="emailHelp"
       autocomplete="username"
-      placeholder="{{'auth.labels.email' | translate}}">
+      placeholder="{{'auth.widgets.username.labels.email' | translate}}">
 </div>
 <div class="form-group">
   <div *ngIf="error"><small class="form-text">{{error | translate}}</small></div>

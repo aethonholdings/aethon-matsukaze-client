@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ValidateService } from '../../services/validate/validate.service';
+import { ValidateService } from '../../../services/validate/validate.service';
 
 @Component({
   selector: 'matsukaze-password-checker',
@@ -24,7 +24,7 @@ export class PasswordCheckerComponent implements OnInit {
       password: this.password,
       verifyPassword: this.verifyPassword
     })
-    if(!this.error) this.passwordChange.emit(this.password)
+    if(!this.error) this.passwordChange.emit(this.password);
   }
 
 }

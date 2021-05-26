@@ -1,0 +1,13 @@
+<div *ngIf="flow=='login'">
+  <matsukaze-login *ngIf="state=='form'" (state)="onChangeState($event)"></matsukaze-login>
+</div>
+<div *ngIf="flow=='reset'">
+  <matsukaze-forgot *ngIf="state=='forgot'" (state)="onChangeState($event)"></matsukaze-forgot>
+  <div *ngIf="state=='checkEmail'" class="form-group">{{'auth.labels.checkEmail' | translate}}</div>
+  <matsukaze-reset *ngIf="state=='reset'" (state)="onChangeState($event)"></matsukaze-reset>
+</div>
+<div *ngIf="flow=='register'">
+  <matsukaze-create *ngIf="state=='form'" (state)="onChangeState($event)"></matsukaze-create>
+  <div *ngIf="state=='checkEmail'" class="form-group">{{'auth.labels.checkEmail' | translate}}</div>
+  <matsukaze-confirm *ngIf="state=='confirm'" (state)="onChangeState($event)"></matsukaze-confirm>
+</div>

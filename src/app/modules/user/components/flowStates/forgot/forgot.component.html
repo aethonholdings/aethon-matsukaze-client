@@ -1,22 +1,22 @@
 <form>
   <div class="form-group">
-    <h3>{{'auth.buttons.forgot' | translate}}</h3>
+    <h3>{{'auth.flows.reset.forgot.labels.reset' | translate}}</h3>
   </div>
   <div class="form-group">
-    <div class="form-text">{{'auth.labels.reset' | translate}}</div>
+    <div class="form-text">{{'auth.flows.reset.forgot.labels.instructions' | translate}}</div>
   </div>
   <matsukaze-username [(email)]="email"></matsukaze-username>
   <div class="form-group">
     <button class="btn btn-warning"
         type="submit"
         style="width: 100%"
-        (click)="onSubmit()">{{'auth.buttons.submit' | translate}}</button>
+        (click)="onSubmit()">{{'auth.flows.reset.forgot.labels.submit' | translate}}</button>
   </div>
 
   <div class="form-group">
     <button class="btn btn-primary"
         type="button"
         style="width: 100%"
-        (click)="onChangeState('login')">{{'auth.buttons.login' | translate}}</button>
+        (click)="onChangeState({flow:'login',state:'form'})">{{'auth.flows.reset.forgot.labels.login' | translate}}</button>
   </div>
 </form>

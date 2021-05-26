@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { MatsukazeObjectTypes } from 'src/app/model/model';
-import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../../services/user/user.service';
 
 @Component({
   selector: 'matsukaze-confirm',
@@ -31,5 +31,5 @@ export class ConfirmComponent implements OnInit {
     });
   }
 
-  onChangeState(state: string) { this.state.emit(state); }
+  onChangeState(state: any) { this.state.emit(state); }
 }

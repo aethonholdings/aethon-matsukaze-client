@@ -5,15 +5,18 @@ import { TranslateModule } from '@ngx-translate/core';
 import { AppRoutingModule } from '../routing/app-routing.module';
 import { NgxSpinnerModule } from "ngx-spinner";
 
-import { LoginComponent } from './components/login/login.component';
-import { CreateComponent } from './components/create/create.component';
+import { FlowComponent } from './components/flow/flow.component';
+import { LoginComponent } from './components/flowStates/login/login.component';
+import { CreateComponent } from './components/flowStates/create/create.component';
+import { ForgotComponent } from './components/flowStates/forgot/forgot.component';
+import { ResetComponent } from './components/flowStates/reset/reset.component';
+import { ConfirmComponent } from './components/flowStates/confirm/confirm.component';
 import { ValidateService } from './services/validate/validate.service';
-import { ConfirmComponent } from './components/confirm/confirm.component';
-import { PasswordCheckerComponent } from './components/password-checker/password-checker.component';
-import { UsernameComponent } from './components/username/username.component';
-import { PasswordComponent } from './components/password/password.component';
-import { ForgotComponent } from './components/forgot/forgot.component';
-import { ResetComponent } from './components/reset/reset.component';
+import { PasswordCheckerComponent } from './components/widgets/password-checker/password-checker.component';
+import { UsernameComponent } from './components/widgets/username/username.component';
+import { PasswordComponent } from './components/widgets/password/password.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { ResetComponent } from './components/reset/reset.component';
     UsernameComponent,
     PasswordComponent,
     ForgotComponent,
-    ResetComponent
+    ResetComponent,
+    FlowComponent
   ],
   imports: [
     CommonModule,
@@ -37,11 +41,7 @@ import { ResetComponent } from './components/reset/reset.component';
     ValidateService
   ],
   exports: [
-    LoginComponent,
-    ConfirmComponent,
-    CreateComponent,
-    ForgotComponent,
-    ResetComponent
+    FlowComponent
   ]
 })
 export class UserModule { }
