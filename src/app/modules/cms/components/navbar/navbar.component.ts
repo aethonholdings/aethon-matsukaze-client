@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from 'src/app/model/model';
@@ -19,7 +20,9 @@ export class NavbarComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private translate: TranslateService,
     private authService: UserService,
-    private router: Router
+    private router: Router,
+    private titleService: Title,
+    private translateService: TranslateService,
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +34,9 @@ export class NavbarComponent implements OnInit {
         this.lang = this.translate.getBrowserLang()
       }
       this.translate.use(this.lang); ;
+      this.translateService.get("title").subscribe(title => {
+        this.titleService.setTitle(title);
+      });
     });
     this.authService.getUser$().subscribe(user => { this.user = user });
   }

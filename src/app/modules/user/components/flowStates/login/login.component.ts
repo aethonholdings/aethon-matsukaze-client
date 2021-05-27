@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     const params = { email: this.email, password: this.password }
     this.error = this.validateParams();
     if(!this.error) {
+      this.spinner.show();
       this.userService.login$(this.email, this.password).subscribe(response => {
         if(response) {
           this.router.navigateByUrl(this.userService.getRedirectUrl());
@@ -36,6 +37,7 @@ export class LoginComponent implements OnInit {
           this.error = "auth.flows.login.form.errors.invalidLogin";
           this.password = null;
         }
+        this.spinner.hide();
       })
     }
     this.spinner.hide();

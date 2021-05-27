@@ -13,14 +13,13 @@ import { environment } from '../../../../../environments/environment'
 export class UserService {
 
   private _user: User = null;
-  private _verbose: boolean = environment.verbose;
-  private _root: string = environment.apiRoot;
   private _redirectUrl: string;
   private _endpoints: any = apiJson["default"];
 
   constructor(private apiService: ApiService, private persistenceService: PersistenceService) {
-    this.apiService.initialise(this._root, this._verbose);
-    this.persistenceService.initialise(this._verbose);
+    console.log(environment.apiRoot+environment.apiEndpoint);
+    this.apiService.initialise(environment.apiRoot+environment.apiEndpoint, environment.verbose);
+    this.persistenceService.initialise(environment.verbose);
     this.persistenceService.retrieve$(this._endpoints.actions.auth.login).subscribe(cacheable => {
       if(cacheable) this._setUser(cacheable.object);
     });
@@ -64,7 +63,7 @@ export class UserService {
     if(params?.email && params?.password) {
       return this.apiService.request$(
         this._endpoints.actions.auth.register,
-        { email: params.email, password: params.password, lang: params.lang }
+        { email: params.email, password: params.password, lang: params.lang, root: environment.returnRoot}
       )
     }
     return of(null);
@@ -77,7 +76,7 @@ export class UserService {
   public requestPasswordReset$(email: string, lang?: string): Observable<any> {
     if(email) return this.apiService.request$(
       this._endpoints.actions.auth.requestReset,
-      { email: email, lang: lang }
+      { email: email, lang: lang, root: environment.returnRoot }
     );
     return of(null);
   }

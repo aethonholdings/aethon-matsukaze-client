@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'matsukaze-root',
@@ -10,12 +9,8 @@ export class RootComponent implements OnInit {
 
   team: string[] = ['konstantinos', 'kallia', 'avgi', 'dennis'];
 
-  constructor(
-    private titleService: Title
-  ) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.titleService.setTitle("Digenes");
-  }
+  ngOnInit(): void {}
 
 }
