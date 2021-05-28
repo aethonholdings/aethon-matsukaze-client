@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RootComponent implements OnInit {
 
-  team: string[] = ['konstantinos', 'kallia', 'avgi', 'dennis'];
-
   constructor() { }
 
   ngOnInit(): void {}

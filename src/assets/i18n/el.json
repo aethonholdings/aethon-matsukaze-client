@@ -2,8 +2,11 @@
   "title": "Διγενης",
   "navbar": {
     "language": "Γλωσσα",
+    "summary": "Περιληψη",
     "sample": "Δειγμα",
     "books": "Βιβλια",
+    "team": "Ομαδα",
+    "publications": "Εκδοσεις",
     "contact": "Επαφη",
     "login": "Login",
     "account": "Λογαριασμος"

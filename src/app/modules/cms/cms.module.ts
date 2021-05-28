@@ -8,13 +8,19 @@ import { TranslateModule } from '@ngx-translate/core';
 import { AppRoutingModule } from '../routing/app-routing.module';
 import { UserModule } from '../user/user.module';
 import { ErrorComponent } from './components/error/error.component';
+import { SummaryComponent } from './components/summary/summary.component';
+import { PublicationsComponent } from './components/publications/publications.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
     RootComponent,
     NavbarComponent,
     AuthComponent,
-    ErrorComponent
+    ErrorComponent,
+    SummaryComponent,
+    PublicationsComponent,
+    TeamComponent
   ],
   imports: [
     CommonModule,

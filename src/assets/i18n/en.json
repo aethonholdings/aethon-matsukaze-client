@@ -2,8 +2,11 @@
   "title": "Digenes",
   "navbar": {
     "language": "Language",
+    "summary": "Summary",
     "sample": "Sample",
     "books": "Books",
+    "team": "Team",
+    "publications": "Publications",
     "contact": "Contact",
     "login": "Login",
     "account": "My account"
