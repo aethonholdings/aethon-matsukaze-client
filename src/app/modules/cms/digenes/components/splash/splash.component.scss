@@ -1,0 +1,11 @@
+@import "../../../../../../styles/_variables.scss";
+
+.splash {
+  position: fixed;
+  background-size: cover;
+  background-color: $matsukaze-red;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-mask-image:-webkit-gradient(linear, top, bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1), rgba(0,0,0,0));
+}

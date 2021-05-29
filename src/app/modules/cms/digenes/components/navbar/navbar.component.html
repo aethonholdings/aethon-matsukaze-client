@@ -15,19 +15,18 @@
             <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('el')" [routerLink]="['.']" [queryParams]="{lang: 'el'}" queryParamsHandling="merge">Ελληνικα</a>
           </div>
         </li>
-        <li class="dropdown">
-          <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.books' | translate}}</a>
-          <div class="dropdown-menu" role="menu">
-            <a class="dropdown-item js-scroll-trigger" [routerLink]="['/summary']" [queryParams]="{lang: lang}">{{'navbar.summary' | translate}}</a>
-            <a class="dropdown-item js-scroll-trigger" [routerLink]="['/books']" [queryParams]="{lang: lang}">{{'navbar.publications' | translate}}</a>
-            <a class="dropdown-item js-scroll-trigger" [routerLink]="['/sample']" [queryParams]="{lang: lang}">{{'navbar.sample' | translate}}</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link text-shadow" [routerLink]="['/books']" [queryParams]="{lang: lang}">{{'navbar.books' | translate}}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-shadow" [routerLink]="['/team']" [queryParams]="{lang: lang}">{{'navbar.team' | translate}}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['/contact']" [queryParams]="{lang: lang}">{{'navbar.contact' | translate}}</a>
+        <li class="dropdown">
+          <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.contact' | translate}}</a>
+          <div class="dropdown-menu" role="menu">
+            <a class="dropdown-item js-scroll-trigger" href="https://www.facebook.com/digenesbook">Facebook</a>
+            <a class="dropdown-item js-scroll-trigger" href="mailto:contact@aethon.sg">Email</a>
+          </div>
         </li>
         <li class="nav-item">
           <a *ngIf="user" [routerLink]="['/home']" [queryParams]="{lang: lang}" class="nav-link text-shadow">{{'navbar.account' | translate}}</a>

@@ -1,4 +1,4 @@
-@import "../../../../../styles/_variables.scss";
+@import "../../../../../../styles/_variables.scss";
 
 /* NAVBAR *********************************************************************/
 .navbar {
@@ -34,4 +34,14 @@ a:hover, a:active {
   .navbar-collapse .nav-item {
     height: 3em;
   }
+}
+
+.icon {
+  height: 1em;
+  width: 1em;
+  background-color: white;
+}
+
+.icon > img {
+
 }
