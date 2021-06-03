@@ -1,63 +1,68 @@
 @import "../../../../../../styles/_variables.scss";
 
 /* CAROUSEL *****************************************************************/
+.blank {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel {
+  position: fixed;
+  top: 0;
+  z-index: -1000;
+}
 
 .carousel-item {
-   width: 100vw;
-   height: 100vh;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* QUOTE ********************************************************************/
 .quote {
-  position: absolute;
-  text-align: center;
+  position: relative;
+  height: 100%;
   width: 100%;
 }
 
-.quote > h1 {
-  bottom: 0px;
+.quote > .portraits {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.quote > .text {
+  position: absolute;
+  width: 100%;
+  bottom: 50%;
   padding: 1em;
   text-transform: uppercase;
+  text-align: center;
   background-color: rgba(0,0,0,0.4);
+  z-index: 100;
 }
 
 @media (max-width: 768px) {
-  .quote > h1 {
+  .quote > .text > h1 {
     font-size: 150%;
   }
 }
 
-/* TITLE *********************************************************************/
-.title {
-  display: flex;
-  justify-content: center;
+/* DEER **********************************************************************/
+
+.deer {
+  padding: 3em 0 0 0;
+  width: 100%;
+  text-align: center;
 }
 
-.title > h1,h2,h3 {
-  display: inline-block;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  padding-bottom: 0.25em;
-  border-bottom-color: rgba(255,0,0,0.4);
-  border-bottom-style: solid;
+.deer > img {
+  width: 80%;
+  max-width: 500px;
 }
 
 /* SYNOPSIS ******************************************************************/
-.synopsis-img {
-  position: relative;
-}
-
-.synopsis-img > h1 {
-  display: fixed;
-  position: absolute;
-  padding: 20px;
-  color: rgba(0,0,0,0.8);
-}
-
-.card {
-  background-color: rgba(255,255,255,0.05);
-  padding: 10%;
-  margin: 10px;
+.synopsis {
+  padding: 3em 0 0 0;
 }

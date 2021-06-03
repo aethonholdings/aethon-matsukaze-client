@@ -24,30 +24,63 @@
           "premise": "He of two <br/> shall be one",
           "punchline": "<p>A retelling of the medieval epic of Digenes Akritas, the Two-Blood Border Lord, Digenes is a graphic novel about a dark, mythical quest set along the Silk Road of the Dark Ages.</p>",
           "detail": "<p>The 10th Century AD. On the Byzantine Empire's eastern border with Saracen Syria, a frail and bookish young man called Vassilios Musur is coming of age. A half-blood, the son to a Syrian emir and a Byzantine noblewoman, Vassilios shows very little promise at a time when manhood is defined by the sheer ability to survive in a world full of violence: strength and skill in arms. </p><p>Yet, through a harrowing, mystical journey to the ends of the world and an internal battle between good and evil, Vassilios will defeat his greatest fears to transform into Digenes, an unstoppable warrior, and become leader of the Akrites, Byzantium’s celebrated border guards.</p>"
-        },
-        "team": {
-          "title": "Team",
-          "members": {
-            "konstantinos": {
-              "img": "konstantinos.jpg",
-              "name": "Konstantinos Dimitriou",
-              "bio": "Konstantinos was born in Athens, Greece.  A Cambridge-trained Electrical Engineer, Konstantions is an avid comics and Tolkien fan, as well as a retired but nostalgic AD&D Dungeon Master who loves History, Anthropology and Philosophy. He has lived, worked and travelled extensively across most of Asia, including China, India, Japan, Korea and South East Asia.  He lives in Singapore."
-            },
-            "kallia": {
-              "img": "kallia.jpg",
-              "name": "Kallia Papadaki",
-              "bio": "Kallia was born in Didimoticho, Greece. She is a novelist, poet and screenwriter. Her novel Dendrites (Polis Publishers, 2015), received the European Union Prize for Literature in 2017. Her short story collection The Back-Lot Sound (Polis Publishers, 2009), won the New Writers Award from the Greek literary journal Diavazo. September, her first feature script won, in 2010, the International Balkan Fund script development award, received the Nipkow Scholarship in Berlin, and premiered at the 48th Karlovy Vary IFF. Kallia lives in Greece."
-            },
-            "avgi": {
-              "img": "avgi.jpg",
-              "name": "Avgi Kanaki",
-              "bio": "Avgo is a greek, self-taught comic artist and illustrator that started their academic life by studying Philosophy of Science, but were always drawn to comics. A few semesters and a degree later they decided it’d be better to just follow their dream and do what they always wanted to do instead and just draw. That’s how they landed their first participation in IDW’s team project Womanthology: Heroic. It was enough to make them fall in love with the art of making comics and they never looked back. Since then they’ve worked with people all over the world as a freelance illustrator and comic artist and their first personal graphic novel as an artist (with writer Paul Mallory), “Greta’s Grimoire, Book1: Initiations” was published in Greece by Jemma Press, followed by “Bestiary”. They’re currently working as a writer and artist on a love project “Equidistance”, a queer, multidimensional mystery/action story alongside co-writer and co-artist Dennis Yatras."
-            },
-            "dennis": {
-              "img": "dennis.jpg",
-              "name": "Dennis Yatras",
-              "bio": "Dennis Yatras was born on the island of Zakynthos, and he’s been living in Athens for the past years. Growing up he was acquainted with Western and Japanese animation and games and became infatuated with their style ever since. As a hobby, he began doodling at a very young age and never seemed to break the habit. After graduating from high school, he enrolled in the Athens School of Graphic Arts in PA.D.A., honing his illustration and design skills. At the same time he decided to dive deeper in the anime and cosplay scene, the latter of which ended up leading him to a second BA degree in Middlesex University’s Fashion Design course some years later. Obsessed with the aesthetic of the 80’s and early 90’s pop culture, he loves designing characters that inhabit his strange yet familiar and nostalgic worlds. Lately he decided to follow his desire to complete Dark Practice, a spooky comic about a team of teenage witches' adventures in a small town of northern England. The first issue of his passion project made its debut at Comicdom CON Athens 2018. From then on he attended many other conventions in Greece and Europe. In 2019 he started to write and illustrate the graphic novel “Equidistance” along with his long-time friend Avgo. The four-parts of this new work are going to be published by Nerdula Creative Lab starting from the first third of 2021."
-            }
+        }
+      }
+    },
+    "team": {
+      "title": "Team",
+      "text": {
+        "members": {
+          "konstantinos": {
+            "img": "konstantinos.jpg",
+            "name": "Konstantinos Dimitriou",
+            "bio": "Konstantinos was born in Athens, Greece.  A Cambridge-trained Electrical Engineer, Konstantions is an avid comics and Tolkien fan, as well as a retired but nostalgic AD&D Dungeon Master who loves History, Anthropology and Philosophy. He has lived, worked and travelled extensively across most of Asia, including China, India, Japan, Korea and South East Asia.  He lives in Singapore."
+          },
+          "kallia": {
+            "img": "kallia.jpg",
+            "name": "Kallia Papadaki",
+            "bio": "Kallia was born in Didimoticho, Greece. She is a novelist, poet and screenwriter. Her novel Dendrites (Polis Publishers, 2015), received the European Union Prize for Literature in 2017. Her short story collection The Back-Lot Sound (Polis Publishers, 2009), won the New Writers Award from the Greek literary journal Diavazo. September, her first feature script won, in 2010, the International Balkan Fund script development award, received the Nipkow Scholarship in Berlin, and premiered at the 48th Karlovy Vary IFF. Kallia lives in Greece."
+          },
+          "avgi": {
+            "img": "avgi.jpg",
+            "name": "Avgoustos Kanakis",
+            "bio": "Avgo is a greek, self-taught comic artist and illustrator that started their academic life by studying Philosophy of Science, but were always drawn to comics. A few semesters and a degree later they decided it’d be better to just follow their dream and do what they always wanted to do instead and just draw. That’s how they landed their first participation in IDW’s team project Womanthology: Heroic. It was enough to make them fall in love with the art of making comics and they never looked back. Since then they’ve worked with people all over the world as a freelance illustrator and comic artist and their first personal graphic novel as an artist (with writer Paul Mallory), “Greta’s Grimoire, Book1: Initiations” was published in Greece by Jemma Press, followed by “Bestiary”. They’re currently working as a writer and artist on a love project “Equidistance”, a queer, multidimensional mystery/action story alongside co-writer and co-artist Dennis Yatras."
+          },
+          "dennis": {
+            "img": "dennis.jpg",
+            "name": "Dennis Yatras",
+            "bio": "Dennis Yatras was born on the island of Zakynthos and has been living in Athens for the past years. Growing up he was acquainted with Western and Japanese animation and games and became infatuated with their style ever since. He is a graduate of both Athens School of Graphic Arts in PA.D.A. as well as Middlesex University’s Fashion Design course. In 2017 he decided to follow his desire to complete Dark Practice, a spooky comic about a team of teenage witches. The first issue of his passion project made its debut on Comicdom CON Athens 2018. From then on he attended many other conventions in Greece and Europe. In 2019 he started to write and illustrate the graphic novel “Equidistance” along with his long-time friend Avgo. The four-parts of this new work are going to be published by Nerdula Creative Lab starting from the last quarter of 2021."
+          }
+        }
+      }
+    },
+    "books": {
+      "title": "Books",
+      "text": {
+        "books": {
+          "1": {
+            "title": "The Mark of Cain",
+            "img": "mark-of-cain-EN.jpg"
+          },
+          "2": {
+            "title": "Fire and Brimstone",
+            "img": "blank.jpg"
+          },
+          "3": {
+            "title": "Gospel of Judas",
+            "img": "blank.jpg"
+          },
+          "4": {
+            "title": "Threshing Floors of Marble",
+            "img": "blank.jpg"
+          },
+          "5": {
+            "title": "Divine Wisdom",
+            "img": "blank.jpg"
+          },
+          "6": {
+            "title": "Apocalypse",
+            "img": "blank.jpg"
           }
         }
       }

@@ -9,7 +9,7 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 })
 export class TeamComponent implements OnInit {
 
-  team: string[] = ['konstantinos', 'kallia', 'avgi', 'dennis'];
+  team: string[][] = [['konstantinos', 'kallia'], ['avgi', 'dennis']];
 
   constructor(library: FaIconLibrary) {
     library.addIcons(faChevronUp);

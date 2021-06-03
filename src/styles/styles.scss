@@ -60,12 +60,8 @@ a:hover, a:active {
 // DIGENES --------------------------------------------------------------------*
 
 .block {
-  display: table;
   width: 100%;
-  height: 100%;
-  background-color: $matsukaze-red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.95));
-  border-bottom: rgba(0,0,0,1) 1px solid;
+  height: 100vh;
   object-fit: cover;
 }
 
@@ -75,6 +71,33 @@ a:hover, a:active {
 
 .buffer {
   height: 100px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.title > h1,h2,h3,h4 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 0.25em;
+  border-bottom-color: rgba(255,0,0,0.4);
+  border-bottom-style: solid;
+}
+
+.content {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.2));
+}
+
+.card {
+  padding: 5%;
+  margin: $matsukaze-margin-base;
+  border-radius: 2%;
+  background-color: rgba(255,255,255,0.1);
 }
 
 // // MODAL -----------------------------------------------------------------------

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'matsukaze-books',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  constructor() { }
+  books: any[][] = [[1, 2], [3, 4], [5, 6]];
 
-  ngOnInit(): void {
-  }
+  constructor(
+    private translateService: TranslateService
+  ) { }
+
+  ngOnInit(): void {}
 
 }

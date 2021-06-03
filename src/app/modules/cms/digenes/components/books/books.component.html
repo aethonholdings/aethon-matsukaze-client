@@ -2,10 +2,25 @@
 <matsukaze-navbar></matsukaze-navbar>
 
 <!-- splash -->
-<matsukaze-splash img="assets/img/artwork/cover.jpg"></matsukaze-splash>
+<matsukaze-splash img="assets/img/artwork/cover.jpg"
+  title="content.books.title"></matsukaze-splash>
 
 <!-- content -->
-
-
-<!-- copyright -->
-<matsukaze-copyright></matsukaze-copyright>
+<div class="container-fluid content">
+  <!-- books -->
+  <div class="container">
+    <div *ngFor="let row of books" class="row">
+      <div *ngFor="let book of row" class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title title">{{'content.books.text.books.' + book + '.title' | translate}}</h4>
+            <p class="card-text"></p>
+          </div>
+          <img class="card-img-bottom" src="./assets/img/artwork/{{'content.books.text.books.' + book + '.img' | translate}}" alt="Card image cap">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright -->
+  <matsukaze-copyright></matsukaze-copyright>
+</div>

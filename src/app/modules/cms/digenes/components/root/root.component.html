@@ -2,62 +2,74 @@
 <matsukaze-navbar></matsukaze-navbar>
 
 <!-- splash -->
-<div class="carousel slide splash" data-ride="carousel" data-interval="5000" data-pause="false">
+<div class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="block" src="assets/img/artwork/splash-EN.jpg">
     </div>
     <div class="carousel-item">
+      <img class="block" src="assets/img/artwork/digenes-and-bardas.jpg">
+    </div>
+    <!-- <div class="carousel-item">
       <img class="block" src="assets/img/artwork/battle.jpg">
     </div>
     <div class="carousel-item">
       <img class="block" src="assets/img/artwork/kiss.jpg">
-    </div>
+    </div> -->
     <div class="carousel-item">
       <img class="block" src="assets/img/artwork/maximo.jpg">
     </div>
   </div>
 </div>
+<div class="blank"></div>
 
-<!-- quote -->
-<div class="digenes-font" style="height: 100%; width: 100%; position: relative;">
-  <div class="container-fluid" style="height: 100%">
-    <div class="row no-gutters" style="height: 100%">
-      <div class="col-lg-6">
-        <div style="height: 100%; width: 100%; background: #000 url('/assets/img/artwork/digenes.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
-      </div>
-      <div class="col-lg-6">
-        <div style="height: 100%; width: 100%; background: #000 url('/assets/img/artwork/bardas.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
-      </div>
-    </div>
-  </div>
-  <div class="quote">
-    <h1 class="quote"><span [innerHTML]="'content.home.text.quote' | translate"></span></h1>
-  </div>
-</div>
+<!-- content -->
 
-<!-- synopsis -->
-<div id="synopsis">
-  <div class="container-fluid">
-    <div class="block" style="background: #000 url('/assets/img/artwork/memories.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;">
-    <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8">
-          <div class="card" style="margin: 20% 0 20% 0; background-color: rgba(0,0,0,0.8)">
-            <div class="title digenes-font">
-              <h3><span [innerHTML]="'content.home.text.synopsis.premise' | translate"></span></h3>
+<div class="content">
+
+  <!-- quote -->
+  <div class="block">
+    <div class="quote">
+      <div class="portraits">
+        <div class="container-fluid">
+          <div class="row block no-gutters">
+            <div class="col-md-6">
+              <div class="block" style="height: 100%; width: 100%; background: #000 url('/assets/img/artwork/digenes.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
             </div>
-            <div class="card-text digenes-font">
-              <h5><span [innerHTML]="'content.home.text.synopsis.punchline' | translate"></span></h5>
-              <span [innerHTML]="'content.home.text.synopsis.detail' | translate"></span>
+            <div class="col-md-6">
+              <div class="block" style="height: 100%; width: 100%; background: #000 url('/assets/img/artwork/bardas.jpg') no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
             </div>
           </div>
         </div>
-        <div class="col-lg-2"></div>
+      </div>
+      <div class="text">
+        <h1 class="digenes-font">
+          <span [innerHTML]="'content.home.text.quote' | translate"></span>
+        </h1>
       </div>
     </div>
   </div>
-</div>
 
-<!-- copyright -->
-<matsukaze-copyright></matsukaze-copyright>
+  <!-- deer -->
+  <div class="deer">
+    <img src="/assets/img/artwork/deer-of-death.png">
+  </div>
+
+  <!-- synopsis -->
+  <div class="synopsis">
+    <div class="container">
+      <div class="card digenes-font">
+        <div class="card-title title digenes-font">
+          <h3><span [innerHTML]="'content.home.text.synopsis.premise' | translate"></span></h3>
+        </div>
+        <div class="card-text">
+          <h5><span [innerHTML]="'content.home.text.synopsis.punchline' | translate"></span></h5>
+          <span [innerHTML]="'content.home.text.synopsis.detail' | translate"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- copyright -->
+  <matsukaze-copyright></matsukaze-copyright>
+</div>
