@@ -1,22 +1,42 @@
 @import "../../../../../../styles/_variables.scss";
 
 /* CAROUSEL *****************************************************************/
+.splash {
+  position: fixed;
+  top: 0;
+  z-index: -1000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.splash > .carousel {
+  height: 100%;
+  width: 100%;
+}
+
+.splash > .carousel > .carousel-inner {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .blank {
+  position: relative;
   display: table;
   width: 100%;
   height: 100%;
 }
 
-.carousel {
-  position: fixed;
-  top: 0;
-  z-index: -1000;
-}
-
-.carousel-item {
-  height: 100vh;
-  width: 100vw;
-}
 
 /* QUOTE ********************************************************************/
 .quote {
@@ -35,7 +55,7 @@
 .quote > .text {
   position: absolute;
   width: 100%;
-  bottom: 50%;
+  bottom: 0;
   padding: 1em;
   text-transform: uppercase;
   text-align: center;
@@ -52,7 +72,6 @@
 /* DEER **********************************************************************/
 
 .deer {
-  padding: 3em 0 0 0;
   width: 100%;
   text-align: center;
 }
