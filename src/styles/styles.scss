@@ -75,10 +75,13 @@ a:hover, a:active {
 
 .title {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .title > h1,h2,h3,h4 {
+  margin: auto;
+  flex: 1 0 auto;
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 0.25em;

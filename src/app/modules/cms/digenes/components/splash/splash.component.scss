@@ -26,7 +26,22 @@
 
 .text {
   position: absolute;
-  bottom: 20vh;
+  bottom: 10vh;
   z-index: 0;
   width: 100%;
+}
+
+.text > .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text > .title > .title-element {
+  margin: auto;
+  flex: 1 0 auto;
+}
+
+.text > .title > .arrow {
+  margin-top: 1em;
 }

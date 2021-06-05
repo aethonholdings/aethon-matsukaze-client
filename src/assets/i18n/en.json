@@ -60,26 +60,36 @@
         "books": {
           "1": {
             "title": "The Mark of Cain",
-            "img": "mark-of-cain-EN.jpg"
+            "date": "January 2022",
+            "img": "mark-of-cain-EN.jpg",
+            "sample": {
+              "id": "2",
+              "label": "Sample"
+            }
           },
           "2": {
             "title": "Fire and Brimstone",
+            "date": "July 2022",
             "img": "blank.jpg"
           },
           "3": {
             "title": "Gospel of Judas",
+            "date": "December 2022",
             "img": "blank.jpg"
           },
           "4": {
             "title": "Threshing Floors of Marble",
+            "date": "June 2023",
             "img": "blank.jpg"
           },
           "5": {
             "title": "Divine Wisdom",
+            "date": "December 2023",
             "img": "blank.jpg"
           },
           "6": {
             "title": "Apocalypse",
+            "date": "June 2024",
             "img": "blank.jpg"
           }
         }
