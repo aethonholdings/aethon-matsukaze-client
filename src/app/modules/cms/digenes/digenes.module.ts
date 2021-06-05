@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { UserModule } from '../../user/user.module';
 import { AppRoutingModule } from '../../routing/app-routing.module';
@@ -31,7 +30,6 @@ import { SplashComponent } from './components/splash/splash.component';
   ],
   imports: [
     CommonModule,
-    FontAwesomeModule,
     TranslateModule,
     AppRoutingModule,
     UserModule
@@ -39,4 +37,4 @@ import { SplashComponent } from './components/splash/splash.component';
   providers: [ TranslateService ],
   exports: [ RootComponent ]
 })
-export class DigenesModule { }
+export class DigenesModule {}
