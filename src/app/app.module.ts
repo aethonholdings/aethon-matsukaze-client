@@ -9,11 +9,12 @@ import { AppRoutingModule } from './modules/routing/app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { DigenesModule } from './modules/cms/digenes/digenes.module';
 import { UserModule } from './modules/user/user.module';
-import { ViewerModule } from './modules/viewer/viewer.module';
 import { PersistenceService } from './services/persistence/persistence.service';
 import { ApiService } from './services/api/api.service';
 import { FilesystemService } from './services/filesystem/filesystem.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { environment } from '../environments/environment'
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -29,7 +30,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     UserModule,
     DigenesModule,
-    ViewerModule,
     NgxSpinnerModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot({
@@ -48,4 +48,9 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   bootstrap: [ AppComponent ]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private apiService: ApiService, private persistenceService: PersistenceService) {
+    this.apiService.initialise(environment.apiRoot+environment.apiEndpoint, environment.verbose);
+    this.persistenceService.initialise(environment.verbose);
+  }
+}

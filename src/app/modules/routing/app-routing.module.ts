@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'auth', component: AuthComponent },
   { path: 'team', component: TeamComponent },
   { path: 'books', component: BooksComponent },
+  { path: 'viewer', loadChildren: () => import('../viewer/viewer.module').then(m => m.ViewerModule) },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: '**', component: ErrorComponent }
 ];

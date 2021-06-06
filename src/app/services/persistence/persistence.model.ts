@@ -1,6 +1,7 @@
 export interface Cacheable<T> {
   location: CacheableLocation,
   key: string,
+  lang: string,
   size: number,
   progress: number,
   object: T

@@ -72,6 +72,16 @@
 /* SYNOPSIS ******************************************************************/
 .synopsis {
   padding: 3em 0 3em 0;
+  height: 100%;
+  width: 100%;
+  background: #000 url('/assets/img/artwork/memories.jpg') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.synopsis > .container > .card {
+  background-color: rgba(0,0,0,0.6);
 }
 
 .deer {

@@ -23,10 +23,11 @@ export class PersistenceService {
     return of(true);
   }
 
-  public store$(endpoint: any, obj: any, blob?: Blob): Observable<Cacheable<any>> {
+  public store$(endpoint: any, lang: string, obj: any, blob?: Blob): Observable<Cacheable<any>> {
     let cacheable: Cacheable<any> = {
       location: null,
       key: this._endpointToString(endpoint),
+      lang: lang,
       size: 0,
       progress: 0,
       object: obj

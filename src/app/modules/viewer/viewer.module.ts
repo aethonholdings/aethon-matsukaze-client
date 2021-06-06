@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ViewerComponent } from './components/viewer/viewer.component';
-import { ApiService } from 'src/app/services/api/api.service';
-import { UserModule } from '../user/user.module';
+
+import { ViewerRoutingModule } from './viewer-routing.module';
+import { ViewportComponent } from './components/viewport/viewport.component';
+import { PublicationComponent } from './components/publication/publication.component';
+import { AssetPackageComponent } from './components/asset-package/asset-package.component';
+import { AssetComponent } from './components/asset/asset.component';
+import { ControllerComponent } from './components/controller/controller.component';
+
 
 @NgModule({
-  declarations: [ViewerComponent],
+  declarations: [
+    ViewportComponent,
+    PublicationComponent,
+    AssetPackageComponent,
+    AssetComponent,
+    ControllerComponent
+  ],
   imports: [
     CommonModule,
-    UserModule
-  ],
-  providers: [ApiService],
-  exports: [ViewerComponent]
+    ViewerRoutingModule
+  ]
 })
 export class ViewerModule { }

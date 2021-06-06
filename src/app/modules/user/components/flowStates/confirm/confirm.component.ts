@@ -25,7 +25,8 @@ export class ConfirmComponent implements OnInit {
     this.email = this.route.snapshot.queryParamMap.get("email");
     this.authService.confirm$({
       email: this.email,
-      activationCode: this.activationCode
+      activationCode: this.activationCode,
+      lang: this.route.snapshot.queryParamMap.get("lang")
     }).subscribe(obj => {
       if(obj.matsukazeObjectType===MatsukazeObjectTypes.error) this.error = obj.type;
     });

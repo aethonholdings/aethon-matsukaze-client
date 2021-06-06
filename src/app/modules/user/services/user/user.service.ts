@@ -17,22 +17,19 @@ export class UserService {
   private _endpoints: any = apiJson["default"];
 
   constructor(private apiService: ApiService, private persistenceService: PersistenceService) {
-    console.log(environment.apiRoot+environment.apiEndpoint);
-    this.apiService.initialise(environment.apiRoot+environment.apiEndpoint, environment.verbose);
-    this.persistenceService.initialise(environment.verbose);
     this.persistenceService.retrieve$(this._endpoints.actions.auth.login).subscribe(cacheable => {
       if(cacheable) this._setUser(cacheable.object);
     });
   }
 
-  public login$(email: string, password: string): Observable<User> {
+  public login$(email: string, password: string, lang: string): Observable<User> {
     const endpoint: any = this._endpoints.actions.auth.login;
     return this.apiService.request$(endpoint, {email: email, password: password}).pipe(
       map(matsukazeObject => {
         if(matsukazeObject?.matsukazeObjectType===MatsukazeObjectTypes.user) this._setUser(matsukazeObject);
         return matsukazeObject;
       }),
-      tap(() => {if(this._user) this.persistenceService.store$(endpoint, this._user).subscribe()})
+      tap(() => {if(this._user) this.persistenceService.store$(endpoint, lang, this._user).subscribe()})
     );
   }
 
@@ -41,7 +38,7 @@ export class UserService {
       return this.apiService.request$(this._endpoints.actions.auth.confirm, params).pipe(
         mergeMap(obj => {
           if(obj.matsukazeObjectType===MatsukazeObjectTypes.user) {
-            return this.loginFromConfirm$(obj);
+            return this.loginFromConfirm$(obj, params.confirm);
           } else {
             return of(obj);
           }
@@ -51,10 +48,10 @@ export class UserService {
     return of(null);
   }
 
-  public loginFromConfirm$(user: User): Observable<User> {
+  public loginFromConfirm$(user: User, lang: string): Observable<User> {
     const endpoint: any = this._endpoints.actions.auth.login;
     this._setUser(user);
-    return this.persistenceService.store$(endpoint, this._user).pipe(
+    return this.persistenceService.store$(endpoint, lang, this._user).pipe(
       map(()=>{ return this._user; })
     );
   }

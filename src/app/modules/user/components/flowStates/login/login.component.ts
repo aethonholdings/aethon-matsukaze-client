@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { UserService } from '../../../services/user/user.service';
 
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private translateService: TranslateService
   ) { }
 
   ngOnInit(): void {}
@@ -29,7 +31,8 @@ export class LoginComponent implements OnInit {
     this.error = this.validateParams();
     if(!this.error) {
       this.spinner.show();
-      this.userService.login$(this.email, this.password).subscribe(response => {
+      console.log(this.translateService.getBrowserLang());
+      this.userService.login$(this.email, this.password, this.translateService.currentLang).subscribe(response => {
         if(response) {
           this.router.navigateByUrl(this.userService.getRedirectUrl());
         }
