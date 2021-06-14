@@ -37,6 +37,24 @@
   height: 100%;
 }
 
+.blank > .text {
+  position: absolute;
+  bottom: 5vh;
+  z-index: 0;
+  width: 100%;
+}
+
+.blank > .text > .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blank > .text > .title > .title-element {
+  margin: auto;
+  flex: 1 0 auto;
+}
+
 
 /* QUOTE ********************************************************************/
 .quote {
