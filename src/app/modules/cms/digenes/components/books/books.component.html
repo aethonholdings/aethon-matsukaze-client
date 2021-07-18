@@ -12,13 +12,13 @@
     <div *ngFor="let row of books" class="row">
       <div *ngFor="let book of row" class="col-md-6">
         <div class="card">
-          <img class="card-img-top cover" src="./assets/img/artwork/{{'content.books.text.books.' + book.count + '.img' | translate}}" alt="Card image cap">
+          <img class="card-img-top cover" src="./assets/img/artwork/{{'content.books.text.books.' + book + '.img' | translate}}" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title title">{{'content.books.text.books.' + book.count + '.title' | translate}}</h4>
-            <p class="card-text text-center">{{'content.books.text.books.' + book.count + '.date' | translate}}</p>
+            <h4 class="card-title title">{{'content.books.text.books.' + book + '.title' | translate}}</h4>
+            <p class="card-text text-center">{{'content.books.text.books.' + book + '.date' | translate}}</p>
             <div *ngIf="book.sample" class="text-center">
-              <a href="{{'content.books.text.books.' + book.count + '.sample.id' | translate}}" class="btn btn-primary">
-                {{'content.books.text.books.' + book.count + '.sample.label' | translate}}
+              <a href="{{'content.books.text.books.' + book + '.sample.id' | translate}}" class="btn btn-primary">
+                {{'content.books.text.books.' + book + '.sample.label' | translate}}
               </a>
             </div>
           </div>

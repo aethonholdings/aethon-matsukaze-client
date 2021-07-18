@@ -15,6 +15,7 @@ import { TeamComponent } from './components/team/team.component';
 import { BooksComponent } from './components/books/books.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { SplashComponent } from './components/splash/splash.component';
+import { PublicationModule } from '../../publication/publication.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SplashComponent } from './components/splash/splash.component';
     CommonModule,
     TranslateModule,
     AppRoutingModule,
+    PublicationModule,
     UserModule
    ],
   providers: [ TranslateService ],

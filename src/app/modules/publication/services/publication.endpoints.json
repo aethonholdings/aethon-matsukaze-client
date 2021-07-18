@@ -1,0 +1,7 @@
+{
+  "actions": {
+    "publication": {
+      "get": {"endpoint": "publication/get", "method": "GET"}
+    }
+  }
+}

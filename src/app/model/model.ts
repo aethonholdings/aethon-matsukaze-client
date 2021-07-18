@@ -151,13 +151,40 @@ export class I18nBundleElement extends MatsukazeObject {
 
 }
 
-export class Publication extends MatsukazeObject {
+export class Publication extends MatsukazeObject implements Positioned {
   id: number;
-  title: I18nBundle;
-  projectId: number
-  pages: Page[] = [];
+  position: number;
+  projectId: number;
+  publicationLanguages: {
+    [key: string]: PublicationLanguage;
+  };
 
   constructor(params: any) { super(params); }
+}
+
+export class PublicationLanguage extends MatsukazeObject {
+  id: number;
+  publicationId: number;
+  assetPackageId: number;
+  language: Language;
+  title: string;
+
+  constructor(params: any) {
+    super(params);
+    this.id = params.id;
+    this.publicationId = params.publicationId;
+    this.language = params.language;
+    this.title = params.title;
+  }
+}
+
+export class AssetPackage extends MatsukazeObject {
+  id: number;
+
+  constructor(params: any) {
+    super(params);
+    this.id = params.id;
+  }
 }
 
 export class MatsukazeError extends MatsukazeObject {

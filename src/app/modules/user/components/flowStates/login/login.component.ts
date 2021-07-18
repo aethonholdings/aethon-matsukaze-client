@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private spinner: NgxSpinnerService,
     private translateService: TranslateService
-  ) { }
+  ) {}
 
   ngOnInit(): void {}
 
