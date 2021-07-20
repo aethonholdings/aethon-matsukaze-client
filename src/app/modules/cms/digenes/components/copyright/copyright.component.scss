@@ -3,9 +3,13 @@
 /* COPYRIGHT ******************************************************************/
 .copyright {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10em;
   text-align: center;
   font-size: small;
+}
+
+.gold-leaf {
+  height: 150px;
 }

@@ -2,6 +2,7 @@
 /* Importing Bootstrap SCSS file. */
 @import "./_theme.scss";
 @import '~bootstrap/scss/bootstrap';
+@import '~swiper/swiper-bundle';
 @import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
 
 html, body {
@@ -99,8 +100,12 @@ a:hover, a:active {
 .card {
   padding: 5%;
   margin: $matsukaze-margin-base;
-  border-radius: 2%;
+  border-radius:10px;
   background-color: rgba(255,255,255,0.1);
+}
+
+.card-img-top {
+  border-radius: 10px;
 }
 
 // // MODAL -----------------------------------------------------------------------
