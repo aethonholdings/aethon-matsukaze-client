@@ -29,8 +29,12 @@
       "news": {
         "title": "Το Σημαδι του Καϊν",
         "text": "Στα βιβλιοπωλεια Ιανουαριο 2022",
-        "action": "Jemma Press",
+        "action": "Από την Jemma Press",
         "link": "https://jemmacomics.com/"
+      },
+      "subscribe": {
+        "title": "Εγγραφειτε στην λιστα επικοινωνιας μας",
+        "action": "Εγγραφή"
       }
     },
     "team": {

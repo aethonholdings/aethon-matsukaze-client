@@ -16,6 +16,7 @@ import { BooksComponent } from './components/books/books.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { PublicationModule } from '../../publication/publication.module';
+import { MailingComponent } from './components/mailing/mailing.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PublicationModule } from '../../publication/publication.module';
     TeamComponent,
     BooksComponent,
     CopyrightComponent,
-    SplashComponent
+    SplashComponent,
+    MailingComponent
   ],
   imports: [
     CommonModule,

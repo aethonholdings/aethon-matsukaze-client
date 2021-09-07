@@ -29,8 +29,12 @@
       "news": {
         "title": "The Mark of Cain",
         "text": "In bookstores January 2022",
-        "action": "Jemma Press",
+        "action": "From Jemma Press",
         "link": "https://jemmacomics.com/"
+      },
+      "subscribe": {
+        "title": "Subscribe to our mailing list",
+        "action": "Subscribe"
       }
     },
     "team": {
