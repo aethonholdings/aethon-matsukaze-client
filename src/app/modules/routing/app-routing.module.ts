@@ -7,6 +7,7 @@ import { BooksComponent } from '../cms/digenes/components/books/books.component'
 import { ErrorComponent } from '../cms/digenes/components/error/error.component';
 import { RootComponent } from '../cms/digenes/components/root/root.component';
 import { AuthComponent } from '../cms/digenes/components/auth/auth.component';
+import { RedirectComponent } from '../cms/digenes/components/redirect/redirect.component';
 
 const routes: Routes = [
   { path: '', component: RootComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'books', component: BooksComponent },
   { path: 'viewer', loadChildren: () => import('../viewer/viewer.module').then(m => m.ViewerModule) },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'preorder', component: RedirectComponent},
   { path: '**', component: ErrorComponent }
 ];
 

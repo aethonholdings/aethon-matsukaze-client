@@ -17,6 +17,7 @@ import { CopyrightComponent } from './components/copyright/copyright.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { PublicationModule } from '../../publication/publication.module';
 import { MailingComponent } from './components/mailing/mailing.component';
+import { RedirectComponent } from './components/redirect/redirect.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MailingComponent } from './components/mailing/mailing.component';
     BooksComponent,
     CopyrightComponent,
     SplashComponent,
-    MailingComponent
+    MailingComponent,
+    RedirectComponent
   ],
   imports: [
     CommonModule,
