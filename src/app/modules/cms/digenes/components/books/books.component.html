@@ -16,9 +16,10 @@
           <div class="card-body">
             <h4 class="card-title title">{{'content.books.text.books.' + book + '.title' | translate}}</h4>
             <p class="card-text text-center">{{'content.books.text.books.' + book + '.date' | translate}}</p>
-            <div *ngIf="book.sample" class="text-center">
-              <a href="{{'content.books.text.books.' + book + '.sample.id' | translate}}" class="btn btn-primary">
-                {{'content.books.text.books.' + book + '.sample.label' | translate}}
+
+            <div *ngIf="book==1" class="text-center">
+              <a [routerLink]="['/preorder']" class="btn btn-primary">
+                {{'content.books.text.books.' + book + '.action.text' | translate}}
               </a>
             </div>
           </div>

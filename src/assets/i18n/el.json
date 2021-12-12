@@ -29,8 +29,7 @@
       "news": {
         "title": "Το Σημαδι του Καϊν",
         "text": "Στα βιβλιοπωλεια 15 Ιανουαριου 2022",
-        "action": "Παραγγείλετε από την Jemma Press",
-        "link": "https://jemmacomics.com/digenhs-i-to-simadi-tou-kain-preorder"
+        "action": "Παραγγείλετε από την Jemma Press"
       },
       "subscribe": {
         "title": "Εγγραφειτε στη λιστα επικοινωνιας μας",
@@ -72,13 +71,13 @@
             "title": "Το Σημαδι του Καϊν",
             "date": "Ιανουαριος 2022",
             "img": "mark-of-cain-EL.jpg",
-            "sample": {
-              "id": "1",
-              "label": "Δειγμα"
+            "action": {
+              "id": "2",
+              "text": "Παραγγειλετε από την Jemma Press"
             }
           },
           "2": {
-            "title": "Πυρ και Θειον",
+            "title": "Οφθαλμος αντι Οφθαλμου",
             "date": "Ιουλιος 2022",
             "img": "blank.jpg"
           },
