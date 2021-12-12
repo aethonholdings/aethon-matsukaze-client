@@ -25,6 +25,10 @@ a:hover, a:active {
   color: rgba(255,255,255,0.8);
 }
 
+.dropdown-item:hover {
+  background-color: $matsukaze-highlight;
+}
+
 .navbar-brand img {
   max-height: 30px;
   opacity: 0.5;
