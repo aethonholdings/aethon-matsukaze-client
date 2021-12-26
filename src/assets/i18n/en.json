@@ -29,8 +29,11 @@
       "news": {
         "title": "The Mark of Cain",
         "text": "In bookstores 15 January 2022",
-        "action": "Preorder from Jemma Press (in Greek)",
+        "action": "BUY",
         "link": "/preorder"
+      },
+      "social": {
+        "title": "Social media"
       },
       "subscribe": {
         "title": "Subscribe to our mailing list",
@@ -74,7 +77,7 @@
             "img": "mark-of-cain-EN.jpg",
             "action": {
               "id": "2",
-              "text": "Preorder from Jemma Press (in Greek)"
+              "text": "Preorder"
             }
           },
           "2": {

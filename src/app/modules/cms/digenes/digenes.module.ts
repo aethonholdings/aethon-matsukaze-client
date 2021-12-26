@@ -17,7 +17,8 @@ import { CopyrightComponent } from './components/copyright/copyright.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { PublicationModule } from '../../publication/publication.module';
 import { MailingComponent } from './components/mailing/mailing.component';
-import { RedirectComponent } from './components/redirect/redirect.component'
+import { RedirectComponent } from './components/redirect/redirect.component';
+import { FacebookComponent } from './components/facebook/facebook.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RedirectComponent } from './components/redirect/redirect.component'
     CopyrightComponent,
     SplashComponent,
     MailingComponent,
-    RedirectComponent
+    RedirectComponent,
+    FacebookComponent
   ],
   imports: [
     CommonModule,
