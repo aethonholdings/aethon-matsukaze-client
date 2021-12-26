@@ -31,8 +31,7 @@
             ],
             "styles": [
               "src/styles/styles.scss"
-            ],
-            "scripts": []
+            ]
           },
           "configurations": {
             "production": {
@@ -60,7 +59,8 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
-              ]
+              ],
+              "scripts": ["src/assets/scripts/googleAnalytics.js"]
             },
             "test": {
               "fileReplacements": [
@@ -87,7 +87,8 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
-              ]
+              ],
+              "scripts": ["src/assets/scripts/googleAnalytics.js"]
             }
           }
         },
