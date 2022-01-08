@@ -18,7 +18,8 @@ import { SplashComponent } from './components/splash/splash.component';
 import { PublicationModule } from '../../publication/publication.module';
 import { MailingComponent } from './components/mailing/mailing.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
-import { FacebookComponent } from './components/facebook/facebook.component'
+import { FacebookComponent } from './components/facebook/facebook.component';
+import { SocialComponent } from './components/social/social.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FacebookComponent } from './components/facebook/facebook.component'
     SplashComponent,
     MailingComponent,
     RedirectComponent,
-    FacebookComponent
+    FacebookComponent,
+    SocialComponent
   ],
   imports: [
     CommonModule,

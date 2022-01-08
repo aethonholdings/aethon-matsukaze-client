@@ -21,12 +21,8 @@
         <li class="nav-item">
           <a class="nav-link text-shadow" [routerLink]="['/team']" [queryParams]="{lang: lang}">{{'navbar.team' | translate}}</a>
         </li>
-        <li class="dropdown">
-          <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.contact' | translate}}</a>
-          <div class="dropdown-menu" role="menu">
-            <a class="dropdown-item js-scroll-trigger" href="https://www.facebook.com/digenesbook">Facebook</a>
-            <a class="dropdown-item js-scroll-trigger" href="mailto:contact@aethon.sg">Email</a>
-          </div>
+        <li class="nav-item">
+          <a class="btn btn-primary my-2 my-sm-0 text-shadow" [routerLink]="['/preorder']" [queryParams]="{lang: lang}">{{'navbar.order' | translate}}</a>
         </li>
       </ul>
     </div>

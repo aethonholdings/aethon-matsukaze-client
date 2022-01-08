@@ -8,8 +8,12 @@
     "team": "Team",
     "publications": "Publications",
     "contact": "Contact",
+    "social": "Social media",
     "login": "Login",
-    "account": "My account"
+    "account": "My account",
+    "order": "Order",
+    "artwork": "Artwork",
+    "history": "Historical background"
   },
   "content": {
     "home": {
@@ -29,7 +33,8 @@
       "news": {
         "title": "The Mark of Cain",
         "text": "In bookstores 15 January 2022",
-        "action": "BUY",
+        "publisher": "From Jemma Press (in Greek)",
+        "action": "ORDER",
         "link": "/preorder"
       },
       "social": {
@@ -81,7 +86,7 @@
             }
           },
           "2": {
-            "title": "An Eye for an Eye",
+            "title": "Fire and Brimstone",
             "date": "July 2022",
             "img": "blank.jpg"
           },
