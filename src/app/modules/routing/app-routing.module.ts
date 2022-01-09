@@ -5,12 +5,14 @@ import { BooksComponent } from '../cms/digenes/components/books/books.component'
 import { RootComponent } from '../cms/digenes/components/root/root.component';
 import { SocialComponent } from '../cms/digenes/components/social/social.component';
 import { RedirectComponent } from '../cms/digenes/components/redirect/redirect.component';
+import { ArtworkComponent } from '../cms/digenes/components/artwork/artwork.component';
 
 const routes: Routes = [
   { path: '', component: RootComponent },
   { path: 'team', component: TeamComponent },
   { path: 'books', component: BooksComponent },
   { path: 'social', component: SocialComponent },
+  { path: 'artwork', component: ArtworkComponent},
   { path: 'preorder', component: RedirectComponent},
   { path: '**', redirectTo: '' }
 ];
