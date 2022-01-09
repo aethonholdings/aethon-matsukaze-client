@@ -2,26 +2,9 @@
 <matsukaze-navbar></matsukaze-navbar>
 
 <!-- splash -->
-
-<div class="splash">
-  <div class="carousel carousel-dark carousel-fade slide" data-ride="carousel" data-interval="5000" data-pause="false" data-wrap="false">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/img/artwork/{{'content.home.images.splash' | translate}}">  // this needs to be asynced
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="blank">
-  <div class="text">
-    <div class="digenes-font title">
-      <div class="arrow title-element">
-        <i class="fas fa-chevron-down fa-3x"></i>
-      </div>
-    </div>
-  </div>
-</div>
+<matsukaze-splash
+    [img]="'content.home.images.splash'"
+    [arrow]="true"></matsukaze-splash>
 
 <!-- content -->
 <div class="content">
@@ -90,71 +73,8 @@
     </div>
   </div>
 
-  <!-- characters -->
-  <div class="characters">
-    <div class="container">
-      <div class="row no-gutters">
-        <div class="col-lg-3">
-          <div class="card text-center digenes-font">
-            <a href="assets/img/artwork/cover.jpg">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/cover.jpg">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card text-center digenes-font">
-            <a href="assets/img/artwork/digenes-and-bardas.jpg">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/digenes-and-bardas.jpg">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card text-center digenes-font">
-            <a href="assets/img/artwork/phokas-family.jpg">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/phokas-family.jpg">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card text-center digenes-font">
-            <a href="assets/img/artwork/vassilios-and-romanos.jpg">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/vassilios-and-romanos.jpg">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-3">
-          <div class="card text-center digenes-font">
-            <a href="assets/img/artwork/vassilios-and-sophia.jpg">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/vassilios-and-sophia.jpg">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card text-center digenes-font">
-            <a href="assets/img/artwork/maximo.jpg">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/maximo.jpg">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card text-center digenes-font">
-            <a href="assets/img/artwork/battle-full.jpg">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/battle-full.jpg">
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card text-center digenes-font">
-            <a href="assets/img/artwork/pg13.jpg">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/pg13.jpg">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Battle of Abydos -->
+  
 
   <!-- mailing list -->
   <div class="padded subscribe #subscribe">
