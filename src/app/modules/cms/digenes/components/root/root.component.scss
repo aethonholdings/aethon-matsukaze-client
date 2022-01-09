@@ -75,6 +75,17 @@ $transparency: 0.7;
   max-width: 500px;
 }
 
+/* BATTLE ********************************************************************/
+.battle {
+  width: 100%;
+  padding: 0 $matsukaze-padding-base 0 $matsukaze-padding-base;
+  text-align: center;
+}
+
+.battle > img {
+  width: 100%;
+}
+
 /* COVER ********************************************************************/
 .cover {
   height: 100%;
