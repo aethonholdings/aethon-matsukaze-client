@@ -5,6 +5,10 @@ $transparency: 0.7;
   padding: 3em 0 3em 0;
 }
 
+.black {
+  background-color: rgba(0,0,0,$transparency);
+}
+
 /* ACTION *******************************************************************/
 .action {
   position: fixed;
@@ -78,27 +82,14 @@ $transparency: 0.7;
 /* BATTLE ********************************************************************/
 .battle {
   width: 100%;
-  padding: 0 $matsukaze-padding-base 0 $matsukaze-padding-base;
+  padding: 3em $matsukaze-padding-base 0 $matsukaze-padding-base;
   text-align: center;
-}
-
-.battle > img {
-  width: 100%;
 }
 
 /* COVER ********************************************************************/
 .cover {
   height: 100%;
   width: 100%;
-}
-
-.cover > .container > .row > .col > .card {
-  background-color: rgba(0,0,0,$transparency);
-}
-
-.cover-img {
-  width: 80%;
-  max-width: 500px;
 }
 
 .news-text {
