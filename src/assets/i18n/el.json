@@ -11,9 +11,10 @@
     "social": "Social media",
     "login": "Login",
     "account": "Λογαριασμος",
-    "order": "Παραγγειλετε",
-    "artwork": "Artwork",
-    "history": "Ιστορικό υπόβαθρο"
+    "order": "Αγοραστε",
+    "artwork": "Σκιτσα",
+    "history": "Ιστορικο υποβαθρο",
+    "home": "Κεντρικη σελιδα"
   },
   "content": {
     "home": {
@@ -34,7 +35,7 @@
         "title": "Το Σημαδι του Καϊν",
         "text": "Στα βιβλιοπωλεια 15 Ιανουαριου 2022",
         "publisher": "Από την Jemma Press",
-        "action": "ΠΑΡΑΓΓΕΙΛΕΤΕ"
+        "action": "ΑΓΟΡΑΣΤΕ"
       },
       "social": {
         "title": "Social media"
@@ -81,7 +82,7 @@
             "img": "mark-of-cain-EL.jpg",
             "action": {
               "id": "2",
-              "text": "ΠΑΡΑΓΓΕΙΛΕΤΕ"
+              "text": "ΑΓΟΡΑΣΤΕ"
             }
           },
           "2": {

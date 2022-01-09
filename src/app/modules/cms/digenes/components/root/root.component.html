@@ -3,8 +3,13 @@
 
 <!-- splash -->
 <matsukaze-splash
-    [img]="'content.home.images.splash'"
-    [arrow]="true"></matsukaze-splash>
+    [img]="'content.home.images.splash'"></matsukaze-splash>
+
+<!-- action -->
+<div class="action">
+  <a [routerLink]="['/preorder']" class="btn btn-primary">{{'content.home.news.action' | translate}}</a>
+</div>
+
 
 <!-- content -->
 <div class="content">
@@ -33,7 +38,7 @@
   </div>
 
   <!-- Battle of Abydos -->
-  <img src="assets/img/artwork/battle-full.jpg" class="img-fluid" />
+  <img src="assets/img/artwork/battle-full.jpg" class="img-fluid" loading="lazy" />
 
   <!-- synopsis -->
   <div class="padded synopsis">

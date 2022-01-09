@@ -5,6 +5,25 @@ $transparency: 0.7;
   padding: 3em 0 3em 0;
 }
 
+/* ACTION *******************************************************************/
+.action {
+  position: fixed;
+  bottom: 2em;
+}
+
+@media (max-width: 640px) {
+  .action {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 640px) {
+  .action {
+    left: 2em;
+  }
+}
+
 /* QUOTE ********************************************************************/
 .quote {
   position: relative;
@@ -30,7 +49,7 @@ $transparency: 0.7;
   z-index: 100;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .quote > .text > h1 {
     font-size: 150%;
   }
