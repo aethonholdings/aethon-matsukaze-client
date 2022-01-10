@@ -92,6 +92,10 @@ $transparency: 0.7;
   width: 100%;
 }
 
+.news {
+  padding-top: 2*$matsukaze-padding-base;
+}
+
 .news-text {
   text-transform: uppercase;
   font-weight: bold;

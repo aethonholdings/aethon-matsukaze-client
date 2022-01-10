@@ -6,10 +6,7 @@
     [img]="'content.home.images.splash' | translate"></matsukaze-splash>
 
 <!-- action -->
-<div class="action">
-  <a [routerLink]="['/preorder']" class="btn btn-primary">{{'content.home.news.action' | translate}}</a>
-</div>
-
+<matsukaze-order class="action"></matsukaze-order>
 
 <!-- content -->
 <div class="content">
@@ -70,16 +67,19 @@
       <div class="row justify-content-lg-center">
         <div class="col col-lg-6">
           <div class="card text-center digenes-font black">
-            <a [routerLink]="['/preorder']">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/mark-of-cain-artwork.jpg">
-            </a>
+
             <div class="card-body">
               <h4 class="card-title title">{{'content.home.news.title' | translate}}</h4>
+              <a [routerLink]="['/preorder']">
+                <img class="card-img-top img-responsive" src="assets/img/artwork/mark-of-cain-artwork.jpg">
+              </a>
               <div class="card-text">
-                <p class="news-text">{{'content.home.news.text' | translate}}</p>
-                <p class="news-text">{{'content.home.news.publisher' | translate}}</p>
+                <div class="news">
+                  <p class="news-text">{{'content.home.news.text' | translate}}</p>
+                  <p class="news-text">{{'content.home.news.publisher' | translate}}</p>                  
+                </div>
+                <matsukaze-order></matsukaze-order>
               </div>
-              <a [routerLink]="['/preorder']" class="btn btn-primary">{{'content.home.news.action' | translate}}</a>
             </div>
           </div>
         </div>

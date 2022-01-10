@@ -19,9 +19,7 @@
             <p class="card-text text-center">{{'content.books.text.books.' + book + '.date' | translate}}</p>
 
             <div *ngIf="book==1" class="text-center">
-              <a [routerLink]="['/preorder']" class="btn btn-primary">
-                {{'content.books.text.books.' + book + '.action.text' | translate}}
-              </a>
+              <matsukaze-order></matsukaze-order>
             </div>
           </div>
         </div>

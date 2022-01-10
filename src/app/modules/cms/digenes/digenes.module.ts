@@ -20,7 +20,8 @@ import { MailingComponent } from './components/mailing/mailing.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
 import { FacebookComponent } from './components/facebook/facebook.component';
 import { SocialComponent } from './components/social/social.component';
-import { ArtworkComponent } from './components/artwork/artwork.component'
+import { ArtworkComponent } from './components/artwork/artwork.component';
+import { OrderComponent } from './components/order/order.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ArtworkComponent } from './components/artwork/artwork.component'
     RedirectComponent,
     FacebookComponent,
     SocialComponent,
-    ArtworkComponent
+    ArtworkComponent,
+    OrderComponent
   ],
   imports: [
     CommonModule,
