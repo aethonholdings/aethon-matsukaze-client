@@ -13,6 +13,12 @@
   color: rgba(255,255,255,0.6);
 }
 
+@media (max-width: 640px) {
+  .dropdown-menu {
+    background-color: rgba(0,0,0,0);
+  }
+}
+
 a:link {
   color: rgba(255,255,255,0.6);
 }
@@ -34,7 +40,7 @@ a:hover, a:active {
   opacity: 0.5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .navbar-collapse .nav-item {
     height: 3em;
   }

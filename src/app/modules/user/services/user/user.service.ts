@@ -6,6 +6,7 @@ import * as apiJson from './user.endpoints.json'
 import { ApiService } from 'src/app/services/api/api.service';
 import { PersistenceService } from 'src/app/services/persistence/persistence.service';
 import { environment } from '../../../../../environments/environment'
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +17,30 @@ export class UserService {
   private _redirectUrl: string;
   private _endpoints: any = apiJson["default"];
 
-  constructor(private apiService: ApiService, private persistenceService: PersistenceService) {
+  constructor(private apiService: ApiService, private persistenceService: PersistenceService, private translateService: TranslateService) {
+    this.translateService.setDefaultLang('en');
     this.persistenceService.retrieve$(this._endpoints.actions.auth.login).subscribe(cacheable => {
-      if(cacheable) this._setUser(cacheable.object);
+      if(cacheable) {
+        this._setUser(cacheable.object);
+      } else {
+        this._setUser({
+          id: null,
+          email: null,
+          token: null,
+          locale: this.translateService.getBrowserLang(),
+          roles: []
+        });
+      }
     });
+  }
+
+  public setLanguage(lang: string) {
+    this._user.locale=lang;
+    this._setUser(this._user);
+  }
+
+  public getLanguage(): string {
+    return this._user.locale;
   }
 
   public login$(email: string, password: string, lang: string): Observable<User> {
@@ -104,6 +125,7 @@ export class UserService {
   private _setUser(json: any): User {
     this._user = new User(json);
     this.apiService.setToken(this._user.token);
+    this.translateService.use(this._user.locale);
     return this._user;
   }
 }

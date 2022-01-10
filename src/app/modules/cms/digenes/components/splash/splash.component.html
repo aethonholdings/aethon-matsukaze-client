@@ -1,10 +1,10 @@
 <div class="splash block" [ngClass]="gradientClass">
-  <img class="splash-img" src="{{url | async}}" />
+  <img class="splash-img" src="{{img}}" />
 </div>
 <div class="blank">
   <div class="text">
     <div class="digenes-font title">
-      <h1 class="title-element">{{title | translate}}</h1>
+      <h1 class="title-element">{{title}}</h1>
       <div *ngIf="arrow" class="arrow title-element">
         <i class="fas fa-chevron-down fa-3x"></i>
       </div>

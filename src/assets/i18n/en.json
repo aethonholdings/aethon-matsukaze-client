@@ -113,6 +113,9 @@
           }
         }
       }
+    },
+    "artwork": {
+      "title": "Artwork"
     }
   },
   "auth": {

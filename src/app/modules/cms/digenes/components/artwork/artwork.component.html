@@ -1,8 +1,14 @@
 <!-- navbar -->
 <matsukaze-navbar></matsukaze-navbar>
 
+<!-- splash -->
+<matsukaze-splash img="assets/img/artwork/expression_sheet.jpg"
+  [title]="'content.artwork.title' | translate"
+  [arrow]="true"
+  [gradient]="true"></matsukaze-splash>
+
 <!-- artwork -->
-<div class="characters">
+<div class="content">
   <div class="container">
     <div class="row no-gutters">
       <div class="col-lg-3">
@@ -65,7 +71,8 @@
       </div>
     </div>
   </div>
-</div>
 
-<!-- copyright -->
-<matsukaze-copyright></matsukaze-copyright>
+  <!-- copyright -->
+  <matsukaze-copyright></matsukaze-copyright>
+
+</div>
