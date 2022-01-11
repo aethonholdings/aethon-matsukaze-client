@@ -60,7 +60,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "scripts": ["src/assets/scripts/googleAnalytics.js"]
+              "scripts": []
             },
             "test": {
               "fileReplacements": [
@@ -88,7 +88,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "scripts": ["src/assets/scripts/googleAnalytics.js"]
+              "scripts": []
             }
           }
         },
