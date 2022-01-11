@@ -21,7 +21,8 @@ import { RedirectComponent } from './components/redirect/redirect.component';
 import { FacebookComponent } from './components/facebook/facebook.component';
 import { SocialComponent } from './components/social/social.component';
 import { ArtworkComponent } from './components/artwork/artwork.component';
-import { OrderComponent } from './components/order/order.component'
+import { OrderComponent } from './components/order/order.component';
+import { CallToActionComponent } from './components/call-to-action/call-to-action.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { OrderComponent } from './components/order/order.component'
     FacebookComponent,
     SocialComponent,
     ArtworkComponent,
-    OrderComponent
+    OrderComponent,
+    CallToActionComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,11 @@
+@import "../../../../../../styles/_variables.scss";
+
+.news {
+  padding-top: 2*$matsukaze-padding-base;
+}
+
+.news-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: large;
+}

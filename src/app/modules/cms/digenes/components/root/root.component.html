@@ -61,27 +61,12 @@
     </div>
   </div>
 
-  <!-- cover -->
+  <!-- call to action -->
   <div class="cover">
     <div class="container">
       <div class="row justify-content-lg-center">
         <div class="col col-lg-6">
-          <div class="card text-center digenes-font black">
-
-            <div class="card-body">
-              <h4 class="card-title title">{{'content.home.news.title' | translate}}</h4>
-              <a [routerLink]="['/preorder']">
-                <img class="card-img-top img-responsive" src="assets/img/artwork/mark-of-cain-artwork.jpg">
-              </a>
-              <div class="card-text">
-                <div class="news">
-                  <p class="news-text">{{'content.home.news.text' | translate}}</p>
-                  <p class="news-text">{{'content.home.news.publisher' | translate}}</p>                  
-                </div>
-                <matsukaze-order></matsukaze-order>
-              </div>
-            </div>
-          </div>
+          <matsukaze-call-to-action></matsukaze-call-to-action>
         </div>
       </div>
     </div>

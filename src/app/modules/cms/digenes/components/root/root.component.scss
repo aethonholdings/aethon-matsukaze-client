@@ -1,13 +1,4 @@
 @import "../../../../../../styles/_variables.scss";
-$transparency: 0.7;
-
-.padded {
-  padding: 3em 0 3em 0;
-}
-
-.black {
-  background-color: rgba(0,0,0,$transparency);
-}
 
 /* ACTION *******************************************************************/
 .action {
@@ -90,16 +81,6 @@ $transparency: 0.7;
 .cover {
   height: 100%;
   width: 100%;
-}
-
-.news {
-  padding-top: 2*$matsukaze-padding-base;
-}
-
-.news-text {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: large;
 }
 
 /* MAILING LIST *************************************************************/

@@ -1,8 +1,5 @@
 @import "../../../../../../styles/_variables.scss";
 
-.content {
-}
-
 .content > div > img {
   width: 100%;
 }
@@ -10,4 +7,9 @@
 /* CHARACTERS ***************************************************************/
 .characters > .container > .row > div > img {
   border-radius: 10px;
+}
+
+/* COVER ********************************************************************/
+.cover {
+  margin-top: $matsukaze-padding-top;
 }
