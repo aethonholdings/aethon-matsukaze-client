@@ -22,7 +22,8 @@ import { FacebookComponent } from './components/facebook/facebook.component';
 import { SocialComponent } from './components/social/social.component';
 import { ArtworkComponent } from './components/artwork/artwork.component';
 import { OrderComponent } from './components/order/order.component';
-import { CallToActionComponent } from './components/call-to-action/call-to-action.component'
+import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
+import { FamilyTreeComponent } from './components/family-tree/family-tree.component'
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CallToActionComponent } from './components/call-to-action/call-to-actio
     SocialComponent,
     ArtworkComponent,
     OrderComponent,
-    CallToActionComponent
+    CallToActionComponent,
+    FamilyTreeComponent
   ],
   imports: [
     CommonModule,
