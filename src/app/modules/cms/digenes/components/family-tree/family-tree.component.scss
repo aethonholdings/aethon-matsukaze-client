@@ -4,15 +4,6 @@
   fill: #FFFFFF;
 }
 
-.box {
-  width: 42px;
-  height: 21px;
-  stroke: #000000;
-  stroke-width: 0.666667;
-  stroke-miterlimit: 8;
-  fill:none;
-}
-
 .line {
   stroke: #000000;
   stroke-width: 0.666667;
@@ -30,13 +21,6 @@
   fill-rule: evenodd;
 }
 
-.emperor {
-  stroke: #000000;
-  stroke-width: 0.666667;
-  stroke-miterlimit: 8;
-  fill: #7030A0;
-}
-
 .house {
   stroke: #000000;
   stroke-width: 0.666667;
@@ -51,8 +35,25 @@
   font-size: 14pt;
 }
 
-.person {
+.person > text {
   font-family: Calibri,sans-serif;
   font-weight: 400;
   font-size: 6pt;
+}
+
+.person > rect {
+  width: 42px;
+  height: 21px;
+  stroke: #000000;
+  stroke-width: 0.666667;
+  stroke-miterlimit: 8;
+  fill:none;
+}
+
+.person .emperor > rect {
+  fill: #7030A0;
+}
+
+.person .emperor > text {
+  fill: red;
 }

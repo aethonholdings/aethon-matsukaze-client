@@ -23,7 +23,8 @@ import { SocialComponent } from './components/social/social.component';
 import { ArtworkComponent } from './components/artwork/artwork.component';
 import { OrderComponent } from './components/order/order.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
-import { FamilyTreeComponent } from './components/family-tree/family-tree.component'
+import { FamilyTreeComponent } from './components/family-tree/family-tree.component';
+import { EpicComponent } from './components/epic/epic.component'
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FamilyTreeComponent } from './components/family-tree/family-tree.compon
     ArtworkComponent,
     OrderComponent,
     CallToActionComponent,
-    FamilyTreeComponent
+    FamilyTreeComponent,
+    EpicComponent
   ],
   imports: [
     CommonModule,

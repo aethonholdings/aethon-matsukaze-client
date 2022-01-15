@@ -10,7 +10,7 @@ export class RedirectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    window.location.href = "https://jemmacomics.com/digenhs-i-to-simadi-tou-kain-preorder";
+    window.location.href = "https://jemmacomics.com/digenhs-i-to-simadi-tou-kain";
   }
 
 }

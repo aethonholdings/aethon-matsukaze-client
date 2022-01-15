@@ -21,6 +21,12 @@
           <a class="nav-link text-shadow" [routerLink]="['/team']" [queryParams]="{lang: lang}">{{'navbar.team' | translate}}</a>
         </li>
         <li class="dropdown">
+          <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.history' | translate}}</a>
+          <div class="dropdown-menu" role="menu">
+            <a class="dropdown-item js-scroll-trigger" [routerLink]="['/history/about']" [queryParams]="{lang: lang}">{{'navbar.about' | translate}}</a>
+          </div>
+        </li>
+        <li class="dropdown">
           <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.language' | translate}}</a>
           <div class="dropdown-menu" role="menu">
             <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('en')" [routerLink]="['.']" [queryParams]="{lang: 'en'}" queryParamsHandling="merge">English</a>
