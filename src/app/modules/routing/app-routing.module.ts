@@ -7,6 +7,7 @@ import { SocialComponent } from '../cms/digenes/components/social/social.compone
 import { RedirectComponent } from '../cms/digenes/components/redirect/redirect.component';
 import { ArtworkComponent } from '../cms/digenes/components/artwork/artwork.component';
 import { EpicComponent } from '../cms/digenes/components/epic/epic.component';
+import { FamilyTreeComponent } from '../cms/digenes/components/family-tree/family-tree.component';
 
 const routes: Routes = [
   { path: '', component: RootComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'social', component: SocialComponent },
   { path: 'artwork', component: ArtworkComponent },
   { path: 'history/about', component: EpicComponent },
+  { path: 'history/families', component: FamilyTreeComponent },  
   { path: 'order', component: RedirectComponent },
   { path: '**', redirectTo: '' }
 ];
