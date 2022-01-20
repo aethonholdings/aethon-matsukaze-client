@@ -9,21 +9,21 @@
     <div class="collapse navbar-collapse" id="navcol-1">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['']" [queryParams]="{lang: lang}">{{'navbar.home' | translate}}</a>
+          <a class="nav-link text-shadow" [routerLink]="['']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.home' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['artwork']" [queryParams]="{lang: lang}">{{'navbar.artwork' | translate}}</a>
+          <a class="nav-link text-shadow" [routerLink]="['/artwork']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.artwork' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['books']" [queryParams]="{lang: lang}">{{'navbar.books' | translate}}</a>
+          <a class="nav-link text-shadow" [routerLink]="['/books']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.books' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['team']" [queryParams]="{lang: lang}">{{'navbar.team' | translate}}</a>
+          <a class="nav-link text-shadow" [routerLink]="['/team']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.team' | translate}}</a>
         </li>
         <li class="dropdown">
           <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.history' | translate}}</a>
           <div class="dropdown-menu" role="menu">
-            <a class="dropdown-item js-scroll-trigger" [routerLink]="['history','about']" [queryParams]="{lang: lang}">{{'navbar.about' | translate}}</a>
+            <a class="dropdown-item js-scroll-trigger" [routerLink]="['/history/about']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.about' | translate}}</a>
           </div>
         </li>
         <li class="dropdown">
