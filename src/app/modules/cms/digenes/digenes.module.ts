@@ -18,13 +18,12 @@ import { SplashComponent } from './components/splash/splash.component';
 import { PublicationModule } from '../../publication/publication.module';
 import { MailingComponent } from './components/mailing/mailing.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
-import { FacebookComponent } from './components/facebook/facebook.component';
-import { SocialComponent } from './components/social/social.component';
 import { ArtworkComponent } from './components/artwork/artwork.component';
 import { OrderComponent } from './components/order/order.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { FamilyTreeComponent } from './components/family-tree/family-tree.component';
-import { EpicComponent } from './components/epic/epic.component'
+import { EpicComponent } from './components/epic/epic.component';
+import { EagleComponent } from './components/eagle/eagle.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +38,12 @@ import { EpicComponent } from './components/epic/epic.component'
     SplashComponent,
     MailingComponent,
     RedirectComponent,
-    FacebookComponent,
-    SocialComponent,
     ArtworkComponent,
     OrderComponent,
     CallToActionComponent,
     FamilyTreeComponent,
-    EpicComponent
+    EpicComponent,
+    EagleComponent
   ],
   imports: [
     CommonModule,

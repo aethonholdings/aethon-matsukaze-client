@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FacebookComponent } from './facebook.component';
+import { EagleComponent } from './eagle.component';
 
-describe('FacebookComponent', () => {
-  let component: FacebookComponent;
-  let fixture: ComponentFixture<FacebookComponent>;
+describe('EagleComponent', () => {
+  let component: EagleComponent;
+  let fixture: ComponentFixture<EagleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FacebookComponent ]
+      declarations: [ EagleComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FacebookComponent);
+    fixture = TestBed.createComponent(EagleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

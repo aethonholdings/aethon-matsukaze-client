@@ -63,7 +63,7 @@
             "bio": "Kallia was born in Didimoticho, Greece. She is a novelist, poet and screenwriter. Her novel Dendrites (Polis Publishers, 2015), received the European Union Prize for Literature in 2017. Her short story collection The Back-Lot Sound (Polis Publishers, 2009), won the New Writers Award from the Greek literary journal Diavazo. September, her first feature script won, in 2010, the International Balkan Fund script development award, received the Nipkow Scholarship in Berlin, and premiered at the 48th Karlovy Vary IFF. Kallia lives in Greece."
           },
           "avgi": {
-            "img": "avgi.jpg",
+            "img": "avgoustos.jpg",
             "name": "Avgoustos Kanakis",
             "bio": "Avgo is a greek, self-taught comic artist and illustrator that started their academic life by studying Philosophy of Science, but were always drawn to comics. A few semesters and a degree later they decided it’d be better to just follow their dream and do what they always wanted to do instead and just draw. That’s how they landed their first participation in IDW’s team project Womanthology: Heroic. It was enough to make them fall in love with the art of making comics and they never looked back. Since then they’ve worked with people all over the world as a freelance illustrator and comic artist and their first personal graphic novel as an artist (with writer Paul Mallory), “Greta’s Grimoire, Book1: Initiations” was published in Greece by Jemma Press, followed by “Bestiary”. They’re currently working as a writer and artist on a love project “Equidistance”, a queer, multidimensional mystery/action story alongside co-writer and co-artist Dennis Yatras."
           },
@@ -99,7 +99,7 @@
             "img": "blank.jpg"
           },
           "4": {
-            "title": "Threshing Floors of Marble",
+            "title": "From Death Arisen",
             "date": "June 2023",
             "img": "blank.jpg"
           },
@@ -122,10 +122,24 @@
     "history": {
       "about": {
         "title": "The epic of Digenes",
-        "narrative": "<p>From the depths of the European Middle Ages and across the continent, springs a series of epic oral traditions: the Arthurian legends, Beowulf, the Icelandic Sagas, Tristan and Iseult.  Stories that are transmitted from mouth to mouth, they are likely centred on historical people and, with the passage of time, transform into fingerprints of the lives and values of the people that retold them.  Awash in metaphysics, religion and magic, they celebrate their protagonists’ martial skills and romantic love.  They describe the superhuman achievements of characters that, today, we would call superheroes.</p><p>With the passage of centuries, the real people behind these stories slowly disappear.  The only thing left is a kernel of truth, surrounded by a collective dream.</p><p>The Byzantine epic of the Two-Blood Border Lord (Digenes Akritas, in Greek), is one of these works.  It is not a single, concrete text, but a corpus of oral traditions and Medieval manuscripts that describe the life and adventures of a man, son of a Saracen Emir who converts to Christianity and a Roman (Byzantine) noblewoman, who lives and fights on the Eastern border of the empire.  The stories are recorded for the first time in the beginning of the second millennium, at dates that are hotly debated, in six manuscripts that still survive: Escorial, Trebizond, Andros-Athens, Grottaferrata, Oxford, and Andros.  In parallel with the recorded versions, the myth of Digenes continues to evolve in folk songs across the Greek-speaking world, especially in Asia Minor, Crete and Cyprus.</p><p>In the manuscripts, the stories are largely recorded in poems.  Written in coarse language, with frequent spelling errors, they are clearly popular, not scholarly works.  Their disregard for historical accuracy and their inconsistencies are such that it is impossible to place the stories in a clear historical era: some report a meeting between Digenes and a Byzantine emperor called Basil, while researchers place other versions as set during the reign of Romanos I.</p>The manuscripts and songs express admiration for Digenes' martial skills, beauty and his Christian faith, with minimal references to allegiance to a country or nation.  They are full of fantastic feats: hunting triumphs, battles with bandits, dragons, Amazons and death himself, passionate and often violent love.  They are the pop culture of their era.</p><p>This rich corpus of tradition underpins the graphic novel Digenes.  The book springs from a simple  question: who might the real person behind the superhero have been?  And, following that: what were his true achievements and struggles, and why did they leave such a lively impression in the imagination of his contemporaries?</p>"
+        "narrative": "<p>From the depths of the European Middle Ages and across the continent, springs a series of epic oral traditions: the Arthurian legends, Beowulf, the Icelandic Sagas, Tristan and Iseult.  Stories that are transmitted from mouth to mouth, they are likely centred on historical people and, with the passage of time, transform into fingerprints of the lives and values of the people that retold them.  Awash in metaphysics, religion and magic, they celebrate their protagonists’ martial skills and romantic love.  They describe the superhuman achievements of characters that, today, we would call superheroes.</p><p>With the passage of centuries, the real people behind these stories slowly disappear.  The only thing left is a kernel of truth, surrounded by the collective dream.</p><p>The Byzantine epic of the Two-Blood Border Lord (Digenes Akritas, in Greek), is one of these works. It is not a single, concrete text, but a corpus of oral traditions and Medieval manuscripts that describe the life and adventures of a man who lives and fights on the Eastern border of the empire, son of a Saracen Emir, who converts to Christianity, and a Roman (Byzantine) noblewoman. The stories are recorded for the first time in the beginning of the second millennium, at dates that are hotly debated, in six manuscripts that still survive: Escorial, Trebizond, Andros-Athens, Grottaferrata, Oxford, and Andros. In parallel with the recorded versions, the myth of Digenes continues to evolve in folk songs across the Greek-speaking world, especially in Asia Minor, Crete and Cyprus.</p><p>In the manuscripts, the stories are largely recorded in poems.  Written in coarse language, with frequent spelling errors, they are clearly popular, not scholarly works.  Their disregard for historical accuracy and their inconsistencies are such that it is impossible to place the stories in a clear historical era: some report a meeting between Digenes and a Byzantine emperor called Basil, while researchers place other versions as set during the reign of Romanos I.</p>The manuscripts and songs express admiration for Digenes' martial skills, beauty and his Christian faith, with minimal references to allegiance to a country or nation.  They are full of fantastic feats: hunting triumphs, battles with bandits, dragons, Amazons and death himself, passionate and often violent love.  They are the pop culture of their era.</p><p>This rich corpus of tradition underpins the graphic novel Digenes.  The book springs from a simple  question: who might the real person behind the superhero have been?  And, following that: what were his true achievements and struggles, and why did they leave such a lively impression in the imagination of his contemporaries?</p>"
       },
       "families": {
-        "title": "Character family trees"
+        "title": "Character family trees",
+        "houses": {
+          "macedon": {
+            "name": "Macedonians"
+          },
+          "phokas": {
+            "name": "Phokas"
+          },
+          "skleros": {
+            "name": "Skleros"
+          },
+          "doukas": {
+            "name": "Doukas"
+          }
+        }
       }
     }
   },
