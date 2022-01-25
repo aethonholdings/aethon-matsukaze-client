@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  team: string[][] = [['konstantinos', 'kallia'], ['avgi', 'dennis']];
+  team: string[][] = [['konstantinos', 'kallia'], ['avgoustos', 'dennis']];
 
   ngOnInit(): void {
   }
