@@ -6,6 +6,7 @@ import { RootComponent } from '../cms/digenes/components/root/root.component';
 import { RedirectComponent } from '../cms/digenes/components/redirect/redirect.component';
 import { ArtworkComponent } from '../cms/digenes/components/artwork/artwork.component';
 import { EpicComponent } from '../cms/digenes/components/epic/epic.component';
+import { EagleComponent } from '../cms/digenes/components/eagle/eagle.component';
 // import { FamilyTreeComponent } from '../cms/digenes/components/family-tree/family-tree.component';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'books', component: BooksComponent },
   { path: 'artwork', component: ArtworkComponent },
   { path: 'history/about', component: EpicComponent },
+  { path: 'history/eagle', component: EagleComponent },
   // { path: 'history/families', component: FamilyTreeComponent },
   { path: 'order', component: RedirectComponent },
   { path: '**', redirectTo: '' }
