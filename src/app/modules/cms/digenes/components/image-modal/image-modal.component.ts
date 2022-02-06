@@ -12,7 +12,7 @@ export class ImageModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    document.body.style.overflowY = 'hidden';
+    document.body.style.overflowY  = 'hidden';
   }
 
   ngOnDestroy(): void {
