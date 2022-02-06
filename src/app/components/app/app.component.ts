@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       })
     ).subscribe(title => {
       this.titleService.setTitle(title);
-    })
+    });
   }
 
 }

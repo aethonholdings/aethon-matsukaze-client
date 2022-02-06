@@ -10,7 +10,7 @@ html, body {
   height: 100vh !important;
   scroll-behavior: smooth;
   margin: 0;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -69,11 +69,6 @@ a:hover, a:active {
 }
 
 // DIGENES --------------------------------------------------------------------*
-
-.page {
-  height: 100%;
-  overflow-y: scroll;
-}
 
 .content {
   position: relative;

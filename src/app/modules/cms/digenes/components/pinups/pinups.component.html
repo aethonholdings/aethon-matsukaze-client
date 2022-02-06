@@ -1,67 +1,56 @@
 <!-- navbar -->
 <matsukaze-navbar></matsukaze-navbar>
 
+<!-- splash -->
+<matsukaze-splash img="assets/img/artwork/maximo.jpg"
+  [title]="'content.artwork.pinups.title' | translate"
+  [arrow]="true"
+  [gradient]="true"></matsukaze-splash>
 
-<div class="page">
-  <!-- splash -->
-  <matsukaze-splash img="assets/img/artwork/maximo.jpg"
-    [title]="'content.artwork.pinups.title' | translate"
-    [arrow]="true"
-    [gradient]="true"></matsukaze-splash>
+<!-- artwork -->
+<div class="content">
 
-  <!-- artwork -->
-  <div class="content">
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-4">
-          <matsukaze-pinup
-              [url]="'content.artwork.pinups.images.1.url' | translate"
-              [title]="'content.artwork.pinups.images.1.title' | translate"></matsukaze-pinup>
-        </div>
-        <div class="col-lg-4">
-          <matsukaze-pinup
-              [url]="'content.artwork.pinups.images.2.url' | translate"
-              [title]="'content.artwork.pinups.images.2.title' | translate"></matsukaze-pinup>
-        </div>
-        <div class="col-lg-4">
-          <matsukaze-pinup
-              [url]="'content.artwork.pinups.images.3.url' | translate"
-              [title]="'content.artwork.pinups.images.3.title' | translate"></matsukaze-pinup>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4">
+        <matsukaze-pinup
+            [url]="'content.artwork.pinups.images.1.url' | translate"
+            [title]="'content.artwork.pinups.images.1.title' | translate"></matsukaze-pinup>
       </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <matsukaze-pinup
-              [url]="'content.artwork.pinups.images.4.url' | translate"
-              [title]="'content.artwork.pinups.images.4.title' | translate"></matsukaze-pinup>
-        </div>
-        <div class="col-lg-4">
-          <matsukaze-pinup
-              [url]="'content.artwork.pinups.images.5.url' | translate"
-              [title]="'content.artwork.pinups.images.5.title' | translate"></matsukaze-pinup>
-        </div>
-        <div class="col-lg-4">
-          <matsukaze-pinup
-              [url]="'content.artwork.pinups.images.6.url' | translate"
-              [title]="'content.artwork.pinups.images.6.title' | translate"></matsukaze-pinup>
-        </div>
+      <div class="col-lg-4">
+        <matsukaze-pinup
+            [url]="'content.artwork.pinups.images.2.url' | translate"
+            [title]="'content.artwork.pinups.images.2.title' | translate"></matsukaze-pinup>
+      </div>
+      <div class="col-lg-4">
+        <matsukaze-pinup
+            [url]="'content.artwork.pinups.images.3.url' | translate"
+            [title]="'content.artwork.pinups.images.3.title' | translate"></matsukaze-pinup>
       </div>
     </div>
-
-    <!-- call to action -->
-    <div class="padded cover">
-      <div class="container">
-        <div class="row justify-content-lg-center">
-          <div class="col-lg-6">
-            <matsukaze-call-to-action></matsukaze-call-to-action>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <matsukaze-pinup
+            [url]="'content.artwork.pinups.images.4.url' | translate"
+            [title]="'content.artwork.pinups.images.4.title' | translate"></matsukaze-pinup>
+      </div>
+      <div class="col-lg-4">
+        <matsukaze-pinup
+            [url]="'content.artwork.pinups.images.5.url' | translate"
+            [title]="'content.artwork.pinups.images.5.title' | translate"></matsukaze-pinup>
+      </div>
+      <div class="col-lg-4">
+        <matsukaze-pinup
+            [url]="'content.artwork.pinups.images.6.url' | translate"
+            [title]="'content.artwork.pinups.images.6.title' | translate"></matsukaze-pinup>
       </div>
     </div>
-
-    <!-- copyright -->
-    <matsukaze-copyright></matsukaze-copyright>
-
   </div>
+
+  <!-- call to action -->
+  <matsukaze-call-to-action></matsukaze-call-to-action>
+
+  <!-- copyright -->
+  <matsukaze-copyright></matsukaze-copyright>
+
 </div>
