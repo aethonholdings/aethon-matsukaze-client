@@ -1,0 +1,12 @@
+
+
+<div class="card digenes-font">
+  <img src="{{url}}" class="card-img-top" loading="lazy" (click)="onClick()">
+  <div class="card-title title digenes-font">
+    <h4><span [innerHTML]="title"></span></h4>
+  </div>
+</div>
+
+<div *ngIf="this.zoom" (click)="onClick()">
+  <matsukaze-image-modal [url]="url"></matsukaze-image-modal>
+</div>

@@ -1,0 +1,53 @@
+<!-- navbar -->
+<matsukaze-navbar></matsukaze-navbar>
+
+<!-- splash -->
+<matsukaze-splash img="assets/img/artwork/pg13.jpg"
+  [title]="'content.artwork.process.title' | translate"
+  [arrow]="true"
+  [gradient]="true"></matsukaze-splash>
+
+<!-- artwork -->
+<div class="content">
+
+  <!-- Text -->
+  <div class="padded">
+    <div class="container">
+      <div class="card digenes-font">
+        <div class="card-title title digenes-font">
+          <h3><span [innerHTML]="'content.artwork.process.card-title' | translate"></span></h3>
+        </div>
+        <div class="card-text digenes-font">
+          <span [innerHTML]="'content.artwork.process.text' | translate"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video -->
+  <div class="container padded">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe width="100%"
+        src="https://www.youtube.com/embed/yQcKTN9jZpw"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- call to action -->
+  <div class="padded cover">
+    <div class="container">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-6">
+          <matsukaze-call-to-action></matsukaze-call-to-action>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- copyright -->
+  <matsukaze-copyright></matsukaze-copyright>
+
+</div>

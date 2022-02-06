@@ -7,8 +7,10 @@
 
 html, body {
   width: 100%;
-  height: 100% !important;
+  height: 100vh !important;
   scroll-behavior: smooth;
+  margin: 0;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -68,6 +70,18 @@ a:hover, a:active {
 
 // DIGENES --------------------------------------------------------------------*
 
+.page {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.content {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.2));
+}
+
 .block {
   width: 100%;
   height: 100vh;
@@ -96,13 +110,6 @@ a:hover, a:active {
   padding-bottom: 0.25em;
   border-bottom-color: rgba(255,0,0,0.4);
   border-bottom-style: solid;
-}
-
-.content {
-  position: relative;
-  background-color: black;
-  width: 100%;
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.2));
 }
 
 .card {

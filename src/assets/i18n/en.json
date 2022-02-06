@@ -13,6 +13,9 @@
     "account": "My account",
     "order": "Order",
     "artwork": "Artwork",
+    "sketches": "Sketches",
+    "pinups": "Pinups",
+    "process": "Process",
     "history": "Historical background",
     "families": "Character family trees",
     "about": "The epic of Digenes",
@@ -56,7 +59,7 @@
           "konstantinos": {
             "img": "konstantinos.jpg",
             "name": "Konstantinos Dimitriou",
-            "bio": "Konstantinos was born in Athens, Greece.  He is an avid comics and Tolkien fan, as well as a retired but nostalgic AD&D Dungeon Master who loves History, Anthropology and Philosophy. He has lived, worked and travelled extensively across most of Asia, including China, India, Japan, Korea and South East Asia.  He holds degrees from Cambridge and Harvard and lives in Singapore."
+            "bio": "Konstantinos was born in Athens, Greece.  He is an avid comics and Tolkien fan, as well as a retired but nostalgic AD&D Dungeon Master who loves History, Anthropology and Philosophy. He has lived, worked and travelled extensively across most of Asia, including China, India, Japan, Korea and South East Asia.  He holds degrees from Cambridge and Harvard and lives between Singapore and Oxford."
           },
           "kallia": {
             "img": "kallia.jpg",
@@ -118,7 +121,43 @@
       }
     },
     "artwork": {
-      "title": "Artwork"
+      "sketches": {
+        "title": "Sketches"
+      },
+      "pinups": {
+        "title": "Pinups",
+        "images": {
+          "1": {
+            "title": "The battle of Abydos",
+            "url": "/assets/img/artwork/battle-full.jpg"
+          },
+          "2": {
+            "title": "Digenes and Bardas Phokas",
+            "url": "/assets/img/artwork/digenes-and-bardas.jpg"
+          },
+          "3": {
+            "title": "Vassilios and Sophia",
+            "url": "/assets/img/artwork/vassilios-and-sophia.jpg"
+          },
+          "4": {
+            "title": "Vassilios and Romanos",
+            "url": "/assets/img/artwork/vassilios-and-romanos.jpg"
+          },
+          "5": {
+            "title": "The Phokas men",
+            "url": "/assets/img/artwork/phokas-family.jpg"
+          },
+          "6": {
+            "title": "The Amazon Maximo",
+            "url": "/assets/img/artwork/maximo.jpg"
+          }
+        }
+      },
+      "process": {
+        "title": "Process",
+        "card-title": "Creating Digenes",
+        "text": "<p>Here you can see the creative process behind the artwork of a typical page in Digenes, from the script and layouts to the final result.  What flashes past your eyes within a few seconds is, in reality, the result of countless hours of collaboration, hard work, thinking, sketching and corrections by the entire team.</p>"
+      }
     },
     "history": {
       "about": {
@@ -145,11 +184,11 @@
       "eagle": {
         "title": "The two-headed eagle",
         "text": {
-          "section1": "<p>The two-headed eagle is a charged symbol.  Today, it still appears on many national flags, including those of Albania, Serbia, and Montenegro.  It’s also on the flag of the Ecumenical Patriarchate of Constantinople, regarded as \"first among equal\" of the Orthodox Christian churches, the Russian Ministry of Defence and even football teams.  In many of the countries where it is still in use, it is often connected with extreme, nationalistic tendencies.  It is a powder keg of emotions.</p><p>But what is the actual meaning of this symbol?</p><p>Its first well-known use in the West is as the crest of the Byzantine empire.  The two-headed eagle first appears in Byzantine art in the 9th century, not as a crest but, rather, as a decorative pattern.  It is only towards the end of Byzantine history, after the 12th century, that it begins to appear on the crest of the Paleologos family, the last Byzantine imperial dynasty, as well as those of other aristocratic houses.</p>",
-          "section2": "<p>We do not know why the two-headed eagle became popular among the Byzantines.  In stark contrast to Western heraldry, which still follows very set rules to this day, for most of Byzantine history, each nobleman chose a motif that was to their personal preference.  Byzantine crests usually had religious motifs and often served as calls to God for victory on the battlefield.</p><p>But the two-headed eagle has no relationship to Christianity, raising the question of what it meant in Byzantium.  The main interpretation is that the eagle refers to the roots the empire in Classical Rome, and that the two heads represent its might across West and East.</p><p>It is less well-known that, well before it was used in Byzantium, the symbol appears across the history of the whole of Eurasia, all the way to prehistoric times.  It is no coincidence that, to the East of Byzantium, in the 11th century, before the rise of the Paleologos dynasty, the two-headed eagle was used on the standards of the Sunni Muslim empire of the Seljuks, a Turkic people with origins in the depths of Central Asia.</p>",
+          "section1": "<p>The two-headed eagle is a charged symbol.  Today, it still features on many national flags, including those of Albania, Serbia, and Montenegro.  It’s also on the flag of the Ecumenical Patriarchate of Constantinople, regarded as \"first among equals\" of the Orthodox Christian churches, the Russian Ministry of Defence and even football teams.  In many of the countries where it is still in use, it is often connected with extreme, nationalistic tendencies.  It is a powder keg of emotions.</p><p>But what is the actual meaning of this symbol?</p><p>Its first well-known use in the West is as the crest of the Byzantine empire.  The two-headed eagle first appears in Byzantine art in the 9th century, not as a crest but, rather, as a decorative pattern.  It is only towards the end of Byzantine history, after the 12th century, that it begins to feature on the crest of the Paleologos family, the last imperial dynasty, as well as those of other aristocratic houses.</p>",
+          "section2": "<p>We do not know why the two-headed eagle became popular among the Byzantines.  In stark contrast to Western heraldry, which follows very set rules to this day, for most of Byzantine history, each nobleman chose a motif of their personal preference.  Byzantine crests usually had religious motifs and often served as calls to God for victory on the battlefield.</p><p>But the two-headed eagle has no relationship to Christianity, raising the question of what it meant in Byzantium.  The main interpretation is that the eagle refers to the roots the empire in Classical Rome, and that the two heads represent its might across West and East.</p><p>It is less well-known that, well before it was used in Byzantium, the symbol appears across the history of the whole of Eurasia, all the way to prehistoric times.  For example, to the East of Byzantium, in the 11th century, before the rise of the Paleologos dynasty, the two-headed eagle was used on the standards of the Sunni Muslim empire of the Seljuks, a Turkic people with origins in the depths of Central Asia.</p>",
           "section3": "<p>In fact, the first depictions of two headed eagle that we know of are incredibly ancient.  The symbol appers in the ruins of Alaca Höyük, a Hittite Bronze Age settlement, and, before that on Mesopotamian seals. Alaca Höyük itself has a Neolithic substratum.</p>",
-          "section4": "<p>The suggestion that the symbol might have been in use during even prehistoric times has led some academics to pursue it in a broader, anthropologic context.  The roots of the Seljuk Turks, in the vast expanse of the Central Asian steppe, suggest we can look for the symbol in ancient, oral traditions across this huge area.<p><p>The eagle has deep symbolic meaning as an incarnation of a divine among most human societies, from the Australian Aborigines to Incas, including the shamanistic, animistic hunter cultures of Central Asia, like Mongolia.</p><p>In the myths of the Yakut, a Turkic people of West Siberia, we come across the image of a multitude of bird-gods sitting on the branches of the World Tree. On the top of this tree, we find Toyon Kottor, a “Lord Creator”, the master of birds: a two-headed eagle. Toyon Kottor is often depicted on the clothes and drums of shamans, human channels between the supernatural and the natural, who, in holy ecstasy, connect with the world of the divine.</p><p>There, on the boundary of history and myth, reality and dream, conscious and subconscious, the only tool that we have to understand the primal meaning of this symbol is speculation through a primordial, poetic lens.</p>",
-          "section5": "<p>How does such a strange image emerge in the mind of an animist hunter?  Perhaps through the mating of two birds, male and female, the union of subjective opposites, into One, the essence of reality that the shamans experience at the height of their ecstasy.  There, where opposites reveal themselves as two sides of the same coin.</p><p>That’s the two-headed eagle: an ancient, magical symbol of divine union, like the Yin and Yang.  And here, in our graphic novel, we return to the question: who, and how, introduced the symbol to Byzantine semiotics?  What events and stories around this person moved the Romans so much to slowly embrace it as a representation of their identity?</p>"
+          "section4": "<p>The suggestion that the symbol might have been in use during even prehistoric times has led some academics to pursue it in a broader, anthropologic context.  The roots of the Seljuk Turks, in the vast expanse of the Central Asian steppe, suggest we can look for the symbol in ancient, oral traditions across this huge area.<p><p>In the myths of the Yakut, a Turkic people of West Siberia, we come across the image of a multitude of bird-gods sitting on the branches of the World Tree. On the top of this tree, we find Toyon Kottor, a “Lord Creator”, the master of birds: a two-headed eagle. Toyon Kottor is often depicted on the clothes and drums of shamans, human channels between the supernatural and the natural, who, in holy ecstasy, connect with the world of the divine.</p><p>There, on the boundary of history and myth, reality and dream, conscious and subconscious, the only tool that we have to understand the primal meaning of this symbol is speculation through a primordial, poetic lens.</p>",
+          "section5": "<p>How does such a strange image emerge in the mind of an animist hunter?  Perhaps through the mating of two birds, male and female, the union of subjective opposites, into One, the essence of reality that the shamans experience at the height of their ecstasy.  There, where opposites reveal themselves as two sides of the same coin.</p><p>That’s how the two-headed eagle is used in in Digenes: an ancient, magical symbol of divine union, like the Yin and Yang.  And, here, we return to the question: who, and how, introduced the symbol to Byzantine semiotics?  What events and stories around this person moved the Romans so much to slowly embrace it as a representation of their identity?</p>"
         }
       }
     }

@@ -12,13 +12,18 @@
           <a class="nav-link text-shadow" [routerLink]="['']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.home' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-shadow" [routerLink]="['/artwork']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.artwork' | translate}}</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link text-shadow" [routerLink]="['/books']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.books' | translate}}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-shadow" [routerLink]="['/team']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.team' | translate}}</a>
+        </li>
+        <li class="dropdown">
+          <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.artwork' | translate}}</a>
+          <div class="dropdown-menu" role="menu">
+            <a class="dropdown-item js-scroll-trigger" [routerLink]="['/artwork/sketches']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.sketches' | translate}}</a>
+            <a class="dropdown-item js-scroll-trigger" [routerLink]="['/artwork/pinups']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.pinups' | translate}}</a>
+            <a class="dropdown-item js-scroll-trigger" [routerLink]="['/artwork/process']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.process' | translate}}</a>
+          </div>
         </li>
         <li class="dropdown">
           <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.history' | translate}}</a>

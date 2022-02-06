@@ -18,12 +18,16 @@ import { SplashComponent } from './components/splash/splash.component';
 import { PublicationModule } from '../../publication/publication.module';
 import { MailingComponent } from './components/mailing/mailing.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
-import { ArtworkComponent } from './components/artwork/artwork.component';
 import { OrderComponent } from './components/order/order.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { FamilyTreeComponent } from './components/family-tree/family-tree.component';
 import { EpicComponent } from './components/epic/epic.component';
 import { EagleComponent } from './components/eagle/eagle.component';
+import { SketchesComponent } from './components/sketches/sketches.component';
+import { PinupsComponent } from './components/pinups/pinups.component';
+import { ProcessComponent } from './components/process/process.component';
+import { PinupComponent } from './components/pinup/pinup.component';
+import { ImageModalComponent } from './components/image-modal/image-modal.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +42,16 @@ import { EagleComponent } from './components/eagle/eagle.component';
     SplashComponent,
     MailingComponent,
     RedirectComponent,
-    ArtworkComponent,
     OrderComponent,
     CallToActionComponent,
     FamilyTreeComponent,
     EpicComponent,
-    EagleComponent
+    EagleComponent,
+    SketchesComponent,
+    PinupsComponent,
+    ProcessComponent,
+    PinupComponent,
+    ImageModalComponent
   ],
   imports: [
     CommonModule,
