@@ -9,7 +9,8 @@ import { EagleComponent } from '../cms/digenes/components/eagle/eagle.component'
 import { SketchesComponent } from '../cms/digenes/components/sketches/sketches.component';
 import { PinupsComponent } from '../cms/digenes/components/pinups/pinups.component';
 import { ProcessComponent } from '../cms/digenes/components/process/process.component';
-// import { FamilyTreeComponent } from '../cms/digenes/components/family-tree/family-tree.component';
+import { FamilyTreeComponent } from '../cms/digenes/components/family-tree/family-tree.component';
+import { PointsOfSaleComponent } from '../cms/digenes/components/points-of-sale/points-of-sale.component';
 
 const routes: Routes = [
   { path: '', component: RootComponent },
@@ -17,11 +18,12 @@ const routes: Routes = [
   { path: 'books', component: BooksComponent },
   { path: 'history/about', component: EpicComponent },
   { path: 'history/eagle', component: EagleComponent },
-  // { path: 'history/families', component: FamilyTreeComponent },
+  { path: 'history/families', component: FamilyTreeComponent },
   { path: 'artwork/sketches', component: SketchesComponent },
   { path: 'artwork/pinups', component: PinupsComponent },
   { path: 'artwork/process', component: ProcessComponent },
   { path: 'order', component: RedirectComponent },
+  { path: 'pointsOfSale', component: PointsOfSaleComponent },
   { path: '**', redirectTo: '' }
 ];
 

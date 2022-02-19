@@ -34,6 +34,12 @@
           </div>
         </li>
         <li class="dropdown">
+          <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.buy' | translate}}</a>
+          <div class="dropdown-menu" role="menu">
+            <a class="dropdown-item js-scroll-trigger" [routerLink]="['/pointsOfSale']" [queryParams]="{lang: lang}" queryParamsHandling="merge">{{'navbar.pointsOfSale' | translate}}</a>
+          </div>
+        </li>
+        <li class="dropdown">
           <a class="nav-link text-shadow dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{{'navbar.language' | translate}}</a>
           <div class="dropdown-menu" role="menu">
             <a class="dropdown-item js-scroll-trigger" (click)="onChangeLang('en')" [routerLink]="['.']" [queryParams]="{lang: 'en'}" queryParamsHandling="merge">English</a>

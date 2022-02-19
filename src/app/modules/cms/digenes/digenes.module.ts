@@ -28,6 +28,7 @@ import { PinupsComponent } from './components/pinups/pinups.component';
 import { ProcessComponent } from './components/process/process.component';
 import { PinupComponent } from './components/pinup/pinup.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
+import { PointsOfSaleComponent } from './components/points-of-sale/points-of-sale.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ImageModalComponent } from './components/image-modal/image-modal.compon
     PinupsComponent,
     ProcessComponent,
     PinupComponent,
-    ImageModalComponent
+    ImageModalComponent,
+    PointsOfSaleComponent
   ],
   imports: [
     CommonModule,
