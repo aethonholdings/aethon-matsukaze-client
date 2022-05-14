@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  books: any[][] = [["1", "2"], ["3", "4"], ["5", "6"]];
+  books: any[][] = [["1", "2"], ["3", "4"], ["5", null]];
 
   constructor() { }
 

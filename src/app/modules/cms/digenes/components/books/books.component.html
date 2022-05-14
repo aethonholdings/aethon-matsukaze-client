@@ -12,12 +12,11 @@
   <div class="container">
     <div *ngFor="let row of books" class="row">
       <div *ngFor="let book of row" class="col-md-6">
-        <div class="card">
+        <div *ngIf="book" class="card">
           <img class="card-img-top cover" src="./assets/img/artwork/{{'content.books.text.books.' + book + '.img' | translate}}" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title title">{{'content.books.text.books.' + book + '.title' | translate}}</h4>
             <p class="card-text text-center">{{'content.books.text.books.' + book + '.date' | translate}}</p>
-
             <div *ngIf="book==1" class="text-center">
               <matsukaze-order></matsukaze-order>
             </div>

@@ -40,11 +40,11 @@
         }
       },
       "news": {
-        "title": "The Mark of Cain",
-        "text": "In bookstores now",
+        "title": "Fire and Brimstone",
+        "text": "Coming July 2022",
         "publisher": "From Jemma Press (in Greek)",
-        "action": "ORDER",
-        "link": "/preorder"
+        "action": "",
+        "img": "A024-Cover-Fire-and-Brimstone.jpg"
       },
       "social": {
         "title": "Social media"
@@ -88,35 +88,30 @@
           "1": {
             "title": "The Mark of Cain",
             "date": "15 January 2022",
-            "img": "mark-of-cain-EN.jpg",
+            "img": "A024-Cover-Mark-of-Cain.jpg",
             "action": {
               "id": "2",
-              "text": "Preorder"
+              "text": "Order"
             }
           },
           "2": {
             "title": "Fire and Brimstone",
-            "date": "June 2022",
-            "img": "blank.jpg"
+            "date": "15 July 2022",
+            "img": "A024-Cover-Fire-and-Brimstone.jpg"
           },
           "3": {
-            "title": "Gospel of Judas",
+            "title": "From Death Arisen",
             "date": "December 2022",
             "img": "blank.jpg"
           },
           "4": {
-            "title": "From Death Arisen",
+            "title": "Divine Wisdom",
             "date": "June 2023",
             "img": "blank.jpg"
           },
           "5": {
-            "title": "Divine Wisdom",
-            "date": "December 2023",
-            "img": "blank.jpg"
-          },
-          "6": {
             "title": "Apocalypse",
-            "date": "June 2024",
+            "date": "December 2023",
             "img": "blank.jpg"
           }
         }
@@ -197,6 +192,9 @@
           "section5": "<p>How does such a strange image emerge in the mind of an animist hunter?  Perhaps through the mating of two birds, male and female, the union of subjective opposites, into One, the essence of reality that the shamans experience at the height of their ecstasy.  There, where opposites reveal themselves as two sides of the same coin.</p><p>That’s how the two-headed eagle is used in Digenes: an ancient, magical symbol of divine union, like the Yin and Yang.  And, here, we return to the question: who, and how, introduced the symbol to Byzantine semiotics?  What events and stories around this person moved the Romans so much to slowly embrace it as a representation of their identity?</p>"
         }
       }
+    },
+    "order": {
+      "text": "Order"
     }
   },
   "auth": {
