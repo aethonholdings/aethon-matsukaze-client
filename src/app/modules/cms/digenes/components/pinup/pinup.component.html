@@ -1,12 +1,10 @@
-
-
 <div class="card digenes-font">
-  <img src="{{url}}" class="card-img-top" loading="lazy" (click)="onClick()">
+  <img src="/assets/img/artwork/pinups/{{url}}" class="card-img-top" loading="lazy" (click)="onClick()">
   <div class="card-title title digenes-font">
     <h4><span [innerHTML]="title"></span></h4>
   </div>
 </div>
 
 <div *ngIf="this.zoom" (click)="onClick()">
-  <matsukaze-image-modal [url]="url"></matsukaze-image-modal>
+  <matsukaze-image-modal url="/assets/img/artwork/pinups/{{url}}"></matsukaze-image-modal>
 </div>

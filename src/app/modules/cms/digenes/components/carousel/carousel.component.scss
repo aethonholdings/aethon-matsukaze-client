@@ -1,0 +1,36 @@
+@import "../../../../../../styles/_variables.scss";
+
+.splash {
+  position: fixed;
+  top: 0;
+  z-index: -1000;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.splash-img {
+  object-fit: cover;
+  background-color: rgba(0,0,0,1);
+}
+
+.blank {
+  display: table;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}

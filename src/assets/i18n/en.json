@@ -27,8 +27,10 @@
   "content": {
     "home": {
       "title": "Digenes",
-      "images": {
-        "splash": "assets/img/artwork/splash-EN.jpg"
+      "carousel": {
+        "1": "assets/img/artwork/splash/splash-EN.jpg",
+        "2": "assets/img/artwork/splash/A002-Cover-Mark-of-Cain.jpg",
+        "3": "assets/img/artwork/splash/A024-Cover-Fire-and-Brimstone.jpg"
       },
       "text": {
         "quote": "CHARACTER IS REVEALED <br/> AT THE EDGE OF A SWORD",
@@ -44,7 +46,7 @@
         "text": "Coming July 2022",
         "publisher": "From Jemma Press (in Greek)",
         "action": "",
-        "img": "A024-Cover-Fire-and-Brimstone.jpg"
+        "img": "fire-and-brimstone.jpg"
       },
       "social": {
         "title": "Social media"
@@ -88,7 +90,7 @@
           "1": {
             "title": "The Mark of Cain",
             "date": "15 January 2022",
-            "img": "A024-Cover-Mark-of-Cain.jpg",
+            "img": "A002-Cover-Mark-of-Cain.jpg",
             "action": {
               "id": "2",
               "text": "Order"
@@ -126,27 +128,27 @@
         "images": {
           "1": {
             "title": "The battle of Abydos",
-            "url": "/assets/img/artwork/battle-full.jpg"
+            "url": "battle-full.jpg"
           },
           "2": {
             "title": "Digenes and Bardas Phokas",
-            "url": "/assets/img/artwork/digenes-and-bardas.jpg"
+            "url": "digenes-and-bardas.jpg"
           },
           "3": {
             "title": "Vassilios and Sophia",
-            "url": "/assets/img/artwork/vassilios-and-sophia.jpg"
+            "url": "vassilios-and-sophia.jpg"
           },
           "4": {
             "title": "Vassilios and Romanos",
-            "url": "/assets/img/artwork/vassilios-and-romanos.jpg"
+            "url": "vassilios-and-romanos.jpg"
           },
           "5": {
             "title": "The Phokas men",
-            "url": "/assets/img/artwork/phokas-family.jpg"
+            "url": "phokas-family.jpg"
           },
           "6": {
             "title": "The Amazon Maximo",
-            "url": "/assets/img/artwork/maximo.jpg"
+            "url": "maximo.jpg"
           }
         }
       },

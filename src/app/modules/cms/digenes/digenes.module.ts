@@ -10,7 +10,6 @@ import { RootComponent } from './components/root/root.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { ErrorComponent } from './components/error/error.component';
-import { PublicationsComponent } from './components/publications/publications.component';
 import { TeamComponent } from './components/team/team.component';
 import { BooksComponent } from './components/books/books.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
@@ -28,6 +27,7 @@ import { ProcessComponent } from './components/process/process.component';
 import { PinupComponent } from './components/pinup/pinup.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
 import { PointsOfSaleComponent } from './components/points-of-sale/points-of-sale.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,6 @@ import { PointsOfSaleComponent } from './components/points-of-sale/points-of-sal
     NavbarComponent,
     AuthComponent,
     ErrorComponent,
-    PublicationsComponent,
     TeamComponent,
     BooksComponent,
     CopyrightComponent,
@@ -52,7 +51,8 @@ import { PointsOfSaleComponent } from './components/points-of-sale/points-of-sal
     ProcessComponent,
     PinupComponent,
     ImageModalComponent,
-    PointsOfSaleComponent
+    PointsOfSaleComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,
