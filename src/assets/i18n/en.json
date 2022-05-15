@@ -35,6 +35,7 @@
       },
       "text": {
         "quote": "CHARACTER IS REVEALED <br/> AT THE EDGE OF A SWORD",
+        "order": "ORDER",
         "synopsis": {
           "title": "Synopsis",
           "premise": "He of two <br/> shall be one",
@@ -94,7 +95,8 @@
             "img": "A002-Cover-Mark-of-Cain.jpg",
             "action": {
               "id": "2",
-              "text": "Order"
+              "text": "Order",
+              "link": "/order?path=digenhs-i-to-simadi-tou-kain"
             }
           },
           "2": {

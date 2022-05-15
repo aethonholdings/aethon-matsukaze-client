@@ -18,7 +18,9 @@
             <h4 class="card-title title">{{'content.books.text.books.' + book + '.title' | translate}}</h4>
             <p class="card-text text-center">{{'content.books.text.books.' + book + '.date' | translate}}</p>
             <div *ngIf="book==1" class="text-center">
-              <matsukaze-order></matsukaze-order>
+              <matsukaze-order
+                  text="{{'content.books.text.books.' + book + '.action.text' | translate}}"
+                  link="{{'content.books.text.books.' + book + '.action.link' | translate}}"></matsukaze-order>
             </div>
           </div>
         </div>

@@ -35,6 +35,7 @@
       },
       "text": {
         "quote": "ΣΤΗΝ ΚΟΨΗ ΤΟΥ ΣΠΑΘΙΟΥ<br />ΓΝΩΡΙΖΟΥΜΕ ΤΟΝ ΧΑΡΑΚΤΗΡΑ ΜΑΣ",
+        "order": "ΑΓΟΡΑΣΤΕ",
         "synopsis": {
           "title": "Συνοψη",
           "premise": "Δυο<br/>εις σαρκα<br/>μιαν",
@@ -94,7 +95,8 @@
             "img": "A002-Cover-Mark-of-Cain.jpg",
             "action": {
               "id": "2",
-              "text": "ΑΓΟΡΑΣΤΕ"
+              "text": "ΑΓΟΡΑΣΤΕ",
+              "link": "/order?path=digenhs-i-to-simadi-tou-kain"
             }
           },
           "2": {
