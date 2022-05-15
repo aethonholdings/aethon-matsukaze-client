@@ -28,9 +28,10 @@
     "home": {
       "title": "Διγενής",
       "carousel": {
-        "1": "assets/img/artwork/splash/splash-EL.jpg",
-        "2": "assets/img/artwork/splash/A002-Cover-Mark-of-Cain.jpg",
-        "3": "assets/img/artwork/splash/A024-Cover-Fire-and-Brimstone.jpg"
+        "1": "splash-EN.jpg",
+        "2": "digenes.jpg",
+        "3": "A024-Cover-Fire-and-Brimstone.jpg",
+        "4": "series-cover.jpg"
       },
       "text": {
         "quote": "ΣΤΗΝ ΚΟΨΗ ΤΟΥ ΣΠΑΘΙΟΥ<br />ΓΝΩΡΙΖΟΥΜΕ ΤΟΝ ΧΑΡΑΚΤΗΡΑ ΜΑΣ",
