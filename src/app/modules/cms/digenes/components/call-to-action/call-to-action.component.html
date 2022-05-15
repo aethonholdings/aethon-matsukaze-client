@@ -5,11 +5,11 @@
         <div class="card text-center digenes-font black">
           <div class="card-body">
             <h4 class="card-title title">{{'content.home.news.title' | translate}}</h4>
-            <a *ngIf="action| async; else noAction" [routerLink]="['/order']">
-              <img class="card-img-top img-responsive" src="assets/img/artwork/{{'content.home.news.img' | translate}}">
+            <a *ngIf="action | async; else noAction" [routerLink]="['/order']">
+              <img *ngIf="src | async" class="card-img-top img-responsive" src="assets/img/artwork/{{src | async}}">
             </a>
             <ng-template #noAction>
-              <img class="card-img-top img-responsive" src="assets/img/artwork/{{'content.home.news.img' | translate}}">
+              <img *ngIf="src | async" class="card-img-top img-responsive" src="assets/img/artwork/{{src | async}}">
             </ng-template>
             <div class="card-text">
               <div class="news">

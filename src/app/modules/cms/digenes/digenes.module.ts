@@ -15,7 +15,6 @@ import { TeamComponent } from './components/team/team.component';
 import { BooksComponent } from './components/books/books.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { SplashComponent } from './components/splash/splash.component';
-import { PublicationModule } from '../../publication/publication.module';
 import { MailingComponent } from './components/mailing/mailing.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
 import { OrderComponent } from './components/order/order.component';
@@ -59,7 +58,6 @@ import { PointsOfSaleComponent } from './components/points-of-sale/points-of-sal
     CommonModule,
     TranslateModule,
     AppRoutingModule,
-    PublicationModule,
     UserModule
    ],
   providers: [ TranslateService ],

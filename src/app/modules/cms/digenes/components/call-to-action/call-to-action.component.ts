@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { delay, map } from 'rxjs/operators';
 
 @Component({
   selector: 'matsukaze-call-to-action',
@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class CallToActionComponent implements OnInit {
   action: Observable<boolean>;
+  src: Observable<string>;
 
   constructor(private translate: TranslateService) { }
 
@@ -20,6 +21,7 @@ export class CallToActionComponent implements OnInit {
         return false;
       })
     )
+    this.src = this.translate.get('content.home.news.img');
   }
 
 }
