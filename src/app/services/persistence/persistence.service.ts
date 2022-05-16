@@ -23,11 +23,11 @@ export class PersistenceService {
     return of(true);
   }
 
-  public store$(endpoint: any, lang: string, obj: any, blob?: Blob): Observable<Cacheable<any>> {
+  public store$(endpoint: any, params: any, obj: any, blob?: Blob): Observable<Cacheable<any>> {
     let cacheable: Cacheable<any> = {
       location: null,
       key: this._endpointToString(endpoint),
-      lang: lang,
+      params: params,
       size: 0,
       progress: 0,
       object: obj
@@ -43,34 +43,7 @@ export class PersistenceService {
                     "\nData:" + JSON.stringify(cacheable))
       }
     } else {
-      // writePromise = new Promise<Cacheable<Asset>>((resolve, reject) => {
-      //   let path: string, filename: string;
-      //   if(this.browserTest) path = "../../assets/imgs/test/"; else path = this.path;
-      //   filename = cacheable.object.id + ".jpg";
-      //   cacheable.location = CacheableLocation.CACHED;
-      //   cacheable.size = blob.size;
-      //   cacheable.progress = 100;
-      //   cacheable.object.uri = path + filename;
-      //   this.store(cacheable).then(result => {
-      //     if(this.browserTest) {
-      //       if(this.verbose) {
-      //         console.log("*** File storage completed: " +
-      //                     "\nFilename:" + filename +
-      //                     "\n(No cordova, mock write)");
-      //       }
-      //       resolve(cacheable);
-      //     } else {
-      //       this.filesystemService.writeFile(path, filename, blob, {replace:true}).then(result => {
-      //         if(this.verbose) {
-      //           console.log("*** File storage completed: " + cacheable.object.uri);
-      //         }
-      //         resolve(cacheable);
-      //       })
-      //     }
-      //   }).catch(error => {
-      //     reject(new Error("Could not persist file: " + filename));
-      //   });
-      // });
+
     }
     return of(cacheable);
   }
@@ -84,38 +57,6 @@ export class PersistenceService {
     }
     return of(JSON.parse(cacheable));
   }
-  //
-  // storeAsset(cacheable: Cacheable<Asset>, data: Blob): Promise<Cacheable<Asset>> {
-  //   let writePromise = new Promise<Cacheable<Asset>>((resolve, reject) => {
-  //     let path, filename: string;
-  //     if(this.browserTest) path = "../../assets/imgs/test/"; else path = this.path;
-  //     filename = cacheable.object.id + ".jpg";
-  //     cacheable.location = CacheableLocation.CACHED;
-  //     cacheable.size = data.size;
-  //     cacheable.progress = 100;
-  //     cacheable.object.uri = path + filename;
-  //     this.store(cacheable).then(result => {
-  //       if(this.browserTest) {
-  //         if(this.verbose) {
-  //           console.log("*** File storage completed: " +
-  //                       "\nFilename:" + filename +
-  //                       "\n(No cordova, mock write)");
-  //         }
-  //         resolve(cacheable);
-  //       } else {
-  //         this.filesystemService.writeFile(path, filename, data, {replace:true}).then(result => {
-  //           if(this.verbose) {
-  //             console.log("*** File storage completed: " + cacheable.object.uri);
-  //           }
-  //           resolve(cacheable);
-  //         })
-  //       }
-  //     }).catch(error => {
-  //       reject(new Error("Could not persist file: " + filename));
-  //     });
-  //   });
-  //   return writePromise;
-  // }
 
   private _endpointToString(endpoint: any): string {
     return endpoint.method + " " + endpoint.endpoint

@@ -23,13 +23,18 @@ export class UserService {
       if(cacheable) {
         this._setUser(cacheable.object);
       } else {
-        this._setUser({
-          id: null,
-          email: null,
-          token: null,
-          locale: this.translateService.getBrowserLang(),
-          roles: []
-        });
+        let locale: string = this.translateService.getBrowserLang();
+        this.persistenceService.store$(
+          this._endpoints.actions.auth.login,
+          null,
+          this._setUser({
+                  id: null,
+                  email: null,
+                  token: null,
+                  locale: locale,
+                  roles: []
+                }),
+          null);
       }
     });
   }
@@ -37,6 +42,17 @@ export class UserService {
   public setLanguage(lang: string) {
     this._user.locale=lang;
     this._setUser(this._user);
+    this.persistenceService.store$(
+      this._endpoints.actions.auth.login,
+      null,
+      this._setUser({
+              id: null,
+              email: null,
+              token: null,
+              locale: lang,
+              roles: []
+            }),
+      null);
   }
 
   public getLanguage(): string {
