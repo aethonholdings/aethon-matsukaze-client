@@ -45,10 +45,11 @@
       },
       "news": {
         "title": "Πυρ και Θειον",
-        "text": "15 Ιουλιου 2022",
+        "text": "Οι παραγγελιες ανοιξανε!",
         "publisher": "Απο την Jemma Press",
-        "action": "",
-        "img": "fire-and-brimstone.jpg"
+        "action": "PREORDER",
+        "img": "fire-and-brimstone.jpg",
+        "link": "/order?path=digenhs-ii-pur-kai-theion-pre-order"
       },
       "social": {
         "title": "Social media"
@@ -102,7 +103,12 @@
           "2": {
             "title": "Πυρ και Θειον",
             "date": "Ιουλιος 2022",
-            "img": "A024-Cover-Fire-and-Brimstone.jpg"
+            "img": "A024-Cover-Fire-and-Brimstone.jpg",
+            "action": {
+              "id": "3",
+              "text": "ΑΓΟΡΑΣΤΕ",
+              "link": "/order?path=digenhs-ii-pur-kai-theion-pre-order"
+            }
           },
           "3": {
             "title": "Θανατον Πατησας",

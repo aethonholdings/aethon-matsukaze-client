@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'artwork/pinups', component: PinupsComponent },
   { path: 'artwork/process', component: ProcessComponent },
   { path: 'order', component: RedirectComponent },
+  { path: 'buy', redirectTo: "/order?path=digenhs-ii-pur-kai-theion-pre-order" },
   { path: 'pointsOfSale', component: PointsOfSaleComponent },
   { path: '**', redirectTo: '' }
 ];

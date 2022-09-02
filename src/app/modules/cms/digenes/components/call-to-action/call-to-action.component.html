@@ -6,7 +6,7 @@
           <div class="card-body">
             <h4 class="card-title title">{{'content.home.news.title' | translate}}</h4>
             <a *ngIf="action | async; else noAction" [routerLink]="['/order']">
-              <img *ngIf="src | async" class="card-img-top img-responsive" src="assets/img/artwork/{{src | async}}">
+              <img *ngIf="src | async" class="card-img-top img-responsive" src="assets/img/artwork/call-to-action/{{src | async}}">
             </a>
             <ng-template #noAction>
               <img *ngIf="src | async" class="card-img-top img-responsive" src="assets/img/artwork/call-to-action/{{src | async}}">
@@ -16,7 +16,7 @@
                 <p class="news-text">{{'content.home.news.text' | translate}}</p>
                 <p class="news-text">{{'content.home.news.publisher' | translate}}</p>
               </div>
-              <matsukaze-order *ngIf="action | async"></matsukaze-order>
+              <matsukaze-order *ngIf="action | async" link="{{'content.home.news.link' | translate}}" text="{{'content.home.news.action' | translate}}"></matsukaze-order>
             </div>
           </div>
         </div>

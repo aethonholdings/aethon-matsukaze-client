@@ -45,10 +45,11 @@
       },
       "news": {
         "title": "Fire and Brimstone",
-        "text": "Coming July 2022",
+        "text": "Preorders are now open!",
         "publisher": "From Jemma Press (in Greek)",
-        "action": "",
-        "img": "fire-and-brimstone.jpg"
+        "action": "PREORDER",
+        "img": "fire-and-brimstone.jpg",
+        "link": "/order?path=digenhs-ii-pur-kai-theion-pre-order"
       },
       "social": {
         "title": "Social media"
@@ -102,7 +103,12 @@
           "2": {
             "title": "Fire and Brimstone",
             "date": "15 July 2022",
-            "img": "A024-Cover-Fire-and-Brimstone.jpg"
+            "img": "A024-Cover-Fire-and-Brimstone.jpg",
+            "action": {
+              "id": "3",
+              "text": "Preorder",
+              "link": "/order?path=digenhs-ii-pur-kai-theion-pre-order"
+            }
           },
           "3": {
             "title": "From Death Arisen",
